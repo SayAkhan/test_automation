@@ -28,12 +28,15 @@
   // 새로운 테스트 실행 시 기존 로그 파일 내용 초기화
  
   let logFileName;
+  // logfile의 이름을 테스트를 실행한 날짜로 지정
   logFileName = `./cypress/logs/cypress_log_${new Date().toISOString().replace(/:/g, '-')}.txt`;
 
+  // log 기록 함수
   Cypress.Commands.add('writelog', (message) => {
   cy.writeFile(logFileName, `${new Date().toISOString()} ${message}\n`, { flag: 'a+' });
 });
 
+//사이트 login 함수. 쿠키 유지가 안되서 폐기
 // Cypress.Commands.add('login', (username, password) => {
 //   cy.session([username, password], () => {
 //     cy.visit('https://login-sqa.pallycon.com/');
