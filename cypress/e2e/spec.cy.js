@@ -13,7 +13,8 @@ describe('TNP', () => {
     cy.viewport(1280,720);
 
     //로그인
-    cy.visit('https://login-sqa.pallycon.com/');
+    cy.wait(500);
+    cy.visit('https://console.doverunner.com/login?redirect=https%3A%2F%2Fcontentsecurity.doverunner.com%2F%23ko');
     cy.get('#mui-2').type(sayakhan);
     cy.get('#mui-3').type('$Say1013!{enter}');
     cy.writelog('로그인 성공')
