@@ -1,6 +1,7 @@
 describe('TNP', () => {
   /* ==== Test Created with Cypress Studio ==== */
   before(() => {
+    
     // 새로운 로그 파일 생성
     cy.task('generateLogFileName').then((fileName) => {
       Cypress.env('currentLogFile', fileName);
@@ -15,8 +16,8 @@ describe('TNP', () => {
     //로그인
 
     cy.visit('https://console.doverunner.com/login?redirect=https%3A%2F%2Fcontentsecurity.doverunner.com%2F%23ko');
-    cy.get('#\\:R2pkverq5lb\\:').type('cnsrms103@gmail.com');
-    cy.get('#\\:R39kverq5lb\\:').type('Say1013!{enter}');
+    cy.get('#\\:r0\\:').type('cnsrms103@gmail.com');
+    cy.get('#\\:r1\\:').type('Say1013!{enter}');
     cy.writelog('로그인 성공')
 
     //TNP 진입
@@ -68,9 +69,9 @@ describe('TNP', () => {
 
     //트랜스코딩 설정
     cy.get(':nth-child(2) > .align-left > .x-icon > .svg-inline--fa').click();
-    cy.get(':nth-child(2) > .align-left > .x-icon > .svg-inline--fa').click();
-    cy.get(':nth-child(2) > .align-left > .x-icon > .svg-inline--fa').click();
-    cy.get(':nth-child(2) > .align-left > .x-icon > .svg-inline--fa').click();
+    //cy.get(':nth-child(2) > .align-left > .x-icon > .svg-inline--fa').click();
+    //cy.get(':nth-child(2) > .align-left > .x-icon > .svg-inline--fa').click();
+    //cy.get(':nth-child(2) > .align-left > .x-icon > .svg-inline--fa').click();
     cy.writelog('1개의 해상도만 설정 성공')
 
     cy.get('.align-right > .outlined_btn').click();
