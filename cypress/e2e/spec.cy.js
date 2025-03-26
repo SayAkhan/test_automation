@@ -14,18 +14,31 @@ describe('TNP', () => {
 
   it('작업생성', function() {
     cy.writelog('Test Start')
-    //해상도 설정
     cy.viewport(1280,720);
 
-    //로그인
+    // 로그인 및 검증
     cy.visit('https://console.doverunner.com/login?redirect=https%3A%2F%2Fcontentsecurity.doverunner.com%2F%23ko');
-    cy.get('#\\:r0\\:').should('be.visible').type('cnsrms103@gmail.com');
-    cy.get('#\\:r1\\:').should('be.visible').type('Say1013!{enter}');
-    cy.writelog('로그인 성공')
+    
+    cy.get('#\\:r0\\:', { failOnStatusCode: false })
+      .should('be.visible')
+      .type('cnsrms103@gmail.com')
+      .should('have.value', 'cnsrms103@gmail.com'); // 입력값 검증
 
-    //TNP 진입
-    cy.get('.side-bar-main > :nth-child(1) > :nth-child(2)').should('be.visible').click();
-    cy.writelog('TNP 진입 성공')
+    cy.get('#\\:r1\\:', { failOnStatusCode: false })
+      .should('be.visible')
+      .type('Say1013!{enter}');
+      
+    // 로그인 성공 검증
+    cy.url().should('include', 'contentsecurity.doverunner.com');
+    cy.writelog('로그인 성공');
+
+    // TNP 진입 및 검증
+    cy.get('.side-bar-main > :nth-child(1) > :nth-child(2)')
+      .should('be.visible')
+      .click();
+    
+    cy.url().should('include', 'tnp'); // TNP 페이지 URL 검증
+    cy.writelog('TNP 진입 성공');
 
     //작업생성
     cy.get('.sidebar-submenu > :nth-child(5)').should('be.visible').click();
@@ -85,8 +98,18 @@ describe('TNP', () => {
     cy.writelog('작업생성 페이지 진입 성공')
     cy.get(':nth-child(4) > .primary_btn').click();
     cy.get('#alert_btn').click();
+    
+    // 작업 생성 성공 검증
 
-    cy.writelog('작업생성 성공')
-   
+    cy.writelog('작업생성 성공');
+  });
+
+  // 전체 테스트에 대한 에러 처리
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      // 스크린샷 저장
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
   });
 })
