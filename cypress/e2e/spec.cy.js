@@ -25,8 +25,7 @@ describe('TNP', () => {
       .should('have.value', 'cnsrms103@gmail.com'); // 입력값 검증
 
     cy.get('#\\:r1\\:', { failOnStatusCode: false })
-      .should('be.visible')
-      .type('Say1013!{enter}');
+      .should('be.visible').type('Say1013!{enter}');
       
     // 로그인 성공 검증
     cy.url().should('include', 'contentsecurity.doverunner.com');
@@ -34,8 +33,7 @@ describe('TNP', () => {
 
     // TNP 진입 및 검증
     cy.get('.side-bar-main > :nth-child(1) > :nth-child(2)')
-      .should('be.visible')
-      .click();
+      .should('be.visible').click();
     
     cy.url().should('include', 'tnp'); // TNP 페이지 URL 검증
     cy.writelog('TNP 진입 성공');
