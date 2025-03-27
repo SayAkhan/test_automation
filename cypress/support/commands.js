@@ -37,12 +37,12 @@
   const minutes = String(now.getMinutes()).padStart(2, '0');
   const seconds = String(now.getSeconds()).padStart(2, '0');
   
-  const formattedDate = `${year}-${month}-${day}_${hours}-${minutes}-${seconds}`;
+  const formattedDate = `${year}-${month}-${day}T${hours}_${minutes}_${seconds}`;
   logFileName = `./cypress/logs/cypress_log_${formattedDate}.txt`;
 
   // log 기록 함수 - 시간 포맷 동일하게 변경
   Cypress.Commands.add('writelog', (message) => {
-    // 로그 메시지의 시간도 동일한 YYYY-MM-dd_hh-mm-ss 형식으로 변경
+    // 로그 메시지의 시간도 동일한 YYYY-MM-dd_hh:mm:ss 형식으로 변경
     const currentTime = new Date();
     const logYear = currentTime.getFullYear();
     const logMonth = String(currentTime.getMonth() + 1).padStart(2, '0');
@@ -51,7 +51,7 @@
     const logMinutes = String(currentTime.getMinutes()).padStart(2, '0');
     const logSeconds = String(currentTime.getSeconds()).padStart(2, '0');
     
-    const logTimeFormat = `${logYear}-${logMonth}-${logDay}_${logHours}-${logMinutes}-${logSeconds}`;
+    const logTimeFormat = `${logYear}-${logMonth}-${logDay}_${logHours}:${logMinutes}:${logSeconds}`;
     cy.writeFile(logFileName, `${logTimeFormat} ${message}\n`, { flag: 'a+' });
   });
 
