@@ -1,4 +1,4 @@
-describe('TNP', () => {
+describe('FWM_H264_H264_UHD_FHD_HD_CMAF', () => {
   /* ==== Test Created with Cypress Studio ==== */
   before(() => {
     // 새로운 로그 파일 생성
@@ -17,89 +17,142 @@ describe('TNP', () => {
     cy.viewport(1280,720);
 
     // 로그인 및 검증
-    cy.visit('https://console.doverunner.com/login?redirect=https%3A%2F%2Fcontentsecurity.doverunner.com%2F%23ko');
-    
-    cy.get('#\\:r0\\:', { failOnStatusCode: false })
-      .should('be.visible')
-      .type('cnsrms103@gmail.com')
-      .should('have.value', 'cnsrms103@gmail.com'); // 입력값 검증
-
-    cy.get('#\\:r1\\:', { failOnStatusCode: false })
-      .should('be.visible').type('Say1013!{enter}');
-      
-    // 로그인 성공 검증
-    cy.url().should('include', 'contentsecurity.doverunner.com');
-    cy.writelog('로그인 성공');
+    cy.retryOperation(() => {
+      return cy.then(() => {
+        cy.login('cnsrms103@gmail.com', 'Say1013!');
+      });
+    }, '로그인');
 
     // TNP 진입 및 검증
-    cy.get('.side-bar-main > :nth-child(1) > :nth-child(2)')
-      .should('be.visible').click();
+    cy.retryOperation(() => {
+      return cy.then(() => {
+        cy.get('.side-bar-main > :nth-child(1) > :nth-child(2)')
+          .should('be.visible')
+          .click();
+        cy.url().should('include', 'tnp');
+        cy.get('body').should('be.visible');
+        cy.writelog('TNP 진입 성공');
+      });
+    }, 'TNP 진입');
+
+    // 작업생성 페이지 진입
+    cy.retryOperation(() => {
+      return cy.then(() => {
+        cy.get('.sidebar-submenu > :nth-child(5)')
+          .should('be.visible')
+          .click();
+        cy.get('body').should('be.visible');
+        cy.writelog('작업생성 페이지 진입 성공');
+      });
+    }, '작업생성 페이지 진입');
+
+    // FWM 선택 및 설정
+    cy.retryOperation(() => {
+      return cy.then(() => {
+        cy.get('#container').click();
+        cy.get('body').should('be.visible');
+        cy.get(':nth-child(3) > td > label > h3').click();
+        cy.writelog('fwm 선택');
+      });
+    }, 'FWM 선택');
+
+    // 작업 정보 입력
+    cy.retryOperation(() => {
+      return cy.then(() => {
+        cy.get('.align-right > .outlined_btn').click();
+        cy.get('body').should('be.visible');
+        cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) > input')
+          .clear()
+          .type('fwm_h264_h264_UHD_FHD_HD_CMAF')
+          .should('have.value', 'fwm_h264_h264_UHD_FHD_HD_CMAF');
+        cy.writelog('작업명 입력');
+      });
+    }, '작업 정보 입력');
+
+    // 나머지 입력 필드 설정
+    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input').type('test');
+    cy.writelog('cid 입력');
+    cy.get(':nth-child(4) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3 > .css-1wa3eu0-placeholder').click();
+    cy.get('#react-select-3-option-0').click();
+    cy.writelog('입력 스토리지 선택');
+
+    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(5) > :nth-child(2) > input').type('test/7min_sdr.mp4');
+    cy.writelog('원본 파일 경로 입력');
+
+    cy.get(':nth-child(8) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3').click();
+    cy.get('#react-select-4-option-0').click();
+    cy.writelog('출력 스토리지 선택');
+
+    cy.get(':nth-child(9) > :nth-child(2) > .width325').click();
+    cy.get(':nth-child(9) > :nth-child(2) > .width325').type('fwm_h264_h264_UHD_FHD_HD_CMAF');
+    cy.writelog('출력 경로 입력');
+
+    // 비디오 설정 페이지 진입
+    cy.retryOperation(() => {
+      return cy.then(() => {
+        cy.get('.align-right > .outlined_btn').click();
+        cy.get('body').should('be.visible');
+        cy.writelog('비디오 설정으로 이동');
+      });
+    }, '비디오 설정 페이지 진입');
+
+    // 스트리밍 포맷 설정
+    cy.get(':nth-child(2) > :nth-child(1) > label').click();
+    cy.get(':nth-child(2) > label').click();
+    cy.get(':nth-child(3) > label').click();
+    cy.writelog('스트리밍 포멧 : CMAF 선택');
+
+    // 비디오 설정 초기화 및 해상도 설정
+    cy.get(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa').click();
+    cy.get(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa').click();
+    cy.get(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa').click();
+    cy.get(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa').click();
+    cy.get(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa').click();
+    cy.writelog('출력 비디오 설정 초기화');
     
-    cy.url().should('include', 'tnp'); // TNP 페이지 URL 검증
-    cy.writelog('TNP 진입 성공');
+    // UHD 설정
+    cy.get('.messageTable > :nth-child(2) > :nth-child(2)').click();
+    cy.get('tbody > :nth-child(2) > :nth-child(3) > input').clear().type('2160');
+    cy.get(':nth-child(5) > table > tbody > :nth-child(2) > td > input').clear().type('8000');
+    cy.get('.floatRight').click();
+    cy.writelog('UHD 추가');
 
-    //작업생성
-    cy.get('.sidebar-submenu > :nth-child(5)').should('be.visible').click();
-    cy.writelog('작업생성 페이지 진입 성공')
+    // FHD 설정
+    cy.get('.messageTable > :nth-child(2) > :nth-child(2)').click();
+    cy.get('tbody > :nth-child(2) > :nth-child(3) > input').clear().type('1080');
+    cy.get(':nth-child(5) > table > tbody > :nth-child(2) > td > input').clear().type('8000');
+    cy.get('.floatRight').click();
+    cy.writelog('FHD 추가');
 
-    //fwm 선택
-    cy.get(':nth-child(3) > td > label > .radiobtn').should('be.visible').click();
-    cy.get('.align-right > .outlined_btn').should('be.visible').click();
-    cy.writelog('fwm 선택 성공')
+    // HD 설정
+    cy.get('.messageTable > :nth-child(2) > :nth-child(2)').click();
+    cy.get('tbody > :nth-child(2) > :nth-child(3) > input').clear().type('720');
+    cy.get(':nth-child(5) > table > tbody > :nth-child(2) > td > input').clear().type('8000');
+    cy.get('.floatRight').click();
+    cy.writelog('HD 추가');
 
-    //입출력 설정
-    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) > input').should('be.visible').type('Cypress_test');
-    cy.writelog('작업명 입력 성공')
+    // 오디오/자막 설정 페이지 진입
+    cy.retryOperation(() => {
+      return cy.then(() => {
+        cy.get('.align-right > .outlined_btn').click();
+        cy.get('body').should('be.visible');
+        cy.writelog('오디오 / 자막 설정으로 이동');
+      });
+    }, '오디오/자막 설정 페이지 진입');
 
-    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input').should('be.visible').type('test');
-    cy.writelog('cid 입력 성공')
+    // 작업 동작 페이지 진입
+    cy.retryOperation(() => {
+      return cy.then(() => {
+        cy.get('.align-right > .outlined_btn').click();
+        cy.get('body').should('be.visible');
+        cy.writelog('작업 동작으로 이동');
+      });
+    }, '작업 동작 페이지 진입');
 
-    cy.get(':nth-child(4) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1wy0on6 > .css-tlfecz-indicatorContainer').should('be.visible').click();
-    cy.get('#react-select-3-option-0').should('be.visible').click();
-    cy.writelog('입력 스토리지 지정 성공')
-
-    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(5) > :nth-child(2) > input').should('be.visible').clear();
-    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(5) > :nth-child(2) > input').should('be.visible').type('test/7min.mp4');
-    cy.writelog('파일 지정 성공')
-
-    cy.get(':nth-child(8) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3').should('be.visible').click();
-    cy.get('#react-select-4-option-0').should('be.visible').click();
-    cy.writelog('저장 스토리지 지정 성공')
-
-    cy.get(':nth-child(9) > :nth-child(2) > .width325').should('be.visible').type('cypress_test');
-    cy.writelog('저장 폴더명 지정 성공')
-
-    cy.get('.align-right > .outlined_btn').should('be.visible').click();
-
-    //스트리밍 포맷 설정
-    cy.writelog('스트리밍 포멧 설정 페이지 진입 성공')
-    cy.get(':nth-child(2) > label > .checkbtn').should('be.visible').click();
-    cy.writelog('hls 체크 해제 성공')
-
-    //트랜스코딩 설정
-    cy.get(':nth-child(2) > .align-left > .x-icon > .svg-inline--fa').should('be.visible').click();
-    // 주석 처리된 코드는 필요한 경우에만 활성화할 것
-    // 다중 해상도 삭제 시 필요한 코드
-    // cy.get(':nth-child(2) > .align-left > .x-icon > .svg-inline--fa').should('be.visible').click();
-    // cy.get(':nth-child(2) > .align-left > .x-icon > .svg-inline--fa').should('be.visible').click();
-    // cy.get(':nth-child(2) > .align-left > .x-icon > .svg-inline--fa').should('be.visible').click();
-    cy.writelog('1개의 해상도만 설정 성공')
-
-    cy.get('.align-right > .outlined_btn').should('be.visible').click();
-
-     //오디오 및 자막 설정
-    cy.writelog('오디오 및 자막설정 페이지 진입 성공')
-    cy.get('.align-right > .outlined_btn').should('be.visible').click();
-    cy.writelog('오디오 및 자막설정 페이지 설정 성공')
-
-    //작업 생성
-    cy.writelog('작업생성 페이지 진입 성공')
+    // 작업 생성 완료
     cy.get(':nth-child(4) > .primary_btn').click();
     cy.get('#alert_btn').click();
-    
-    // 작업 생성 성공 검증
-
-    cy.writelog('작업생성 성공');
+    cy.writelog('작업 생성 완료');
   });
 
   // 전체 테스트에 대한 에러 처리
