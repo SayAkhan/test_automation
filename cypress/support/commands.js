@@ -42,7 +42,7 @@
 
   // log 기록 함수 - 시간 포맷 동일하게 변경
   Cypress.Commands.add('writelog', (message) => {
-    // 로그 메시지의 시간도 동일한 YYYY-MM-dd_hh:mm:ss 형식으로 변경
+    // 로그 메시지의 시간도 동일한 YYYY-MM-ddThh:mm:ss 형식으로 변경
     const currentTime = new Date();
     const logYear = currentTime.getFullYear();
     const logMonth = String(currentTime.getMonth() + 1).padStart(2, '0');
@@ -63,3 +63,59 @@
 //     cy.get('#mui-3').type(`${password}{enter}`, { log: false });
 //   });
 // });
+
+// 로그인 함수 추가
+Cypress.Commands.add('login', (email, password) => {
+  cy.visit('https://console.doverunner.com/login?redirect=https%3A%2F%2Fcontentsecurity.doverunner.com%2F%23ko');
+  
+  // 페이지 로딩 완료 검증
+  cy.get('body').should('be.visible');
+  cy.get('#\\:r0\\:', { failOnStatusCode: false })
+    .should('be.visible')
+    .type(email)
+    .should('have.value', email);
+
+  cy.get('#\\:r1\\:', { failOnStatusCode: false })
+    .should('be.visible')
+    .type(`${password}{enter}`);
+    
+  // 로그인 성공 검증
+  cy.url().should('include', 'contentsecurity.doverunner.com');
+  cy.get('body').should('be.visible');
+  cy.writelog('로그인 성공');
+});
+
+// 재시도 로직을 위한 커스텀 명령어
+Cypress.Commands.add('retryOperation', (operationFn, operationName, maxRetries = 3) => {
+  let retryCount = 0;
+
+  function attempt() {
+    return cy.then(() => {
+      try {
+        return operationFn();
+      } catch (error) {
+        retryCount++;
+        cy.writelog(`[재시도 ${retryCount}/${maxRetries}] ${operationName} 실패: ${error.message}`);
+        cy.screenshot(`재시도_${operationName}_${retryCount}회차_실패`);
+        
+        if (retryCount >= maxRetries) {
+          cy.writelog(`[최종 실패] ${operationName} - 최대 재시도 횟수(${maxRetries}회) 초과`);
+          cy.screenshot(`최종실패_${operationName}`);
+          throw error;
+        }
+        
+        cy.wait(2000);
+        return attempt();
+      }
+    }).then(() => {
+      if (retryCount > 0) {
+        cy.writelog(`[재시도 성공] ${operationName} - ${retryCount + 1}번째 시도에서 성공`);
+        cy.screenshot(`재시도_${operationName}_${retryCount + 1}회차_성공`);
+      } else {
+        cy.writelog(`[성공] ${operationName}`);
+      }
+    });
+  }
+
+  return attempt();
+});
