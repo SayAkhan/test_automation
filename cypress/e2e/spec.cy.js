@@ -59,82 +59,151 @@ describe('FWM_H264_H264_UHD_FHD_HD_CMAF', () => {
     // 작업 정보 입력
     cy.retryOperation(() => {
       return cy.then(() => {
-        cy.get('.align-right > .outlined_btn').click();
+        cy.get('.align-right > .outlined_btn')
+          .should('be.visible')
+          .should('not.be.disabled')
+          .click();
         cy.get('body').should('be.visible');
-        cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) > input')
-          .clear()
-          .type('fwm_h264_h264_UHD_FHD_HD_CMAF')
-          .should('have.value', 'fwm_h264_h264_UHD_FHD_HD_CMAF');
-        cy.writelog('작업명 입력');
+        
+        // 입력 필드 찾기 및 입력
+        return cy.retryOperation(() => {
+          return cy.then(() => {
+            const inputSelector = ':nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) > input';
+            const expectedValue = 'fwm_h264_h264_UHD_FHD_HD_CMAF';
+            
+            cy.get(inputSelector)
+              .clear()
+              .wait(500)
+              .type(expectedValue)
+              .wait(500)
+              .should('have.value', expectedValue);
+          });
+        }, '작업명 입력 및 검증');
+        
+        cy.writelog('작업명 입력 완료');
       });
     }, '작업 정보 입력');
 
     // 나머지 입력 필드 설정
-    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input').type('test');
-    cy.writelog('cid 입력');
-    cy.get(':nth-child(4) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3 > .css-1wa3eu0-placeholder').click();
-    cy.get('#react-select-3-option-0').click();
-    cy.writelog('입력 스토리지 선택');
+    cy.retryOperation(() => {
+      return cy.then(() => {
+        cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input')
+          .type('test');
+        cy.writelog('cid 입력');
+      });
+    }, 'CID 입력');
 
-    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(5) > :nth-child(2) > input').type('test/7min_sdr.mp4');
-    cy.writelog('원본 파일 경로 입력');
+    cy.retryOperation(() => {
+      return cy.then(() => {
+        cy.get(':nth-child(4) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3 > .css-1wa3eu0-placeholder')
+          .click();
+        cy.get('#react-select-3-option-0')
+          .click();
+        cy.writelog('입력 스토리지 선택');
+      });
+    }, '입력 스토리지 선택');
 
-    cy.get(':nth-child(8) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3').click();
-    cy.get('#react-select-4-option-0').click();
-    cy.writelog('출력 스토리지 선택');
+    cy.retryOperation(() => {
+      return cy.then(() => {
+        cy.get(':nth-child(1) > :nth-child(2) > :nth-child(5) > :nth-child(2) > input')
+          .type('test/7min_sdr.mp4');
+        cy.writelog('원본 파일 경로 입력');
+      });
+    }, '원본 파일 경로 입력');
 
-    cy.get(':nth-child(9) > :nth-child(2) > .width325').click();
-    cy.get(':nth-child(9) > :nth-child(2) > .width325').type('fwm_h264_h264_UHD_FHD_HD_CMAF');
-    cy.writelog('출력 경로 입력');
+    cy.retryOperation(() => {
+      return cy.then(() => {
+        cy.get(':nth-child(8) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3')
+          .click();
+        cy.get('#react-select-4-option-0')
+          .click();
+        cy.writelog('출력 스토리지 선택');
+      });
+    }, '출력 스토리지 선택');
+
+    cy.retryOperation(() => {
+      return cy.then(() => {
+        cy.get(':nth-child(9) > :nth-child(2) > .width325')
+          .click()
+          .type('fwm_h264_h264_UHD_FHD_HD_CMAF');
+        cy.writelog('출력 경로 입력');
+      });
+    }, '출력 경로 입력');
 
     // 비디오 설정 페이지 진입
     cy.retryOperation(() => {
       return cy.then(() => {
-        cy.get('.align-right > .outlined_btn').click();
+        cy.get('.align-right > .outlined_btn')
+          .should('be.visible')
+          .should('not.be.disabled')
+          .click();
         cy.get('body').should('be.visible');
         cy.writelog('비디오 설정으로 이동');
       });
     }, '비디오 설정 페이지 진입');
 
     // 스트리밍 포맷 설정
-    cy.get(':nth-child(2) > :nth-child(1) > label').click();
-    cy.get(':nth-child(2) > label').click();
-    cy.get(':nth-child(3) > label').click();
-    cy.writelog('스트리밍 포멧 : CMAF 선택');
+    cy.retryOperation(() => {
+      return cy.then(() => {
+        cy.get(':nth-child(2) > :nth-child(1) > label').click();
+        cy.get(':nth-child(2) > label').click();
+        cy.get(':nth-child(3) > label').click();
+        cy.writelog('스트리밍 포멧 : CMAF 선택');
+      });
+    }, '스트리밍 포맷 설정');
 
     // 비디오 설정 초기화 및 해상도 설정
-    cy.get(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa').click();
-    cy.get(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa').click();
-    cy.get(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa').click();
-    cy.get(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa').click();
-    cy.get(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa').click();
-    cy.writelog('출력 비디오 설정 초기화');
+    cy.retryOperation(() => {
+      return cy.then(() => {
+        cy.get(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa').click();
+        cy.get(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa').click();
+        cy.get(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa').click();
+        cy.get(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa').click();
+        cy.get(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa').click();
+        cy.writelog('출력 비디오 설정 초기화');
+      });
+    }, '비디오 설정 초기화');
     
     // UHD 설정
-    cy.get('.messageTable > :nth-child(2) > :nth-child(2)').click();
-    cy.get('tbody > :nth-child(2) > :nth-child(3) > input').clear().type('2160');
-    cy.get(':nth-child(5) > table > tbody > :nth-child(2) > td > input').clear().type('8000');
-    cy.get('.floatRight').click();
-    cy.writelog('UHD 추가');
+    cy.retryOperation(() => {
+      return cy.then(() => {
+        cy.get('.messageTable > :nth-child(2) > :nth-child(2)').click();
+        cy.get('tbody > :nth-child(2) > :nth-child(3) > input').clear().type('2160');
+        cy.get(':nth-child(5) > table > tbody > :nth-child(2) > td > input').clear().type('3000');
+        cy.get('.floatRight').click();
+        cy.writelog('UHD 추가');
+      });
+    }, 'UHD 설정');
 
     // FHD 설정
-    cy.get('.messageTable > :nth-child(2) > :nth-child(2)').click();
-    cy.get('tbody > :nth-child(2) > :nth-child(3) > input').clear().type('1080');
-    cy.get(':nth-child(5) > table > tbody > :nth-child(2) > td > input').clear().type('8000');
-    cy.get('.floatRight').click();
-    cy.writelog('FHD 추가');
+    cy.retryOperation(() => {
+      return cy.then(() => {
+        cy.get('.messageTable > :nth-child(2) > :nth-child(2)').click();
+        cy.get('tbody > :nth-child(2) > :nth-child(3) > input').clear().type('1080');
+        cy.get(':nth-child(5) > table > tbody > :nth-child(2) > td > input').clear().type('3000');
+        cy.get('.floatRight').click();
+        cy.writelog('FHD 추가');
+      });
+    }, 'FHD 설정');
 
     // HD 설정
-    cy.get('.messageTable > :nth-child(2) > :nth-child(2)').click();
-    cy.get('tbody > :nth-child(2) > :nth-child(3) > input').clear().type('720');
-    cy.get(':nth-child(5) > table > tbody > :nth-child(2) > td > input').clear().type('8000');
-    cy.get('.floatRight').click();
-    cy.writelog('HD 추가');
+    cy.retryOperation(() => {
+      return cy.then(() => {
+        cy.get('.messageTable > :nth-child(2) > :nth-child(2)').click();
+        cy.get('tbody > :nth-child(2) > :nth-child(3) > input').clear().type('720');
+        cy.get(':nth-child(5) > table > tbody > :nth-child(2) > td > input').clear().type('3000');
+        cy.get('.floatRight').click();
+        cy.writelog('HD 추가');
+      });
+    }, 'HD 설정');
 
     // 오디오/자막 설정 페이지 진입
     cy.retryOperation(() => {
       return cy.then(() => {
-        cy.get('.align-right > .outlined_btn').click();
+        cy.get('.align-right > .outlined_btn')
+          .should('be.visible')
+          .should('not.be.disabled')
+          .click();
         cy.get('body').should('be.visible');
         cy.writelog('오디오 / 자막 설정으로 이동');
       });
@@ -143,16 +212,28 @@ describe('FWM_H264_H264_UHD_FHD_HD_CMAF', () => {
     // 작업 동작 페이지 진입
     cy.retryOperation(() => {
       return cy.then(() => {
-        cy.get('.align-right > .outlined_btn').click();
+        cy.get('.align-right > .outlined_btn')
+          .should('be.visible')
+          .should('not.be.disabled')
+          .click();
         cy.get('body').should('be.visible');
         cy.writelog('작업 동작으로 이동');
       });
     }, '작업 동작 페이지 진입');
 
     // 작업 생성 완료
-    cy.get(':nth-child(4) > .primary_btn').click();
-    cy.get('#alert_btn').click();
-    cy.writelog('작업 생성 완료');
+    cy.retryOperation(() => {
+      return cy.then(() => {
+        cy.get(':nth-child(4) > .primary_btn')
+          .should('be.visible')
+          .should('not.be.disabled')
+          .click();
+        cy.get('#alert_btn')
+          .should('be.visible')
+          .click();
+        cy.writelog('작업 생성 완료');
+      });
+    }, '작업 생성 완료');
   });
 
   // 전체 테스트에 대한 에러 처리
