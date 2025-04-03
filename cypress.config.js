@@ -1,6 +1,7 @@
 module.exports ={
   e2e: {
     experimentalStudio: true,
+    watchForFileChanges: false,
     setupNodeEvents(on, config) {
       on('task', {
         generateLogFileName() {
