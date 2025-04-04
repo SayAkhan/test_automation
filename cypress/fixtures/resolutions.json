@@ -1,0 +1,87 @@
+{
+  "UHD_FHD_HD": {
+    "name": "UHD_FHD_HD",
+    "resolutions": [
+      {
+        "height": "2160",
+        "bitrate": "3000",
+        "name": "UHD"
+      },
+      {
+        "height": "1080",
+        "bitrate": "3000",
+        "name": "FHD"
+      },
+      {
+        "height": "720",
+        "bitrate": "3000",
+        "name": "HD"
+      }
+    ]
+  },
+  "FHD_FHD_HD_SD_SD": {
+    "name": "FHD_FHD_HD_SD_SD",
+    "resolutions": [
+      {
+        "height": "1080",
+        "bitrate": "3000",
+        "name": "FHD"
+      },
+      {
+        "height": "1080",
+        "bitrate": "3000",
+        "name": "FHD"
+      },
+      {
+        "height": "720",
+        "bitrate": "3000",
+        "name": "HD"
+      },
+      {
+        "height": "480",
+        "bitrate": "3000",
+        "name": "SD"
+      },
+      {
+        "height": "480",
+        "bitrate": "3000",
+        "name": "SD"
+      }
+    ]
+  },
+  "UHD_FHD_FHD_HD_HD_SD": {
+    "name": "UHD_FHD_FHD_HD_HD_SD",
+    "resolutions": [
+      {
+        "height": "2160",
+        "bitrate": "3000",
+        "name": "UHD"
+      },
+      {
+        "height": "1080",
+        "bitrate": "3000",
+        "name": "FHD"
+      },
+      {
+        "height": "1080",
+        "bitrate": "3000",
+        "name": "FHD"
+      },
+      {
+        "height": "720",
+        "bitrate": "3000",
+        "name": "HD"
+      },
+      {
+        "height": "720",
+        "bitrate": "3000",
+        "name": "HD"
+      },
+      {
+        "height": "480",
+        "bitrate": "3000",
+        "name": "SD"
+      }
+    ]
+  }
+} 
