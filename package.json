@@ -1,0 +1,11 @@
+{
+  "name": "test-automation",
+  "version": "1.0.0",
+  "description": "Test automation project",
+  "scripts": {
+    "generate-tests": "node cypress/e2e/generate_tests.js"
+  },
+  "dependencies": {
+    "cypress": "^13.6.0"
+  }
+} 
