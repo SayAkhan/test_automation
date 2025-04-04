@@ -1,30 +1,23 @@
-before(() => {
-  // 새로운 로그 파일 생성
-  cy.task('generateLogFileName').then((fileName) => {
-    Cypress.env('currentLogFile', fileName);
-  });
-  //테스트 시작 로그 기록
-  cy.writelog('Test Start');
-});
 
-after(() => {
-  // 테스트 종료 후 로그 마무리
-  cy.writelog('Test End');
+// 자동 생성된 테스트 파일
+before(function() {
+  cy.task('generateLogFileName');
 });
 
 
-describe('fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
-  it('fwm_h264_h264_uhd_fhd_hd_cmaf 작업생성', function() {
+describe('1_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
+  it('1_fwm_h264_h264_uhd_fhd_hd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h264_h264_uhd_fhd_hd_cmaf',
+      taskName: '1_fwm_h264_h264_uhd_fhd_hd_cmaf',
       cid: 'test',
       inputCodec: 'H264',
       resolutionProfile: 'UHD_FHD_HD',
       streamingFormat: 'CMAF',
-      outputCodec: 'H264'
+      outputCodec: 'H264',
+      type: 'FWM'
     });
   });
 
@@ -36,18 +29,20 @@ describe('fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
   });
 });
 
-describe('fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
-  it('fwm_h264_h264_uhd_fhd_hd_dash_hls 작업생성', function() {
+
+describe('2_fwm_h264_h264_uhd_fhd_hd_dash+hls', () => {
+  it('2_fwm_h264_h264_uhd_fhd_hd_dash+hls 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h264_h264_uhd_fhd_hd_dash_hls',
+      taskName: '2_fwm_h264_h264_uhd_fhd_hd_dash+hls',
       cid: 'test',
       inputCodec: 'H264',
       resolutionProfile: 'UHD_FHD_HD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264'
+      streamingFormat: 'DASH+HLS',
+      outputCodec: 'H264',
+      type: 'FWM'
     });
   });
 
@@ -59,18 +54,20 @@ describe('fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
   });
 });
 
-describe('fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
-  it('fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf 작업생성', function() {
+
+describe('3_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
+  it('3_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf',
+      taskName: '3_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf',
       cid: 'test',
       inputCodec: 'H264',
       resolutionProfile: 'FHD_FHD_HD_SD_SD',
       streamingFormat: 'CMAF',
-      outputCodec: 'H264'
+      outputCodec: 'H264',
+      type: 'FWM'
     });
   });
 
@@ -82,18 +79,20 @@ describe('fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
   });
 });
 
-describe('fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
-  it('fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls 작업생성', function() {
+
+describe('4_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash+hls', () => {
+  it('4_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash+hls 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls',
+      taskName: '4_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash+hls',
       cid: 'test',
       inputCodec: 'H264',
       resolutionProfile: 'FHD_FHD_HD_SD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264'
+      streamingFormat: 'DASH+HLS',
+      outputCodec: 'H264',
+      type: 'FWM'
     });
   });
 
@@ -105,18 +104,20 @@ describe('fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
   });
 });
 
-describe('fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
-  it('fwm_h265_h264_uhd_fhd_hd_cmaf 작업생성', function() {
+
+describe('5_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
+  it('5_fwm_h265_h264_uhd_fhd_hd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h265_h264_uhd_fhd_hd_cmaf',
+      taskName: '5_fwm_h265_h264_uhd_fhd_hd_cmaf',
       cid: 'test',
       inputCodec: 'H265',
       resolutionProfile: 'UHD_FHD_HD',
       streamingFormat: 'CMAF',
-      outputCodec: 'H264'
+      outputCodec: 'H264',
+      type: 'FWM'
     });
   });
 
@@ -128,18 +129,20 @@ describe('fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
   });
 });
 
-describe('fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
-  it('fwm_h265_h264_uhd_fhd_hd_dash_hls 작업생성', function() {
+
+describe('6_fwm_h265_h264_uhd_fhd_hd_dash+hls', () => {
+  it('6_fwm_h265_h264_uhd_fhd_hd_dash+hls 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h265_h264_uhd_fhd_hd_dash_hls',
+      taskName: '6_fwm_h265_h264_uhd_fhd_hd_dash+hls',
       cid: 'test',
       inputCodec: 'H265',
       resolutionProfile: 'UHD_FHD_HD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264'
+      streamingFormat: 'DASH+HLS',
+      outputCodec: 'H264',
+      type: 'FWM'
     });
   });
 
@@ -151,18 +154,20 @@ describe('fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
   });
 });
 
-describe('fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
-  it('fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf 작업생성', function() {
+
+describe('7_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
+  it('7_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf',
+      taskName: '7_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf',
       cid: 'test',
       inputCodec: 'H265',
       resolutionProfile: 'FHD_FHD_HD_SD_SD',
       streamingFormat: 'CMAF',
-      outputCodec: 'H264'
+      outputCodec: 'H264',
+      type: 'FWM'
     });
   });
 
@@ -174,18 +179,20 @@ describe('fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
   });
 });
 
-describe('fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
-  it('fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls 작업생성', function() {
+
+describe('8_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash+hls', () => {
+  it('8_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash+hls 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls',
+      taskName: '8_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash+hls',
       cid: 'test',
       inputCodec: 'H265',
       resolutionProfile: 'FHD_FHD_HD_SD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264'
+      streamingFormat: 'DASH+HLS',
+      outputCodec: 'H264',
+      type: 'FWM'
     });
   });
 
@@ -197,18 +204,20 @@ describe('fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
   });
 });
 
-describe('fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
-  it('fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+
+describe('9_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
+  it('9_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h264_h265_uhd_fhd_hd_cmaf',
+      taskName: '9_fwm_h264_h265_uhd_fhd_hd_cmaf',
       cid: 'test',
       inputCodec: 'H264',
       resolutionProfile: 'UHD_FHD_HD',
       streamingFormat: 'CMAF',
-      outputCodec: 'H265'
+      outputCodec: 'H265',
+      type: 'FWM'
     });
   });
 
@@ -220,18 +229,20 @@ describe('fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
   });
 });
 
-describe('fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
-  it('fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+
+describe('10_fwm_h264_h265_uhd_fhd_hd_dash+hls', () => {
+  it('10_fwm_h264_h265_uhd_fhd_hd_dash+hls 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h264_h265_uhd_fhd_hd_dash_hls',
+      taskName: '10_fwm_h264_h265_uhd_fhd_hd_dash+hls',
       cid: 'test',
       inputCodec: 'H264',
       resolutionProfile: 'UHD_FHD_HD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H265'
+      streamingFormat: 'DASH+HLS',
+      outputCodec: 'H265',
+      type: 'FWM'
     });
   });
 
@@ -243,18 +254,20 @@ describe('fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
   });
 });
 
-describe('fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
-  it('fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+
+describe('11_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
+  it('11_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h265_h265_uhd_fhd_hd_cmaf',
+      taskName: '11_fwm_h265_h265_uhd_fhd_hd_cmaf',
       cid: 'test',
       inputCodec: 'H265',
       resolutionProfile: 'UHD_FHD_HD',
       streamingFormat: 'CMAF',
-      outputCodec: 'H265'
+      outputCodec: 'H265',
+      type: 'FWM'
     });
   });
 
@@ -266,18 +279,20 @@ describe('fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
   });
 });
 
-describe('fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
-  it('fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+
+describe('12_fwm_h265_h265_uhd_fhd_hd_dash+hls', () => {
+  it('12_fwm_h265_h265_uhd_fhd_hd_dash+hls 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h265_h265_uhd_fhd_hd_dash_hls',
+      taskName: '12_fwm_h265_h265_uhd_fhd_hd_dash+hls',
       cid: 'test',
       inputCodec: 'H265',
       resolutionProfile: 'UHD_FHD_HD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H265'
+      streamingFormat: 'DASH+HLS',
+      outputCodec: 'H265',
+      type: 'FWM'
     });
   });
 
@@ -289,18 +304,20 @@ describe('fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
   });
 });
 
-describe('fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
-  it('fwm_h264_h264_uhd_fhd_hd_cmaf 작업생성', function() {
+
+describe('13_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
+  it('13_fwm_h264_h264_uhd_fhd_hd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h264_h264_uhd_fhd_hd_cmaf',
+      taskName: '13_fwm_h264_h264_uhd_fhd_hd_cmaf',
       cid: 'test',
       inputCodec: 'H264',
       resolutionProfile: 'UHD_FHD_HD',
       streamingFormat: 'CMAF',
-      outputCodec: 'H264'
+      outputCodec: 'H264',
+      type: 'FWM'
     });
   });
 
@@ -312,18 +329,20 @@ describe('fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
   });
 });
 
-describe('fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
-  it('fwm_h264_h264_uhd_fhd_hd_dash_hls 작업생성', function() {
+
+describe('14_fwm_h264_h264_uhd_fhd_hd_dash+hls', () => {
+  it('14_fwm_h264_h264_uhd_fhd_hd_dash+hls 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h264_h264_uhd_fhd_hd_dash_hls',
+      taskName: '14_fwm_h264_h264_uhd_fhd_hd_dash+hls',
       cid: 'test',
       inputCodec: 'H264',
       resolutionProfile: 'UHD_FHD_HD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264'
+      streamingFormat: 'DASH+HLS',
+      outputCodec: 'H264',
+      type: 'FWM'
     });
   });
 
@@ -335,18 +354,20 @@ describe('fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
   });
 });
 
-describe('fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
-  it('fwm_h265_h264_uhd_fhd_hd_cmaf 작업생성', function() {
+
+describe('15_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
+  it('15_fwm_h265_h264_uhd_fhd_hd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h265_h264_uhd_fhd_hd_cmaf',
+      taskName: '15_fwm_h265_h264_uhd_fhd_hd_cmaf',
       cid: 'test',
       inputCodec: 'H265',
       resolutionProfile: 'UHD_FHD_HD',
       streamingFormat: 'CMAF',
-      outputCodec: 'H264'
+      outputCodec: 'H264',
+      type: 'FWM'
     });
   });
 
@@ -358,18 +379,20 @@ describe('fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
   });
 });
 
-describe('fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
-  it('fwm_h265_h264_uhd_fhd_hd_dash_hls 작업생성', function() {
+
+describe('16_fwm_h265_h264_uhd_fhd_hd_dash+hls', () => {
+  it('16_fwm_h265_h264_uhd_fhd_hd_dash+hls 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h265_h264_uhd_fhd_hd_dash_hls',
+      taskName: '16_fwm_h265_h264_uhd_fhd_hd_dash+hls',
       cid: 'test',
       inputCodec: 'H265',
       resolutionProfile: 'UHD_FHD_HD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264'
+      streamingFormat: 'DASH+HLS',
+      outputCodec: 'H264',
+      type: 'FWM'
     });
   });
 
@@ -381,18 +404,20 @@ describe('fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
   });
 });
 
-describe('fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
-  it('fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+
+describe('17_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
+  it('17_drm_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h264_h265_uhd_fhd_hd_cmaf',
+      taskName: '17_drm_fwm_h264_h265_uhd_fhd_hd_cmaf',
       cid: 'test',
       inputCodec: 'H264',
       resolutionProfile: 'UHD_FHD_HD',
       streamingFormat: 'CMAF',
-      outputCodec: 'H265'
+      outputCodec: 'H265',
+      type: 'DRM_FWM'
     });
   });
 
@@ -404,18 +429,20 @@ describe('fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
   });
 });
 
-describe('fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
-  it('fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+
+describe('18_drm_fwm_h264_h265_uhd_fhd_hd_dash+hls', () => {
+  it('18_drm_fwm_h264_h265_uhd_fhd_hd_dash+hls 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h264_h265_uhd_fhd_hd_dash_hls',
+      taskName: '18_drm_fwm_h264_h265_uhd_fhd_hd_dash+hls',
       cid: 'test',
       inputCodec: 'H264',
       resolutionProfile: 'UHD_FHD_HD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H265'
+      streamingFormat: 'DASH+HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM'
     });
   });
 
@@ -427,18 +454,20 @@ describe('fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
   });
 });
 
-describe('fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
-  it('fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+
+describe('19_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
+  it('19_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h265_h265_uhd_fhd_hd_cmaf',
+      taskName: '19_drm_fwm_h265_h265_uhd_fhd_hd_cmaf',
       cid: 'test',
       inputCodec: 'H265',
       resolutionProfile: 'UHD_FHD_HD',
       streamingFormat: 'CMAF',
-      outputCodec: 'H265'
+      outputCodec: 'H265',
+      type: 'DRM_FWM'
     });
   });
 
@@ -450,18 +479,20 @@ describe('fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
   });
 });
 
-describe('fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
-  it('fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+
+describe('20_drm_fwm_h265_h265_uhd_fhd_hd_dash+hls', () => {
+  it('20_drm_fwm_h265_h265_uhd_fhd_hd_dash+hls 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createFWMTask({
-      taskName: 'fwm_h265_h265_uhd_fhd_hd_dash_hls',
+      taskName: '20_drm_fwm_h265_h265_uhd_fhd_hd_dash+hls',
       cid: 'test',
       inputCodec: 'H265',
       resolutionProfile: 'UHD_FHD_HD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H265'
+      streamingFormat: 'DASH+HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM'
     });
   });
 
@@ -471,4 +502,9 @@ describe('fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
       cy.screenshot(`실패_${this.currentTest.title}`);
     }
   });
+});
+
+
+after(function() {
+  cy.task('combineLogs');
 });

@@ -1,106 +1,111 @@
 const fs = require('fs');
 const path = require('path');
 
-// fwm_combinations.txt 파일 경로 설정
-const combinationsFilePath = path.join(__dirname, 'fwm_combinations.txt');
-console.log('파일 경로:', combinationsFilePath);
+// 기본 조합 정의
+const defaultCombinations = [
+  // H264 조합 (8개)
+  'h264_h264_uhd_fhd_hd_cmaf',
+  'h264_h264_uhd_fhd_hd_dash',
+  'h264_h264_uhd_fhd_hd_hls',
+  'h264_h264_fhd_fhd_hd_sd_sd_cmaf',
+  'h264_h264_fhd_fhd_hd_sd_sd_dash',
+  'h264_h264_fhd_fhd_hd_sd_sd_hls',
+  'h265_h264_uhd_fhd_hd_cmaf',
+  'h265_h264_fhd_fhd_hd_sd_sd_cmaf',
+  
+  // H265 조합 (4개)
+  'h264_h265_uhd_fhd_hd_cmaf',
+  'h264_h265_uhd_fhd_hd_dash',
+  'h264_h265_uhd_fhd_hd_hls',
+  'h265_h265_uhd_fhd_hd_cmaf',
+  
+  // H264 조합 (4개)
+  'h264_h264_uhd_fhd_hd_cmaf',
+  'h264_h264_uhd_fhd_hd_dash',
+  'h264_h264_uhd_fhd_hd_hls',
+  'h264_h264_fhd_fhd_hd_sd_sd_cmaf'
+];
 
-// 파일이 없으면 생성
-if (!fs.existsSync(combinationsFilePath)) {
-  console.log('파일이 존재하지 않습니다. 기본 파일을 생성합니다.');
-  const defaultCombinations = `=== FWM H264 조합 ===
-총 조합 수: 8
+// fwm_combinations.txt 파일 경로
+const combinationsPath = path.join(__dirname, 'fwm_combinations.txt');
 
-조합 1: 추가완료
-작업타입: FWM
-입력파일: H264
-출력 코덱: H264
-해상도: UHD+FHD+HD
-스트리밍 포멧: CMAF
-
-조합 2: 추가 완료
-작업타입: FWM
-입력파일: H264
-출력 코덱: H264
-해상도: UHD+FHD+HD
-스트리밍 포멧: DASH+HLS`;
-
-  fs.writeFileSync(combinationsFilePath, defaultCombinations);
+// 파일이 없으면 기본 조합으로 생성
+if (!fs.existsSync(combinationsPath)) {
+  const fileContent = [
+    '# H264 조합',
+    ...defaultCombinations.slice(0, 6),
+    '',
+    '# H265 조합',
+    ...defaultCombinations.slice(6)
+  ].join('\n');
+  
+  fs.writeFileSync(combinationsPath, fileContent);
   console.log('기본 조합 파일이 생성되었습니다.');
 }
 
-// fwm_combinations.txt 파일 읽기
-const combinations = fs.readFileSync(combinationsFilePath, 'utf8');
-console.log('파일 내용:', combinations);
+// 파일 내용 읽기
+const fileContent = fs.readFileSync(combinationsPath, 'utf8');
+const lines = fileContent.split('\n');
 
-// 각 조합을 파싱하여 테스트 케이스 생성
-const lines = combinations.split('\n');
-console.log('분할된 줄 수:', lines.length);
+// 작업타입 파싱
+let currentType = 'FWM';
+let currentInputCodec = '';
+let currentOutputCodec = '';
+let currentResolution = '';
+let currentStreamingFormat = '';
 
-let currentCombination = null;
 const testCases = [];
 
-for (let i = 0; i < lines.length; i++) {
-  const line = lines[i].trim();
-  
-  // 새로운 조합 시작
-  if (line.startsWith('조합')) {
-    if (currentCombination) {
-      testCases.push(currentCombination);
+for (const line of lines) {
+  if (line.includes('작업타입:')) {
+    const typeMatch = line.match(/작업타입:\s*(\w+)(?:\+(\w+))?/);
+    if (typeMatch) {
+      if (typeMatch[2]) {
+        currentType = `${typeMatch[1]}_${typeMatch[2]}`.toUpperCase();
+      } else {
+        currentType = typeMatch[1].toUpperCase();
+      }
     }
-    currentCombination = {
-      inputCodec: '',
-      outputCodec: '',
-      resolutionProfile: '',
-      streamingFormat: ''
-    };
-  }
-  
-  // 조합 정보 파싱
-  if (currentCombination) {
-    if (line.includes('입력파일:')) {
-      currentCombination.inputCodec = line.split(':')[1].trim();
-    } else if (line.includes('출력 코덱:')) {
-      currentCombination.outputCodec = line.split(':')[1].trim();
-    } else if (line.includes('해상도:')) {
-      currentCombination.resolutionProfile = line.split(':')[1].trim().replace(/\+/g, '_');
-    } else if (line.includes('스트리밍 포멧:')) {
-      currentCombination.streamingFormat = line.split(':')[1].trim().replace(/\+/g, '_');
+  } else if (line.includes('입력파일:')) {
+    currentInputCodec = line.split(':')[1].trim().toLowerCase();
+  } else if (line.includes('출력 코덱:')) {
+    currentOutputCodec = line.split(':')[1].trim().toLowerCase();
+  } else if (line.includes('해상도:')) {
+    currentResolution = line.split(':')[1].trim().toLowerCase().replace(/\+/g, '_');
+  } else if (line.includes('스트리밍 포멧:')) {
+    currentStreamingFormat = line.split(':')[1].trim().toLowerCase();
+    
+    // 모든 정보가 수집되었으면 테스트 케이스 생성
+    if (currentInputCodec && currentOutputCodec && currentResolution && currentStreamingFormat) {
+      testCases.push({
+        taskName: `${testCases.length + 1}_${currentType.toLowerCase()}_${currentInputCodec}_${currentOutputCodec}_${currentResolution}_${currentStreamingFormat}`,
+        type: currentType,
+        cid: 'test',
+        inputCodec: currentInputCodec,
+        outputCodec: currentOutputCodec,
+        resolutionProfile: currentResolution,
+        streamingFormat: currentStreamingFormat
+      });
+      
+      // 변수 초기화
+      currentInputCodec = '';
+      currentOutputCodec = '';
+      currentResolution = '';
+      currentStreamingFormat = '';
     }
   }
 }
-
-// 마지막 조합 추가
-if (currentCombination) {
-  testCases.push(currentCombination);
-}
-
-// taskName 설정
-testCases.forEach(testCase => {
-  testCase.taskName = `fwm_${testCase.inputCodec}_${testCase.outputCodec}_${testCase.resolutionProfile}_${testCase.streamingFormat}`.toLowerCase();
-});
-
-console.log('파싱된 테스트 케이스:', testCases);
-console.log('최종 테스트 케이스 수:', testCases.length);
 
 if (testCases.length === 0) {
-  console.error('테스트 케이스가 생성되지 않았습니다. 파일 내용을 확인해주세요.');
+  console.error('테스트 케이스가 생성되지 않았습니다.');
   process.exit(1);
 }
 
-// 테스트 파일 생성
-const testFileContent = `before(() => {
-  // 새로운 로그 파일 생성
-  cy.task('generateLogFileName').then((fileName) => {
-    Cypress.env('currentLogFile', fileName);
-  });
-  //테스트 시작 로그 기록
-  cy.writelog('Test Start');
-});
-
-after(() => {
-  // 테스트 종료 후 로그 마무리
-  cy.writelog('Test End');
+// 테스트 파일 내용 생성
+const testFileContent = `
+// 자동 생성된 테스트 파일
+before(function() {
+  cy.task('generateLogFileName');
 });
 
 ${testCases.map(testCase => `
@@ -111,11 +116,12 @@ describe('${testCase.taskName}', () => {
 
     cy.createFWMTask({
       taskName: '${testCase.taskName}',
-      cid: 'test',
-      inputCodec: '${testCase.inputCodec}',
-      resolutionProfile: '${testCase.resolutionProfile}',
-      streamingFormat: '${testCase.streamingFormat}',
-      outputCodec: '${testCase.outputCodec}'
+      cid: '${testCase.cid}',
+      inputCodec: '${testCase.inputCodec.toUpperCase()}',
+      resolutionProfile: '${testCase.resolutionProfile.toUpperCase()}',
+      streamingFormat: '${testCase.streamingFormat.toUpperCase()}',
+      outputCodec: '${testCase.outputCodec.toUpperCase()}',
+      type: '${testCase.type}'
     });
   });
 
@@ -125,11 +131,17 @@ describe('${testCase.taskName}', () => {
       cy.screenshot(\`실패_\${this.currentTest.title}\`);
     }
   });
-});`).join('\n')}`;
+});
+`).join('\n')}
+
+after(function() {
+  cy.task('combineLogs');
+});
+`;
 
 // 테스트 파일 저장
 const outputPath = path.join(__dirname, 'fwm_auto_generated_tests.cy.js');
 fs.writeFileSync(outputPath, testFileContent);
 
-console.log(`테스트 파일이 생성되었습니다: ${outputPath}`);
-console.log(`생성된 테스트 케이스 수: ${testCases.length}`); 
+console.log('테스트 파일이 생성되었습니다:', outputPath);
+console.log('생성된 테스트 케이스 수:', testCases.length); 
