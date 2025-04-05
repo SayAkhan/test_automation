@@ -73,7 +73,7 @@ for (const line of lines) {
   } else if (line.includes('해상도:')) {
     currentResolution = line.split(':')[1].trim().toLowerCase().replace(/\+/g, '_');
   } else if (line.includes('스트리밍 포멧:')) {
-    currentStreamingFormat = line.split(':')[1].trim().toLowerCase();
+    currentStreamingFormat = line.split(':')[1].trim().toLowerCase().replace(/\+/g, '_');
     
     // 모든 정보가 수집되었으면 테스트 케이스 생성
     if (currentInputCodec && currentOutputCodec && currentResolution && currentStreamingFormat) {

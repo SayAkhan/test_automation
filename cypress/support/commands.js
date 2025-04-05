@@ -145,6 +145,7 @@ Cypress.Commands.add('navigateToTNP', function() {
 Cypress.Commands.add('navigateToCreateTask', function() {
   return cy.then(() => {
     cy.get('body').should('be.visible');
+    cy.safeClick('.sidebar-submenu > :nth-child(5)'); 
     cy.writelog('작업생성 페이지 진입 성공');
   });
 });
@@ -289,32 +290,17 @@ Cypress.Commands.add('selectHLSFormat', function() {
 Cypress.Commands.add('setOutputFormat', function(format) {
   return cy.then(() => {
     // 셀렉트 박스 요소를 찾고 클릭
-    cy.get('.css-1hwfws3', { timeout: 5000 })
-      .should('be.visible')
-      .click();
-    
-    // 옵션 목록이 나타날 때까지 대기 (다른 클래스도 시도)
-    cy.get('.css-1n7v3ny-option, .css-1n7v3ny-option, [id^="react-select-6-option-"]', { timeout: 5000 })
-      .should('be.visible')
-      .first();
-    
-    // 옵션 선택
+    cy.safeClick('.css-1hwfws3');
     if (format === 'H265') {
-      cy.get('#react-select-6-option-1, [id^="react-select-6-option-"]:contains("H265")', { timeout: 5000 })
-        .should('be.visible')
-        .click();
+      cy.safeClick('#react-select-6-option-1');
     } else {
-      cy.get('#react-select-6-option-0, [id^="react-select-6-option-"]:contains("H264")', { timeout: 5000 })
-        .should('be.visible')
-        .click();
+      cy.safeClick('#react-select-6-option-0');
     }
-    
-    // 선택이 완료될 때까지 대기
-    cy.get('.css-1hwfws3', { timeout: 5000 })
-      .should('contain', format);
     cy.writelog(`출력 포맷 설정: ${format}`);
+
   });
 });
+
 
 import { resolutionProfiles } from '../fixtures/resolutions';
 
@@ -335,11 +321,12 @@ Cypress.Commands.add('addResolution', function(resolution) {
   const name = resolution.name;
 
   return cy.then(() => {
-    cy.safeClick('.messageTable > :nth-child(2) > :nth-child(2)', { timeout: 1000 });
+    cy.safeClick('.messageTable > :nth-child(2) > :nth-child(2)');
     cy.get('tbody > :nth-child(2) > :nth-child(3) > input').clear().type(height);
     cy.get(':nth-child(5) > table > tbody > :nth-child(2) > td > input').clear().type(bitrate);
-    cy.safeClick('.floatRight', { timeout: 1000 });
+    cy.safeClick('.floatRight');
     cy.writelog(name + ' 추가');
+
   });
 });
 
@@ -381,16 +368,10 @@ Cypress.Commands.add('navigateToTaskOperation', function() {
 Cypress.Commands.add('selectResolution', function(resolution) {
   return cy.then(() => {
     // 첫 번째 요소 클릭
-    cy.get('#container', { timeout: 5000 })
-      .should('be.visible')
-      .first()
-      .click();
+    cy.safeClick('#container', { timeout: 5000 });
     
     // 두 번째 요소 클릭
-    cy.get(':nth-child(3) > td > label > h3', { timeout: 5000 })
-      .should('be.visible')
-      .first()
-      .click();
+    cy.safeClick(':nth-child(3) > td > label > h3', { timeout: 5000 });
     
     cy.writelog(`해상도 : ${resolution} 선택`);
   });
@@ -422,9 +403,15 @@ Cypress.Commands.add('selectTaskType', function(taskType) {
 
 
 // 작업 생성 완료를 위한 공통 함수
-Cypress.Commands.add('completeTaskCreation', function(taskName) {
+Cypress.Commands.add('completeTaskCreation', function(taskName, type) {
   return cy.then(() => {
     cy.safeClick(':nth-child(4) > .primary_btn');
+    
+    // DRM_FWM 타입일 경우 추가 버튼 클릭
+    if (type === 'DRM_FWM') {
+      cy.safeClick('.align-center > .primary_btn');
+    }
+    
     cy.safeClick('#alert_btn');
     cy.writelog(`작업 생성 완료: ${taskName}`);
   });
@@ -441,23 +428,47 @@ Cypress.Commands.add('createFWMTask', (options) => {
     outputCodec,
     type
   } = options;
+  const inputPath = inputCodec === 'H265' 
+    ? 'test/h265_5min_sample.mp4'
+    : 'test/h264_5min_sample.mp4';
 
-  cy.get('[data-testid="task-name-input"]').type(taskName);
-  cy.get('[data-testid="cid-input"]').type(cid);
-  cy.get('[data-testid="input-codec-select"]').select(inputCodec);
-  cy.get('[data-testid="resolution-profile-select"]').select(resolutionProfile);
-  cy.get('[data-testid="streaming-format-select"]').select(streamingFormat);
-  cy.get('[data-testid="output-codec-select"]').select(outputCodec);
+  cy.navigateToTNP();
+  cy.navigateToCreateTask();
 
   if (type === 'DRM') {
     cy.selectDRM();
   } else if (type === 'FWM') {
     cy.selectFWM();
   } else if (type === 'DRM_FWM') {
+    cy.selectFWM();
     cy.selectDRM_FWM();
   }
 
-  cy.get('[data-testid="create-task-button"]').click();
+  cy.inputTaskInfo({
+    taskName,
+    cid,
+    inputPath,
+    outputPath: taskName
+  });
+
+  cy.navigateToVideoSettings();
+
+  if (streamingFormat === 'CMAF') {
+    cy.selectCMAFFormat();
+  } else if (streamingFormat === 'DASH') {
+    cy.selectDashFormat();
+  } else if (streamingFormat === 'HLS') {
+    cy.selectHLSFormat();
+  }
+
+  if (outputCodec === 'H265') {
+    cy.setOutputFormat('H265');
+  }
+
+  cy.configureResolutionsFromProfile(resolutionProfile || 'UHD_FHD_HD');
+  cy.navigateToAudioSubtitleSettings();
+  cy.navigateToTaskOperation();
+  cy.completeTaskCreation(taskName, type);
 });
 
 // 해상도 설정을 위한 공통 함수

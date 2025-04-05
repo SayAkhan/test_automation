@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Test automation project",
   "scripts": {
-    "generate-tests": "node cypress/e2e/generate_tests.js"
+    "generate-tests": "node cypress/e2e/generate_tests.js",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "dependencies": {
     "cypress": "^13.6.0"
