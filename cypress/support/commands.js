@@ -118,7 +118,8 @@ Cypress.Commands.add('retryOperation', function(operation, operationName, maxAtt
 
 // 클릭 작업을 위한 안전한 공통 함수
 Cypress.Commands.add('safeClick', function(selector, options = {}) {
-  return cy.get(selector, { timeout: 5000 })
+  const timeout = options.timeout || 5000;
+  return cy.get(selector, { timeout })
     .should('be.visible')
     .should('not.be.disabled')
     .then($elements => {
@@ -143,7 +144,6 @@ Cypress.Commands.add('navigateToTNP', function() {
 // 작업 생성 페이지 진입을 위한 공통 함수
 Cypress.Commands.add('navigateToCreateTask', function() {
   return cy.then(() => {
-    cy.safeClick('.sidebar-submenu > :nth-child(5)');
     cy.get('body').should('be.visible');
     cy.writelog('작업생성 페이지 진입 성공');
   });
@@ -159,6 +159,24 @@ Cypress.Commands.add('selectFWM', function() {
   });
 });
 
+Cypress.Commands.add('selectDRM', function() {
+  return cy.then(() => {
+    cy.safeClick('#container');
+    cy.get('body').should('be.visible');
+    cy.safeClick(':nth-child(2) > td > label > h3');
+    cy.writelog('drm 선택');
+  });
+});
+
+Cypress.Commands.add('selectDRM_FWM', function() {
+  return cy.then(() => {
+    cy.safeClick('#container');
+    cy.get('body').should('be.visible');
+    cy.safeClick(':nth-child(1) > td > label > h3');
+    cy.writelog('drm+fwm 선택');
+  });
+});
+
 // 작업 정보 입력을 위한 공통 함수
 Cypress.Commands.add('inputTaskInfo', function(options) {
   const taskName = options.taskName;
@@ -167,40 +185,50 @@ Cypress.Commands.add('inputTaskInfo', function(options) {
   const outputPath = taskName;
 
   return cy.then(() => {
-    cy.safeClick('.align-right > .outlined_btn');
-    cy.get('body').should('be.visible');
+    cy.get('.align-right > .outlined_btn', { timeout: 5000 })
+      .should('be.visible')
+      .click();
     
     // 작업명 입력
-    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) > input')
+    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) > input', { timeout: 5000 })
+      .should('be.visible')
       .clear()
-      .wait(500)
       .type(taskName)
-      .wait(500)
       .should('have.value', taskName);
     
     // CID 입력
-    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input')
+    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input', { timeout: 5000 })
+      .should('be.visible')
       .type(cid);
     cy.writelog('cid 입력');
     
     // 입력 스토리지 선택
-    cy.safeClick(':nth-child(4) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3 > .css-1wa3eu0-placeholder');
-    cy.safeClick('#react-select-3-option-0');
+    cy.get(':nth-child(4) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3 > .css-1wa3eu0-placeholder', { timeout: 5000 })
+      .should('be.visible')
+      .click();
+    cy.get('#react-select-3-option-0', { timeout: 5000 })
+      .should('be.visible')
+      .click();
     cy.writelog('입력 스토리지 선택');
     
     // 입력 파일 경로 입력
-    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(5) > :nth-child(2) > input')
+    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(5) > :nth-child(2) > input', { timeout: 5000 })
+      .should('be.visible')
       .type(inputPath);
     cy.writelog('입력 파일 경로 입력');
     
     // 출력 스토리지 선택
-    cy.safeClick(':nth-child(8) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3');
-    cy.safeClick('#react-select-4-option-0');
+    cy.get(':nth-child(8) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3', { timeout: 5000 })
+      .should('be.visible')
+      .click();
+    cy.get('#react-select-4-option-0', { timeout: 5000 })
+      .should('be.visible')
+      .click();
     cy.writelog('출력 스토리지 선택');
     
     // 출력 경로 입력
-    cy.get(':nth-child(9) > :nth-child(2) > .width325')
-      .click()
+    cy.get(':nth-child(9) > :nth-child(2) > .width325', { timeout: 5000 })
+      .should('be.visible')
       .type(outputPath);
     cy.writelog('출력 경로 입력');
   });
@@ -218,9 +246,15 @@ Cypress.Commands.add('navigateToVideoSettings', function() {
 // 스트리밍 포맷(CMAF) 설정을 위한 공통 함수
 Cypress.Commands.add('selectCMAFFormat', function() {
   return cy.then(() => {
-    cy.safeClick(':nth-child(2) > :nth-child(1) > label');
-    cy.safeClick(':nth-child(2) > label');
-    cy.safeClick(':nth-child(3) > label');
+    cy.get(':nth-child(2) > :nth-child(1) > label', { timeout: 5000 })
+      .should('be.visible')
+      .click();
+    cy.get(':nth-child(2) > label', { timeout: 5000 })
+      .should('be.visible')
+      .click();
+    cy.get(':nth-child(3) > label', { timeout: 5000 })
+      .should('be.visible')
+      .click();
     cy.writelog('스트리밍 포멧 : CMAF 선택');
   });
 });
@@ -228,8 +262,12 @@ Cypress.Commands.add('selectCMAFFormat', function() {
 // 스트리밍 포맷(DASH) 설정을 위한 공통 함수
 Cypress.Commands.add('selectDashFormat', function() {
   return cy.then(() => {
-    cy.safeClick(':nth-child(2) > :nth-child(1) > label');
-    cy.safeClick(':nth-child(2) > label');
+    cy.get(':nth-child(2) > :nth-child(1) > label', { timeout: 5000 })
+      .should('be.visible')
+      .click();
+    cy.get(':nth-child(2) > label', { timeout: 5000 })
+      .should('be.visible')
+      .click();
     cy.writelog('스트리밍 포멧 : DASH 선택');
   });
 });
@@ -237,8 +275,12 @@ Cypress.Commands.add('selectDashFormat', function() {
 // 스트리밍 포맷(HLS) 설정을 위한 공통 함수
 Cypress.Commands.add('selectHLSFormat', function() {
   return cy.then(() => {
-    cy.safeClick(':nth-child(2) > :nth-child(1) > label');
-    cy.safeClick(':nth-child(3) > label');
+    cy.get(':nth-child(2) > :nth-child(1) > label', { timeout: 5000 })
+      .should('be.visible')
+      .click();
+    cy.get(':nth-child(3) > label', { timeout: 5000 })
+      .should('be.visible')
+      .click();
     cy.writelog('스트리밍 포멧 : HLS 선택');
   });
 });
@@ -246,17 +288,45 @@ Cypress.Commands.add('selectHLSFormat', function() {
 // 출력 포맷 설정을 위한 공통 함수
 Cypress.Commands.add('setOutputFormat', function(format) {
   return cy.then(() => {
-    cy.safeClick('.css-1hwfws3');
+    // 셀렉트 박스 요소를 찾고 클릭
+    cy.get('.css-1hwfws3', { timeout: 5000 })
+      .should('be.visible')
+      .click();
+    
+    // 옵션 목록이 나타날 때까지 대기 (다른 클래스도 시도)
+    cy.get('.css-1n7v3ny-option, .css-1n7v3ny-option, [id^="react-select-6-option-"]', { timeout: 5000 })
+      .should('be.visible')
+      .first();
+    
+    // 옵션 선택
     if (format === 'H265') {
-      cy.safeClick('#react-select-6-option-1');
+      cy.get('#react-select-6-option-1, [id^="react-select-6-option-"]:contains("H265")', { timeout: 5000 })
+        .should('be.visible')
+        .click();
     } else {
-      cy.safeClick('#react-select-6-option-0');
+      cy.get('#react-select-6-option-0, [id^="react-select-6-option-"]:contains("H264")', { timeout: 5000 })
+        .should('be.visible')
+        .click();
     }
+    
+    // 선택이 완료될 때까지 대기
+    cy.get('.css-1hwfws3', { timeout: 5000 })
+      .should('contain', format);
     cy.writelog(`출력 포맷 설정: ${format}`);
   });
 });
 
 import { resolutionProfiles } from '../fixtures/resolutions';
+
+// 비디오 설정 초기화를 위한 공통 함수
+Cypress.Commands.add('resetVideoSettings', function() {
+  return cy.then(() => {
+    for(let i = 0; i < 5; i++) {
+      cy.safeClick(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa', { timeout: 1000 });
+    }
+    cy.writelog('출력 비디오 설정 초기화');
+  });
+});
 
 // 단일 해상도 설정을 위한 공통 함수
 Cypress.Commands.add('addResolution', function(resolution) {
@@ -265,21 +335,11 @@ Cypress.Commands.add('addResolution', function(resolution) {
   const name = resolution.name;
 
   return cy.then(() => {
-    cy.safeClick('.messageTable > :nth-child(2) > :nth-child(2)');
+    cy.safeClick('.messageTable > :nth-child(2) > :nth-child(2)', { timeout: 1000 });
     cy.get('tbody > :nth-child(2) > :nth-child(3) > input').clear().type(height);
     cy.get(':nth-child(5) > table > tbody > :nth-child(2) > td > input').clear().type(bitrate);
-    cy.safeClick('.floatRight');
+    cy.safeClick('.floatRight', { timeout: 1000 });
     cy.writelog(name + ' 추가');
-  });
-});
-
-// 비디오 설정 초기화를 위한 공통 함수
-Cypress.Commands.add('resetVideoSettings', function() {
-  return cy.then(() => {
-    for(let i = 0; i < 5; i++) {
-      cy.safeClick(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa');
-    }
-    cy.writelog('출력 비디오 설정 초기화');
   });
 });
 
@@ -317,14 +377,23 @@ Cypress.Commands.add('navigateToTaskOperation', function() {
   });
 });
 
+// 해상도 설정을 위한 공통 함수
 Cypress.Commands.add('selectResolution', function(resolution) {
-  cy.retryOperation(function() {
-    return cy.then(function() {
-      cy.get('#container').click({ multiple: true });
-      cy.get(':nth-child(3) > td > label > h3').click({ multiple: true });
-      cy.writelog(`해상도 : ${resolution} 선택`);
-    });
-  }, '해상도 설정');
+  return cy.then(() => {
+    // 첫 번째 요소 클릭
+    cy.get('#container', { timeout: 5000 })
+      .should('be.visible')
+      .first()
+      .click();
+    
+    // 두 번째 요소 클릭
+    cy.get(':nth-child(3) > td > label > h3', { timeout: 5000 })
+      .should('be.visible')
+      .first()
+      .click();
+    
+    cy.writelog(`해상도 : ${resolution} 선택`);
+  });
 });
 
 
@@ -362,42 +431,33 @@ Cypress.Commands.add('completeTaskCreation', function(taskName) {
 });
 
 // FWM 작업 생성 함수
-Cypress.Commands.add('createFWMTask', function(options) {
-  const inputPath = options.inputCodec === 'H265' 
-    ? 'test/h265_5min_sample.mp4'
-    : 'test/h264_5min_sample.mp4';
+Cypress.Commands.add('createFWMTask', (options) => {
+  const {
+    taskName,
+    cid,
+    inputCodec,
+    resolutionProfile,
+    streamingFormat,
+    outputCodec,
+    type
+  } = options;
 
-  return cy.then(() => {
-    cy.navigateToTNP();
-    cy.navigateToCreateTask();
+  cy.get('[data-testid="task-name-input"]').type(taskName);
+  cy.get('[data-testid="cid-input"]').type(cid);
+  cy.get('[data-testid="input-codec-select"]').select(inputCodec);
+  cy.get('[data-testid="resolution-profile-select"]').select(resolutionProfile);
+  cy.get('[data-testid="streaming-format-select"]').select(streamingFormat);
+  cy.get('[data-testid="output-codec-select"]').select(outputCodec);
+
+  if (type === 'DRM') {
+    cy.selectDRM();
+  } else if (type === 'FWM') {
     cy.selectFWM();
-    cy.inputTaskInfo({
-      ...options,
-      inputPath: inputPath
-    });
-    cy.navigateToVideoSettings();
+  } else if (type === 'DRM_FWM') {
+    cy.selectDRM_FWM();
+  }
 
-    switch(options.streamingFormat) {
-      case 'DASH':
-        cy.selectDashFormat();
-        break;
-      case 'HLS':
-        cy.selectHLSFormat();
-        break;
-      case 'CMAF':
-        cy.selectCMAFFormat();
-        break;
-    }
-
-    if (options.outputCodec === 'H265') {
-      cy.setOutputFormat('H265');
-    }
-
-    cy.configureResolutionsFromProfile(options.resolutionProfile || 'UHD_FHD_HD');
-    cy.navigateToAudioSubtitleSettings();
-    cy.navigateToTaskOperation();
-    cy.completeTaskCreation(options.taskName);
-  });
+  cy.get('[data-testid="create-task-button"]').click();
 });
 
 // 해상도 설정을 위한 공통 함수
