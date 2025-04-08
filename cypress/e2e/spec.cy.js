@@ -13,22 +13,22 @@
   });
 
 
-  describe('20_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
-    it('20_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+  describe('drm_test', () => {
+    it('drm_test 작업생성', function() {
       cy.viewport(1280, 720);
       cy.login('jcg@inka.co.kr', 'Say1013!');
 
       cy.createDRMTask({
-        taskName: '20_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls',
+        taskName: 'drm_test',
         cid: 'test',
         inputCodec: 'H265',
-        aspectRatio: true,
+        aspectRatio: false,
         resolutionProfile: 'UHD_FHD_HD',
         streamingFormat: 'DASH_HLS',
         outputCodec: 'H265',
-        type: 'DRM',
+        type: 'DRM_FWM',
         audioEncryption: true,
-        multiKey: true,
+        multiKey: false,
         multiManifest: true,
         drmOff: true
         
