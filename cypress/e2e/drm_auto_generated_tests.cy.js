@@ -1,7 +1,15 @@
+before(() => {
+  // 새로운 로그 파일 생성
+  cy.task('generateLogFileName').then((fileName) => {
+    Cypress.env('currentLogFile', fileName);
+  });
+//테스트 시작 로그 기록
+cy.writelog('Test Start');
+});
 
-// 자동 생성된 테스트 파일
-before(function() {
-  cy.task('generateLogFileName');
+after(() => {
+  // 테스트 종료 후 로그 마무리
+  cy.writelog('Test End');
 });
 
 
@@ -19202,9 +19210,4 @@ describe('640_drm_fwm_mkv_체크_h264_fhd_fhd_hd_sd_sd', () => {
       cy.screenshot(`실패_${this.currentTest.title}`);
     }
   });
-});
-
-
-after(function() {
-  cy.task('combineLogs');
 });
