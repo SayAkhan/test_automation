@@ -49,7 +49,7 @@ for (const line of lines) {
   } else if (line.includes('멀티매니페스트:')) {
     currentMultiManifest = line.split(':')[1].trim() === '체크';
   } else if (line.includes('DRM 비활성화 구간:')) {
-    currentDrmOff = line.split(':')[1].trim() === '체크';
+    currentDrmOff = line.split(':')[1].trim() === '설정';
     
     // 모든 정보가 수집되었으면 테스트 케이스 생성
     if (currentInputCodec && currentOutputCodec && currentResolution && currentStreamingFormat) {
