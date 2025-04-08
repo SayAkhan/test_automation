@@ -83,6 +83,7 @@ Cypress.Commands.add('login', (email, password) => {
   cy.url().should('include', 'qa-contentsecurity.doverunner.com');
   cy.get('body').should('be.visible');
   cy.writelog('로그인 성공');
+  cy.get('.MuiButton-outlined').click();
 });
 
 // 재시도 로직을 위한 공통 함수
@@ -236,6 +237,8 @@ Cypress.Commands.add('inputTaskInfo', function(options) {
       .type(outputPath)
       .should('have.value', outputPath);
     cy.writelog('출력 경로 입력');
+
+    
   });
 });
 
@@ -470,11 +473,276 @@ Cypress.Commands.add('createFWMTask', (options) => {
     cy.setOutputFormat('H265');
   }
 
-  cy.configureResolutionsFromProfile(resolutionProfile || 'UHD_FHD_HD');
+  cy.configureResolutionsFromProfile(resolutionProfile);
   cy.navigateToAudioSubtitleSettings();
   cy.navigateToTaskOperation();
   cy.completeTaskCreation(taskName, type);
 });
 
-// 해상도 설정을 위한 공통 함수
+
+
+Cypress.Commands.add('inputDRMTaskInfo', function(options) {
+  const taskName = options.taskName;
+  const cid = options.cid || 'test';
+  const inputPath = options.inputPath || 'test/7min_sdr.mp4';
+  const outputPath = taskName;
+
+  return cy.then(() => {
+    cy.get('.align-right > .outlined_btn')
+      .should('be.visible')
+      .click();
+    
+    // 작업명 입력
+    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) > input')
+      .should('be.visible')
+      .clear()
+      .type(taskName)
+      .should('have.value', taskName);
+    
+    // CID 입력
+    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input')
+      .should('be.visible')
+      .clear()
+      .type(cid)
+      .should('have.value', cid);
+    cy.writelog('cid 입력');
+    
+    // 입력 스토리지 선택
+    cy.get(':nth-child(4) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3 > .css-1wa3eu0-placeholder')
+      .should('be.visible')
+      .click();
+    cy.get('#react-select-3-option-0')
+      .should('be.visible')
+      .click();
+    cy.writelog('입력 스토리지 선택');
+    
+    // 입력 파일 경로 입력
+    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(5) > :nth-child(2) > input')
+      .should('be.visible')
+      .clear()
+      .type(inputPath);
+    cy.writelog('입력 파일 경로 입력');
+
+    //추가 오디오파일 입력
+    cy.get(':nth-child(6) > :nth-child(2) > .fwmInputTable > tbody > tr > td > .floatLeft').type('test/sample2.aac');
+    cy.writelog('추가 오디오파일 입력');
+    //추가 자막파일 입력
+    cy.get(':nth-child(7) > :nth-child(2) > .fwmInputTable > tbody > tr > td > .floatLeft').type('test/h264_5min_sample.vtt');
+    cy.writelog('추가 자막파일 입력');
+    
+    // 출력 스토리지 선택
+    cy.get(':nth-child(8) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3')
+      .should('be.visible')
+      .click();
+    cy.get('#react-select-4-option-2')
+      .should('be.visible')
+      .click();
+    cy.writelog('출력 스토리지 선택');
+    
+    // 출력 경로 입력
+    cy.get(':nth-child(9) > :nth-child(2) > .width325')
+      .should('be.visible')
+      .clear()
+      .type(outputPath)
+      .should('have.value', outputPath);
+    cy.writelog('출력 경로 입력');
+  });
+});
+
+Cypress.Commands.add('aspectRatio', function(aspectRatio) {
+  if (aspectRatio === true) {
+    cy.get(':nth-child(4) > :nth-child(2) > .inline-block > label')
+      .should('be.visible')
+      .click();
+    cy.writelog('비율옵션 활성화');
+  }
+});
+
+Cypress.Commands.add('navigateToDRMTaskOperation', function(type) {
+  return cy.then(() => {
+    // DASH 자막옵션
+    if (type === 'DASH' || type === 'DASH_HLS') {
+      const dashOptions = [':nth-child(1) > :nth-child(2) > .width200 > label', 
+                         ':nth-child(1) > :nth-child(2) > :nth-child(2) > label',
+                         ':nth-child(1) > :nth-child(2) > :nth-child(3) > label'];
+      const randomDashIndex = Math.floor(Math.random() * dashOptions.length);
+      cy.get(dashOptions[randomDashIndex])
+        .should('be.visible')
+        .click();
+      cy.writelog(`DASH 자막 옵션 ${randomDashIndex + 1} 선택`);
+    }
+
+    // HLS 자막옵션
+    if (type === 'HLS' || type === 'DASH_HLS') {
+      const hlsOptions = [':nth-child(2) > :nth-child(2) > .width200 > label',
+                         ':nth-child(2) > :nth-child(2) > :nth-child(2) > label',
+                         ':nth-child(2) > :nth-child(2) > :nth-child(3) > label'];
+      const randomHlsIndex = Math.floor(Math.random() * hlsOptions.length);
+      cy.get(hlsOptions[randomHlsIndex])
+        .should('be.visible')
+        .click();
+      cy.writelog(`HLS 자막 옵션 ${randomHlsIndex + 1} 선택`);
+    }
+
+    // CMAF 자막옵션
+    if (type === 'CMAF' || type === 'DASH_HLS') {
+      const cmafOptions = [':nth-child(3) > :nth-child(2) > .width200 > label',
+                          ':nth-child(3) > :nth-child(2) > .width130 > label'];
+      const randomCmafIndex = Math.floor(Math.random() * cmafOptions.length);
+      cy.get(cmafOptions[randomCmafIndex])
+        .should('be.visible')
+        .click();
+      cy.writelog(`CMAF 자막 옵션 ${randomCmafIndex + 1} 선택`);
+    }
+
+    // 언어코드 선택
+    cy.get('.css-1hwfws3')
+      .should('be.visible')
+      .first()
+      .click();
+    cy.get('#react-select-7-option-1')
+      .should('be.visible')
+      .click();
+    cy.writelog('언어코드 선택 완료');
+
+    // 다음 단계로 이동
+    cy.safeClick('.align-right > .outlined_btn');
+    cy.writelog('작업 동작 페이지 진입');
+  });
+});
+
+
+Cypress.Commands.add('completeDRMTaskCreation', function(options) {
+  const {
+    taskName,
+    audioEncryption,
+    multiKey,
+    multiManifest,
+    drmOff
+  } = options;
+
+  //오디오 트랙 암호화
+  if (audioEncryption === false) {
+    cy.get(':nth-child(2) > td > label')
+      .should('be.visible')
+      .click();
+  } else {
+    cy.writelog('오디오 트랙 암호화 활성화');
+  }
+
+  //멀티키
+  if (multiKey === true) {
+    cy.get(':nth-child(3) > td > label')
+      .should('be.visible')
+      .click();
+    
+      cy.get('#max_sd_height')
+      .should('be.visible')
+      .clear()
+      .type('480');
+      cy.writelog('sd 최대 해상도 480p 설정');
+
+      cy.get('#max_hd_height')
+      .should('be.visible')
+      .clear()
+      .type('1080');
+      cy.writelog('hd 최대 해상도 1080p 설정');
+      cy.get('#max_uhd1_height')
+      .should('be.visible')
+      .clear()
+      .type('2160');
+      cy.writelog('uhd 최대 해상도 2160p 설정');
+  //비율옵션
+    cy.writelog('멀티키 활성화');
+  }
+
+  //멀티매니페스트
+  if (multiManifest === true) {
+    cy.get(':nth-child(7) > td > label')
+      .should('be.visible')
+      .click();
+    cy.writelog('멀티매니페스트 활성화');
+  }
+
+  //drm 비활성화
+  if (drmOff === true) {
+    cy.get(':nth-child(2) > div > input')
+      .should('be.visible')
+      .clear()
+      .type('5');
+    cy.writelog('drm 비활성화 구간 5초 설정');
+  }
+
+  // 작업 생성 완료
+  cy.get('.align-center > .primary_btn')
+      .should('be.visible')
+      .click();
+      cy.safeClick('#alert_btn');
+  cy.writelog(`작업 생성 완료: ${taskName}`);
+});
+
+//DRM 작업 생성 함수
+Cypress.Commands.add('createDRMTask', (options) => {
+  const {
+    taskName,
+    cid,
+    inputCodec,
+    aspectRatio,
+    resolutionProfile,
+    streamingFormat,
+    outputCodec,
+    type,
+    audioEncryption,
+    multiKey,
+    multiManifest,
+    drmOff
+  } = options;
+  const inputPath = inputCodec === 'H265' 
+    ? 'test/h265_5min_sample.mp4'
+    : 'test/h264_5min_sample.mp4';
+
+  cy.navigateToTNP();
+  cy.navigateToCreateTask();
+
+  if (type === 'DRM') {
+    cy.selectDRM();
+  } else if (type === 'FWM') {
+    cy.selectFWM();
+  } else if (type === 'DRM_FWM') {
+    cy.selectFWM();
+    cy.selectDRM_FWM();
+  }
+
+  cy.inputDRMTaskInfo({
+    taskName,
+    cid,
+    inputPath,
+    outputPath: taskName,
+  });
+
+  cy.navigateToVideoSettings();
+  cy.aspectRatio(aspectRatio);
+  
+  if (streamingFormat === 'CMAF') {
+    cy.selectCMAFFormat();
+  } else if (streamingFormat === 'DASH') {
+    cy.selectDashFormat();
+  } else if (streamingFormat === 'HLS') {
+    cy.selectHLSFormat();
+  }
+
+  if (outputCodec === 'H265') {
+    cy.setOutputFormat('H265');
+  }
+  cy.configureResolutionsFromProfile(resolutionProfile);
+  cy.navigateToAudioSubtitleSettings();
+  cy.navigateToDRMTaskOperation(streamingFormat);
+  cy.completeDRMTaskCreation({
+    audioEncryption,
+    multiKey,
+    multiManifest,
+    drmOff
+  });
+});
+
 
