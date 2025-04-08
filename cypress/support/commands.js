@@ -635,10 +635,18 @@ Cypress.Commands.add('createFWMTask', (options) => {
     type
   } = options;
 
-  // 입력 파일 코덱에 따른 입력파일 경로 설정
-  const inputPath = inputCodec === 'H265' 
-    ? 'test/h265_5min_sample.mp4'
-    : 'test/h264_5min_sample.mp4';
+  let inputPath;
+  if (inputCodec === 'H265') {
+    inputPath = 'test/h265_5min_sample.mp4';
+  } else if (inputCodec === 'PRORES') {
+    inputPath = 'test/prores_sample.mov';
+  } else if (inputCodec === 'XDCAM') {
+    inputPath = 'test/xdcam_sample.mxf';
+  } else if (inputCodec === 'MKV') {
+    inputPath = 'test/h264_5min_sample.mkv';
+  } else {
+    inputPath = 'test/h264_5min_sample.mp4'; // Default to H264
+  }
   
   //TNP 페이지 이동
   cy.navigateToTNP();
@@ -711,10 +719,18 @@ Cypress.Commands.add('createDRMTask', (options) => {
     drmOff
   } = options;
 
-  // 입력 파일 코덱에 따른 입력파일 경로 설정
-  const inputPath = inputCodec === 'H265' 
-    ? 'test/h265_5min_sample.mp4'
-    : 'test/h264_5min_sample.mp4';
+  let inputPath;
+  if (inputCodec === 'H265') {
+    inputPath = 'test/h265_5min_sample.mp4';
+  } else if (inputCodec === 'PRORES') {
+    inputPath = 'test/prores_sample.mov';
+  } else if (inputCodec === 'XDCAM') {
+    inputPath = 'test/xdcam_sample.mxf';
+  } else if (inputCodec === 'MKV') {
+    inputPath = 'test/h264_5min_sample.mkv';
+  } else {
+    inputPath = 'test/h264_5min_sample.mp4'; // Default to H264
+  }
 
   //TNP 페이지 이동
   cy.navigateToTNP();
