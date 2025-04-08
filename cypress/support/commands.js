@@ -256,12 +256,15 @@ Cypress.Commands.add('selectCMAFFormat', function() {
   return cy.then(() => {
     cy.get(':nth-child(2) > :nth-child(1) > label')
       .should('be.visible')
+      .first()
       .click();
     cy.get(':nth-child(2) > label')
       .should('be.visible')
+      .first()
       .click();
     cy.get(':nth-child(3) > label')
       .should('be.visible')
+      .first()
       .click();
     cy.writelog('스트리밍 포멧 : CMAF 선택');
   });
@@ -270,11 +273,9 @@ Cypress.Commands.add('selectCMAFFormat', function() {
 // 스트리밍 포맷(DASH) 설정을 위한 공통 함수
 Cypress.Commands.add('selectDashFormat', function() {
   return cy.then(() => {
-    cy.get(':nth-child(2) > :nth-child(1) > label')
-      .should('be.visible')
-      .click();
     cy.get(':nth-child(2) > label')
       .should('be.visible')
+      .first()
       .click();
     cy.writelog('스트리밍 포멧 : DASH 선택');
   });
@@ -283,11 +284,9 @@ Cypress.Commands.add('selectDashFormat', function() {
 // 스트리밍 포맷(HLS) 설정을 위한 공통 함수
 Cypress.Commands.add('selectHLSFormat', function() {
   return cy.then(() => {
-    cy.get(':nth-child(2) > :nth-child(1) > label')
+    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > label')
       .should('be.visible')
-      .click();
-    cy.get(':nth-child(3) > label')
-      .should('be.visible')
+      .first()
       .click();
     cy.writelog('스트리밍 포멧 : HLS 선택');
   });
@@ -425,62 +424,6 @@ Cypress.Commands.add('completeTaskCreation', function(taskName, type) {
   });
 });
 
-// FWM 작업 생성 함수
-Cypress.Commands.add('createFWMTask', (options) => {
-  const {
-    taskName,
-    cid,
-    inputCodec,
-    resolutionProfile,
-    streamingFormat,
-    outputCodec,
-    type
-  } = options;
-  const inputPath = inputCodec === 'H265' 
-    ? 'test/h265_5min_sample.mp4'
-    : 'test/h264_5min_sample.mp4';
-
-  cy.navigateToTNP();
-  cy.navigateToCreateTask();
-
-  if (type === 'DRM') {
-    cy.selectDRM();
-  } else if (type === 'FWM') {
-    cy.selectFWM();
-  } else if (type === 'DRM_FWM') {
-    cy.selectFWM();
-    cy.selectDRM_FWM();
-  }
-
-  cy.inputTaskInfo({
-    taskName,
-    cid,
-    inputPath,
-    outputPath: taskName
-  });
-
-  cy.navigateToVideoSettings();
-
-  if (streamingFormat === 'CMAF') {
-    cy.selectCMAFFormat();
-  } else if (streamingFormat === 'DASH') {
-    cy.selectDashFormat();
-  } else if (streamingFormat === 'HLS') {
-    cy.selectHLSFormat();
-  }
-
-  if (outputCodec === 'H265') {
-    cy.setOutputFormat('H265');
-  }
-
-  cy.configureResolutionsFromProfile(resolutionProfile);
-  cy.navigateToAudioSubtitleSettings();
-  cy.navigateToTaskOperation();
-  cy.completeTaskCreation(taskName, type);
-});
-
-
-
 Cypress.Commands.add('inputDRMTaskInfo', function(options) {
   const taskName = options.taskName;
   const cid = options.cid || 'test';
@@ -585,7 +528,7 @@ Cypress.Commands.add('navigateToDRMTaskOperation', function(type) {
     }
 
     // CMAF 자막옵션
-    if (type === 'CMAF' || type === 'DASH_HLS') {
+    if (type === 'CMAF') {
       const cmafOptions = [':nth-child(3) > :nth-child(2) > .width200 > label',
                           ':nth-child(3) > :nth-child(2) > .width130 > label'];
       const randomCmafIndex = Math.floor(Math.random() * cmafOptions.length);
@@ -636,23 +579,22 @@ Cypress.Commands.add('completeDRMTaskCreation', function(options) {
       .should('be.visible')
       .click();
     
-      cy.get('#max_sd_height')
+    cy.get('#max_sd_height')
       .should('be.visible')
       .clear()
       .type('480');
-      cy.writelog('sd 최대 해상도 480p 설정');
+    cy.writelog('sd 최대 해상도 480p 설정');
 
-      cy.get('#max_hd_height')
+    cy.get('#max_hd_height')
       .should('be.visible')
       .clear()
       .type('1080');
-      cy.writelog('hd 최대 해상도 1080p 설정');
-      cy.get('#max_uhd1_height')
+    cy.writelog('hd 최대 해상도 1080p 설정');
+    cy.get('#max_uhd1_height')
       .should('be.visible')
       .clear()
       .type('2160');
-      cy.writelog('uhd 최대 해상도 2160p 설정');
-  //비율옵션
+    cy.writelog('uhd 최대 해상도 2160p 설정');
     cy.writelog('멀티키 활성화');
   }
 
@@ -675,10 +617,81 @@ Cypress.Commands.add('completeDRMTaskCreation', function(options) {
 
   // 작업 생성 완료
   cy.get('.align-center > .primary_btn')
-      .should('be.visible')
-      .click();
-      cy.safeClick('#alert_btn');
+    .should('be.visible')
+    .click();
+  cy.safeClick('#alert_btn');
   cy.writelog(`작업 생성 완료: ${taskName}`);
+});
+
+// FWM 작업 생성 함수
+Cypress.Commands.add('createFWMTask', (options) => {
+  const {
+    taskName,
+    cid,
+    inputCodec,
+    resolutionProfile,
+    streamingFormat,
+    outputCodec,
+    type
+  } = options;
+
+  // 입력 파일 코덱에 따른 입력파일 경로 설정
+  const inputPath = inputCodec === 'H265' 
+    ? 'test/h265_5min_sample.mp4'
+    : 'test/h264_5min_sample.mp4';
+  
+  //TNP 페이지 이동
+  cy.navigateToTNP();
+
+  //작업 생성 페이지 이동
+  cy.navigateToCreateTask();
+
+  //작업 타입 선택
+  if (type === 'DRM') {
+    cy.selectDRM();
+  } else if (type === 'FWM') {
+    cy.selectFWM();
+  } else if (type === 'DRM_FWM') {
+    cy.selectFWM();
+    cy.selectDRM_FWM();
+  }
+
+  //입력 파일 정보 입력
+  cy.inputTaskInfo({
+    taskName,
+    cid,
+    inputPath,
+    outputPath: taskName
+  });
+
+  //비디오 설정 페이지 이동
+  cy.navigateToVideoSettings();
+
+  //스트리밍 포맷 선택
+  if (streamingFormat === 'CMAF') {
+    cy.selectCMAFFormat();
+  } else if (streamingFormat === 'DASH') {
+    cy.selectDashFormat();
+  } else if (streamingFormat === 'HLS') {
+    cy.selectHLSFormat();
+  }
+
+  //출력이 H265포맷일 경우
+  if (outputCodec === 'H265') {
+    cy.setOutputFormat('H265');
+  }
+
+  //해상도 프로파일 선택
+  cy.configureResolutionsFromProfile(resolutionProfile);
+
+  //오디오/자막 설정 페이지 이동
+  cy.navigateToAudioSubtitleSettings();
+
+  //작업 동작 페이지 이동
+  cy.navigateToTaskOperation();
+
+  //작업 생성 완료
+  cy.completeTaskCreation(taskName, type);
 });
 
 //DRM 작업 생성 함수
@@ -697,13 +710,19 @@ Cypress.Commands.add('createDRMTask', (options) => {
     multiManifest,
     drmOff
   } = options;
+
+  // 입력 파일 코덱에 따른 입력파일 경로 설정
   const inputPath = inputCodec === 'H265' 
     ? 'test/h265_5min_sample.mp4'
     : 'test/h264_5min_sample.mp4';
 
+  //TNP 페이지 이동
   cy.navigateToTNP();
+
+  //작업 생성 페이지 이동
   cy.navigateToCreateTask();
 
+  //작업 타입 선택
   if (type === 'DRM') {
     cy.selectDRM();
   } else if (type === 'FWM') {
@@ -711,8 +730,10 @@ Cypress.Commands.add('createDRMTask', (options) => {
   } else if (type === 'DRM_FWM') {
     cy.selectFWM();
     cy.selectDRM_FWM();
-  }
 
+
+  }
+  //입력 파일 정보 입력
   cy.inputDRMTaskInfo({
     taskName,
     cid,
@@ -720,9 +741,13 @@ Cypress.Commands.add('createDRMTask', (options) => {
     outputPath: taskName,
   });
 
+  //비디오 설정 페이지 이동
   cy.navigateToVideoSettings();
+
+  //비율옵션 선택
   cy.aspectRatio(aspectRatio);
-  
+
+  //스트리밍 포맷 선택
   if (streamingFormat === 'CMAF') {
     cy.selectCMAFFormat();
   } else if (streamingFormat === 'DASH') {
@@ -731,18 +756,29 @@ Cypress.Commands.add('createDRMTask', (options) => {
     cy.selectHLSFormat();
   }
 
+  //출력이 H265포맷일 경우
   if (outputCodec === 'H265') {
     cy.setOutputFormat('H265');
   }
+
+  //해상도 프로파일 선택
   cy.configureResolutionsFromProfile(resolutionProfile);
+
+  //오디오/자막 설정 페이지 이동
   cy.navigateToAudioSubtitleSettings();
+
+  // DRM 작업 동작 페이지 이동
   cy.navigateToDRMTaskOperation(streamingFormat);
+
+  // DRM 작업 생성 완료
   cy.completeDRMTaskCreation({
+    taskName,
     audioEncryption,
     multiKey,
     multiManifest,
     drmOff
   });
+
 });
 
 
