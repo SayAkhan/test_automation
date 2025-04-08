@@ -22,8 +22,42 @@ let currentDrmOff = false;
 
 const testCases = [];
 
+// Helper function to add a test case and reset variables
+function addTestCaseAndReset() {
+  if (currentInputCodec && currentOutputCodec && currentResolution && currentStreamingFormat) {
+    testCases.push({
+      taskName: `${testCases.length + 1}_${currentType.toLowerCase()}_${currentInputCodec}_${currentOutputCodec}_${currentResolution}_${currentStreamingFormat}`,
+      type: currentType,
+      cid: 'test',
+      inputCodec: currentInputCodec,
+      outputCodec: currentOutputCodec,
+      resolutionProfile: currentResolution,
+      streamingFormat: currentStreamingFormat,
+      aspectRatio: currentAspectRatio,
+      audioEncryption: currentAudioEncryption,
+      multiKey: currentMultiKey,
+      multiManifest: currentMultiManifest,
+      drmOff: currentDrmOff
+    });
+  }
+  // Reset variables for the next test case
+  currentInputCodec = '';
+  currentOutputCodec = '';
+  currentResolution = '';
+  currentStreamingFormat = '';
+  currentAspectRatio = false; // Reset to default boolean value
+  currentAudioEncryption = false;
+  currentMultiKey = false;
+  currentMultiManifest = false;
+  currentDrmOff = false;
+}
+
 for (const line of lines) {
   if (line.includes('작업타입:')) {
+    // Before processing the new type, add the previously collected test case
+    addTestCaseAndReset();
+
+    // Parse the new type
     const typeMatch = line.match(/작업타입:\s*(\w+)(?:\+(\w+))?/);
     if (typeMatch) {
       if (typeMatch[2]) {
@@ -50,37 +84,12 @@ for (const line of lines) {
     currentMultiManifest = line.split(':')[1].trim() === '체크';
   } else if (line.includes('DRM 비활성화 구간:')) {
     currentDrmOff = line.split(':')[1].trim() === '설정';
-    
-    // 모든 정보가 수집되었으면 테스트 케이스 생성
-    if (currentInputCodec && currentOutputCodec && currentResolution && currentStreamingFormat) {
-      testCases.push({
-        taskName: `${testCases.length + 1}_${currentType.toLowerCase()}_${currentInputCodec}_${currentOutputCodec}_${currentResolution}_${currentStreamingFormat}`,
-        type: currentType,
-        cid: 'test',
-        inputCodec: currentInputCodec,
-        outputCodec: currentOutputCodec,
-        resolutionProfile: currentResolution,
-        streamingFormat: currentStreamingFormat,
-        aspectRatio: currentAspectRatio,
-        audioEncryption: currentAudioEncryption,
-        multiKey: currentMultiKey,
-        multiManifest: currentMultiManifest,
-        drmOff: currentDrmOff
-      });
-      
-      // 변수 초기화
-      currentInputCodec = '';
-      currentOutputCodec = '';
-      currentResolution = '';
-      currentStreamingFormat = '';
-      currentAspectRatio = '';
-      currentAudioEncryption = false;
-      currentMultiKey = false;
-      currentMultiManifest = false;
-      currentDrmOff = false;
-    }
+    // No need to push test case here anymore
   }
 }
+
+// Add the very last test case after the loop finishes
+addTestCaseAndReset();
 
 if (testCases.length === 0) {
   console.error('테스트 케이스가 생성되지 않았습니다.');
@@ -90,8 +99,18 @@ if (testCases.length === 0) {
 // 테스트 파일 내용 생성
 const testFileContent = `
 // 자동 생성된 테스트 파일
-before(function() {
-  cy.task('generateLogFileName');
+before(() => {
+  // 새로운 로그 파일 생성
+  cy.task('generateLogFileName').then((fileName) => {
+    Cypress.env('currentLogFile', fileName);
+  });
+//테스트 시작 로그 기록
+cy.writelog('Test Start');
+});
+
+after(() => {
+  // 테스트 종료 후 로그 마무리
+  cy.writelog('Test End');
 });
 
 ${testCases.map(testCase => `
@@ -124,10 +143,6 @@ describe('${testCase.taskName}', () => {
   });
 });
 `).join('\n')}
-
-after(function() {
-  cy.task('combineLogs');
-});
 `;
 
 // 테스트 파일 저장

@@ -104,8 +104,18 @@ if (testCases.length === 0) {
 // 테스트 파일 내용 생성
 const testFileContent = `
 // 자동 생성된 테스트 파일
-before(function() {
-  cy.task('generateLogFileName');
+before(() => {
+  // 새로운 로그 파일 생성
+  cy.task('generateLogFileName').then((fileName) => {
+    Cypress.env('currentLogFile', fileName);
+  });
+//테스트 시작 로그 기록
+cy.writelog('Test Start');
+});
+
+after(() => {
+  // 테스트 종료 후 로그 마무리
+  cy.writelog('Test End');
 });
 
 ${testCases.map(testCase => `
@@ -133,10 +143,6 @@ describe('${testCase.taskName}', () => {
   });
 });
 `).join('\n')}
-
-after(function() {
-  cy.task('combineLogs');
-});
 `;
 
 // 테스트 파일 저장
