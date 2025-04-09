@@ -9628,7 +9628,7 @@ describe('321_drm_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -9658,7 +9658,7 @@ describe('322_drm_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -9688,7 +9688,7 @@ describe('323_drm_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -9718,7 +9718,7 @@ describe('324_drm_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -9748,7 +9748,7 @@ describe('325_drm_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -9778,7 +9778,7 @@ describe('326_drm_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -9808,7 +9808,7 @@ describe('327_drm_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -9838,7 +9838,7 @@ describe('328_drm_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -9868,7 +9868,7 @@ describe('329_drm_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -9898,7 +9898,7 @@ describe('330_drm_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -9928,7 +9928,7 @@ describe('331_drm_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -9958,7 +9958,7 @@ describe('332_drm_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -9988,7 +9988,7 @@ describe('333_drm_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10018,7 +10018,7 @@ describe('334_drm_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10048,7 +10048,7 @@ describe('335_drm_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10078,7 +10078,7 @@ describe('336_drm_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10108,7 +10108,7 @@ describe('337_drm_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10138,7 +10138,7 @@ describe('338_drm_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10168,7 +10168,7 @@ describe('339_drm_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10198,7 +10198,7 @@ describe('340_drm_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10228,7 +10228,7 @@ describe('341_drm_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10258,7 +10258,7 @@ describe('342_drm_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10288,7 +10288,7 @@ describe('343_drm_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10318,7 +10318,7 @@ describe('344_drm_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10348,7 +10348,7 @@ describe('345_drm_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10378,7 +10378,7 @@ describe('346_drm_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10408,7 +10408,7 @@ describe('347_drm_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10438,7 +10438,7 @@ describe('348_drm_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10468,7 +10468,7 @@ describe('349_drm_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10498,7 +10498,7 @@ describe('350_drm_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10528,7 +10528,7 @@ describe('351_drm_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10558,7 +10558,7 @@ describe('352_drm_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10588,7 +10588,7 @@ describe('353_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10618,7 +10618,7 @@ describe('354_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10648,7 +10648,7 @@ describe('355_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10678,7 +10678,7 @@ describe('356_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10708,7 +10708,7 @@ describe('357_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10738,7 +10738,7 @@ describe('358_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10768,7 +10768,7 @@ describe('359_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10798,7 +10798,7 @@ describe('360_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10828,7 +10828,7 @@ describe('361_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10858,7 +10858,7 @@ describe('362_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10888,7 +10888,7 @@ describe('363_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10918,7 +10918,7 @@ describe('364_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10948,7 +10948,7 @@ describe('365_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -10978,7 +10978,7 @@ describe('366_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11008,7 +11008,7 @@ describe('367_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11038,7 +11038,7 @@ describe('368_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11068,7 +11068,7 @@ describe('369_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11098,7 +11098,7 @@ describe('370_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11128,7 +11128,7 @@ describe('371_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11158,7 +11158,7 @@ describe('372_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11188,7 +11188,7 @@ describe('373_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11218,7 +11218,7 @@ describe('374_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11248,7 +11248,7 @@ describe('375_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11278,7 +11278,7 @@ describe('376_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11308,7 +11308,7 @@ describe('377_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11338,7 +11338,7 @@ describe('378_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11368,7 +11368,7 @@ describe('379_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11398,7 +11398,7 @@ describe('380_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11428,7 +11428,7 @@ describe('381_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11458,7 +11458,7 @@ describe('382_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11488,7 +11488,7 @@ describe('383_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11518,7 +11518,7 @@ describe('384_drm_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11548,7 +11548,7 @@ describe('385_drm_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11578,7 +11578,7 @@ describe('386_drm_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11608,7 +11608,7 @@ describe('387_drm_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11638,7 +11638,7 @@ describe('388_drm_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11668,7 +11668,7 @@ describe('389_drm_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11698,7 +11698,7 @@ describe('390_drm_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11728,7 +11728,7 @@ describe('391_drm_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11758,7 +11758,7 @@ describe('392_drm_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11788,7 +11788,7 @@ describe('393_drm_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11818,7 +11818,7 @@ describe('394_drm_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11848,7 +11848,7 @@ describe('395_drm_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11878,7 +11878,7 @@ describe('396_drm_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11908,7 +11908,7 @@ describe('397_drm_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11938,7 +11938,7 @@ describe('398_drm_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11968,7 +11968,7 @@ describe('399_drm_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -11998,7 +11998,7 @@ describe('400_drm_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12028,7 +12028,7 @@ describe('401_drm_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12058,7 +12058,7 @@ describe('402_drm_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12088,7 +12088,7 @@ describe('403_drm_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12118,7 +12118,7 @@ describe('404_drm_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12148,7 +12148,7 @@ describe('405_drm_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12178,7 +12178,7 @@ describe('406_drm_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12208,7 +12208,7 @@ describe('407_drm_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12238,7 +12238,7 @@ describe('408_drm_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12268,7 +12268,7 @@ describe('409_drm_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12298,7 +12298,7 @@ describe('410_drm_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12328,7 +12328,7 @@ describe('411_drm_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12358,7 +12358,7 @@ describe('412_drm_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12388,7 +12388,7 @@ describe('413_drm_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12418,7 +12418,7 @@ describe('414_drm_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12448,7 +12448,7 @@ describe('415_drm_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12478,7 +12478,7 @@ describe('416_drm_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12508,7 +12508,7 @@ describe('417_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12538,7 +12538,7 @@ describe('418_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12568,7 +12568,7 @@ describe('419_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12598,7 +12598,7 @@ describe('420_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12628,7 +12628,7 @@ describe('421_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12658,7 +12658,7 @@ describe('422_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12688,7 +12688,7 @@ describe('423_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12718,7 +12718,7 @@ describe('424_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12748,7 +12748,7 @@ describe('425_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12778,7 +12778,7 @@ describe('426_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12808,7 +12808,7 @@ describe('427_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12838,7 +12838,7 @@ describe('428_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12868,7 +12868,7 @@ describe('429_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12898,7 +12898,7 @@ describe('430_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12928,7 +12928,7 @@ describe('431_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12958,7 +12958,7 @@ describe('432_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -12988,7 +12988,7 @@ describe('433_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13018,7 +13018,7 @@ describe('434_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13048,7 +13048,7 @@ describe('435_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13078,7 +13078,7 @@ describe('436_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13108,7 +13108,7 @@ describe('437_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13138,7 +13138,7 @@ describe('438_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13168,7 +13168,7 @@ describe('439_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13198,7 +13198,7 @@ describe('440_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13228,7 +13228,7 @@ describe('441_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13258,7 +13258,7 @@ describe('442_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13288,7 +13288,7 @@ describe('443_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13318,7 +13318,7 @@ describe('444_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13348,7 +13348,7 @@ describe('445_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13378,7 +13378,7 @@ describe('446_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13408,7 +13408,7 @@ describe('447_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13438,7 +13438,7 @@ describe('448_drm_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13468,7 +13468,7 @@ describe('449_drm_fwm_prores_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13498,7 +13498,7 @@ describe('450_drm_fwm_prores_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13528,7 +13528,7 @@ describe('451_drm_fwm_prores_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13558,7 +13558,7 @@ describe('452_drm_fwm_prores_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13588,7 +13588,7 @@ describe('453_drm_fwm_prores_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13618,7 +13618,7 @@ describe('454_drm_fwm_prores_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13648,7 +13648,7 @@ describe('455_drm_fwm_prores_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13678,7 +13678,7 @@ describe('456_drm_fwm_prores_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13708,7 +13708,7 @@ describe('457_drm_fwm_prores_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13738,7 +13738,7 @@ describe('458_drm_fwm_prores_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13768,7 +13768,7 @@ describe('459_drm_fwm_prores_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13798,7 +13798,7 @@ describe('460_drm_fwm_prores_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13828,7 +13828,7 @@ describe('461_drm_fwm_prores_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13858,7 +13858,7 @@ describe('462_drm_fwm_prores_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13888,7 +13888,7 @@ describe('463_drm_fwm_prores_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13918,7 +13918,7 @@ describe('464_drm_fwm_prores_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13948,7 +13948,7 @@ describe('465_drm_fwm_prores_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -13978,7 +13978,7 @@ describe('466_drm_fwm_prores_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14008,7 +14008,7 @@ describe('467_drm_fwm_prores_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14038,7 +14038,7 @@ describe('468_drm_fwm_prores_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14068,7 +14068,7 @@ describe('469_drm_fwm_prores_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14098,7 +14098,7 @@ describe('470_drm_fwm_prores_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14128,7 +14128,7 @@ describe('471_drm_fwm_prores_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14158,7 +14158,7 @@ describe('472_drm_fwm_prores_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14188,7 +14188,7 @@ describe('473_drm_fwm_prores_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14218,7 +14218,7 @@ describe('474_drm_fwm_prores_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14248,7 +14248,7 @@ describe('475_drm_fwm_prores_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14278,7 +14278,7 @@ describe('476_drm_fwm_prores_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14308,7 +14308,7 @@ describe('477_drm_fwm_prores_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14338,7 +14338,7 @@ describe('478_drm_fwm_prores_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14368,7 +14368,7 @@ describe('479_drm_fwm_prores_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14398,7 +14398,7 @@ describe('480_drm_fwm_prores_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14428,7 +14428,7 @@ describe('481_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14458,7 +14458,7 @@ describe('482_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14488,7 +14488,7 @@ describe('483_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14518,7 +14518,7 @@ describe('484_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14548,7 +14548,7 @@ describe('485_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14578,7 +14578,7 @@ describe('486_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14608,7 +14608,7 @@ describe('487_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14638,7 +14638,7 @@ describe('488_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14668,7 +14668,7 @@ describe('489_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14698,7 +14698,7 @@ describe('490_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14728,7 +14728,7 @@ describe('491_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14758,7 +14758,7 @@ describe('492_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14788,7 +14788,7 @@ describe('493_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14818,7 +14818,7 @@ describe('494_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14848,7 +14848,7 @@ describe('495_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14878,7 +14878,7 @@ describe('496_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14908,7 +14908,7 @@ describe('497_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14938,7 +14938,7 @@ describe('498_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14968,7 +14968,7 @@ describe('499_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -14998,7 +14998,7 @@ describe('500_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15028,7 +15028,7 @@ describe('501_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15058,7 +15058,7 @@ describe('502_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15088,7 +15088,7 @@ describe('503_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15118,7 +15118,7 @@ describe('504_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15148,7 +15148,7 @@ describe('505_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15178,7 +15178,7 @@ describe('506_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15208,7 +15208,7 @@ describe('507_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15238,7 +15238,7 @@ describe('508_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15268,7 +15268,7 @@ describe('509_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15298,7 +15298,7 @@ describe('510_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15328,7 +15328,7 @@ describe('511_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15358,7 +15358,7 @@ describe('512_drm_fwm_prores_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15388,7 +15388,7 @@ describe('513_drm_fwm_xdcam_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15418,7 +15418,7 @@ describe('514_drm_fwm_xdcam_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15448,7 +15448,7 @@ describe('515_drm_fwm_xdcam_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15478,7 +15478,7 @@ describe('516_drm_fwm_xdcam_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15508,7 +15508,7 @@ describe('517_drm_fwm_xdcam_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15538,7 +15538,7 @@ describe('518_drm_fwm_xdcam_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15568,7 +15568,7 @@ describe('519_drm_fwm_xdcam_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15598,7 +15598,7 @@ describe('520_drm_fwm_xdcam_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15628,7 +15628,7 @@ describe('521_drm_fwm_xdcam_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15658,7 +15658,7 @@ describe('522_drm_fwm_xdcam_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15688,7 +15688,7 @@ describe('523_drm_fwm_xdcam_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15718,7 +15718,7 @@ describe('524_drm_fwm_xdcam_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15748,7 +15748,7 @@ describe('525_drm_fwm_xdcam_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15778,7 +15778,7 @@ describe('526_drm_fwm_xdcam_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15808,7 +15808,7 @@ describe('527_drm_fwm_xdcam_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15838,7 +15838,7 @@ describe('528_drm_fwm_xdcam_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15868,7 +15868,7 @@ describe('529_drm_fwm_xdcam_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15898,7 +15898,7 @@ describe('530_drm_fwm_xdcam_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15928,7 +15928,7 @@ describe('531_drm_fwm_xdcam_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15958,7 +15958,7 @@ describe('532_drm_fwm_xdcam_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -15988,7 +15988,7 @@ describe('533_drm_fwm_xdcam_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16018,7 +16018,7 @@ describe('534_drm_fwm_xdcam_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16048,7 +16048,7 @@ describe('535_drm_fwm_xdcam_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16078,7 +16078,7 @@ describe('536_drm_fwm_xdcam_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16108,7 +16108,7 @@ describe('537_drm_fwm_xdcam_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16138,7 +16138,7 @@ describe('538_drm_fwm_xdcam_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16168,7 +16168,7 @@ describe('539_drm_fwm_xdcam_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16198,7 +16198,7 @@ describe('540_drm_fwm_xdcam_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16228,7 +16228,7 @@ describe('541_drm_fwm_xdcam_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16258,7 +16258,7 @@ describe('542_drm_fwm_xdcam_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16288,7 +16288,7 @@ describe('543_drm_fwm_xdcam_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16318,7 +16318,7 @@ describe('544_drm_fwm_xdcam_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16348,7 +16348,7 @@ describe('545_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16378,7 +16378,7 @@ describe('546_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16408,7 +16408,7 @@ describe('547_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16438,7 +16438,7 @@ describe('548_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16468,7 +16468,7 @@ describe('549_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16498,7 +16498,7 @@ describe('550_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16528,7 +16528,7 @@ describe('551_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16558,7 +16558,7 @@ describe('552_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16588,7 +16588,7 @@ describe('553_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16618,7 +16618,7 @@ describe('554_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16648,7 +16648,7 @@ describe('555_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16678,7 +16678,7 @@ describe('556_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16708,7 +16708,7 @@ describe('557_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16738,7 +16738,7 @@ describe('558_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16768,7 +16768,7 @@ describe('559_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16798,7 +16798,7 @@ describe('560_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16828,7 +16828,7 @@ describe('561_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16858,7 +16858,7 @@ describe('562_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16888,7 +16888,7 @@ describe('563_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16918,7 +16918,7 @@ describe('564_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16948,7 +16948,7 @@ describe('565_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -16978,7 +16978,7 @@ describe('566_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17008,7 +17008,7 @@ describe('567_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17038,7 +17038,7 @@ describe('568_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17068,7 +17068,7 @@ describe('569_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17098,7 +17098,7 @@ describe('570_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17128,7 +17128,7 @@ describe('571_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17158,7 +17158,7 @@ describe('572_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17188,7 +17188,7 @@ describe('573_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17218,7 +17218,7 @@ describe('574_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17248,7 +17248,7 @@ describe('575_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17278,7 +17278,7 @@ describe('576_drm_fwm_xdcam_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17308,7 +17308,7 @@ describe('577_drm_fwm_mkv_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17338,7 +17338,7 @@ describe('578_drm_fwm_mkv_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17368,7 +17368,7 @@ describe('579_drm_fwm_mkv_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17398,7 +17398,7 @@ describe('580_drm_fwm_mkv_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17428,7 +17428,7 @@ describe('581_drm_fwm_mkv_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17458,7 +17458,7 @@ describe('582_drm_fwm_mkv_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17488,7 +17488,7 @@ describe('583_drm_fwm_mkv_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17518,7 +17518,7 @@ describe('584_drm_fwm_mkv_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17548,7 +17548,7 @@ describe('585_drm_fwm_mkv_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17578,7 +17578,7 @@ describe('586_drm_fwm_mkv_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17608,7 +17608,7 @@ describe('587_drm_fwm_mkv_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17638,7 +17638,7 @@ describe('588_drm_fwm_mkv_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17668,7 +17668,7 @@ describe('589_drm_fwm_mkv_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17698,7 +17698,7 @@ describe('590_drm_fwm_mkv_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17728,7 +17728,7 @@ describe('591_drm_fwm_mkv_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17758,7 +17758,7 @@ describe('592_drm_fwm_mkv_h264_uhd_fhd_hd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17788,7 +17788,7 @@ describe('593_drm_fwm_mkv_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17818,7 +17818,7 @@ describe('594_drm_fwm_mkv_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17848,7 +17848,7 @@ describe('595_drm_fwm_mkv_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17878,7 +17878,7 @@ describe('596_drm_fwm_mkv_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17908,7 +17908,7 @@ describe('597_drm_fwm_mkv_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17938,7 +17938,7 @@ describe('598_drm_fwm_mkv_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17968,7 +17968,7 @@ describe('599_drm_fwm_mkv_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -17998,7 +17998,7 @@ describe('600_drm_fwm_mkv_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18028,7 +18028,7 @@ describe('601_drm_fwm_mkv_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18058,7 +18058,7 @@ describe('602_drm_fwm_mkv_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18088,7 +18088,7 @@ describe('603_drm_fwm_mkv_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18118,7 +18118,7 @@ describe('604_drm_fwm_mkv_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18148,7 +18148,7 @@ describe('605_drm_fwm_mkv_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18178,7 +18178,7 @@ describe('606_drm_fwm_mkv_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18208,7 +18208,7 @@ describe('607_drm_fwm_mkv_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18238,7 +18238,7 @@ describe('608_drm_fwm_mkv_h264_uhd_fhd_hd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18268,7 +18268,7 @@ describe('609_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18298,7 +18298,7 @@ describe('610_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18328,7 +18328,7 @@ describe('611_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18358,7 +18358,7 @@ describe('612_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18388,7 +18388,7 @@ describe('613_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18418,7 +18418,7 @@ describe('614_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18448,7 +18448,7 @@ describe('615_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18478,7 +18478,7 @@ describe('616_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18508,7 +18508,7 @@ describe('617_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18538,7 +18538,7 @@ describe('618_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18568,7 +18568,7 @@ describe('619_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18598,7 +18598,7 @@ describe('620_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18628,7 +18628,7 @@ describe('621_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18658,7 +18658,7 @@ describe('622_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18688,7 +18688,7 @@ describe('623_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18718,7 +18718,7 @@ describe('624_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
       streamingFormat: 'CMAF',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18748,7 +18748,7 @@ describe('625_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18778,7 +18778,7 @@ describe('626_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18808,7 +18808,7 @@ describe('627_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18838,7 +18838,7 @@ describe('628_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18868,7 +18868,7 @@ describe('629_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18898,7 +18898,7 @@ describe('630_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18928,7 +18928,7 @@ describe('631_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18958,7 +18958,7 @@ describe('632_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -18988,7 +18988,7 @@ describe('633_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -19018,7 +19018,7 @@ describe('634_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -19048,7 +19048,7 @@ describe('635_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -19078,7 +19078,7 @@ describe('636_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -19108,7 +19108,7 @@ describe('637_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -19138,7 +19138,7 @@ describe('638_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -19168,7 +19168,7 @@ describe('639_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -19198,7 +19198,7 @@ describe('640_drm_fwm_mkv_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
       streamingFormat: 'DASH_HLS',
       outputCodec: 'H264',
       type: 'DRM_FWM',
-      aspectRatio: true,
+      aspectRatio: false,
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
@@ -19232,6 +19232,36 @@ describe('641_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
       audioEncryption: false,
       multiKey: false,
       multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('642_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
+  it('642_drm_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '642_drm_fwm_h264_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
       drmOff: false
     });
   });
@@ -19245,13 +19275,463 @@ describe('641_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
 });
 
 
-describe('642_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
-  it('642_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+describe('643_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
+  it('643_drm_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createDRMTask({
-      taskName: '642_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls',
+      taskName: '643_drm_fwm_h264_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('644_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
+  it('644_drm_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '644_drm_fwm_h264_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('645_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
+  it('645_drm_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '645_drm_fwm_h264_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('646_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
+  it('646_drm_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '646_drm_fwm_h264_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('647_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
+  it('647_drm_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '647_drm_fwm_h264_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('648_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
+  it('648_drm_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '648_drm_fwm_h264_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('649_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
+  it('649_drm_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '649_drm_fwm_h264_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('650_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
+  it('650_drm_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '650_drm_fwm_h264_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('651_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
+  it('651_drm_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '651_drm_fwm_h264_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('652_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
+  it('652_drm_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '652_drm_fwm_h264_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('653_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
+  it('653_drm_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '653_drm_fwm_h264_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('654_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
+  it('654_drm_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '654_drm_fwm_h264_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('655_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
+  it('655_drm_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '655_drm_fwm_h264_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('656_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
+  it('656_drm_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '656_drm_fwm_h264_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('657_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
+  it('657_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '657_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('658_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
+  it('658_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '658_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls',
       cid: 'test',
       inputCodec: 'H264',
       resolutionProfile: 'UHD_FHD_HD',
@@ -19275,13 +19755,463 @@ describe('642_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
 });
 
 
-describe('643_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
-  it('643_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+describe('659_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
+  it('659_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createDRMTask({
-      taskName: '643_drm_fwm_h265_h265_uhd_fhd_hd_cmaf',
+      taskName: '659_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('660_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
+  it('660_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '660_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('661_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
+  it('661_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '661_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('662_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
+  it('662_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '662_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('663_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
+  it('663_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '663_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('664_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
+  it('664_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '664_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('665_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
+  it('665_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '665_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('666_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
+  it('666_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '666_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('667_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
+  it('667_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '667_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('668_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
+  it('668_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '668_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('669_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
+  it('669_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '669_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('670_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
+  it('670_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '670_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('671_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
+  it('671_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '671_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('672_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
+  it('672_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '672_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H264',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('673_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
+  it('673_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '673_drm_fwm_h265_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('674_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
+  it('674_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '674_drm_fwm_h265_h265_uhd_fhd_hd_cmaf',
       cid: 'test',
       inputCodec: 'H265',
       resolutionProfile: 'UHD_FHD_HD',
@@ -19305,13 +20235,883 @@ describe('643_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
 });
 
 
-describe('644_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
-  it('644_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+describe('675_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
+  it('675_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
     cy.login('jcg@inka.co.kr', 'Say1013!');
 
     cy.createDRMTask({
-      taskName: '644_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls',
+      taskName: '675_drm_fwm_h265_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('676_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
+  it('676_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '676_drm_fwm_h265_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('677_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
+  it('677_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '677_drm_fwm_h265_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('678_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
+  it('678_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '678_drm_fwm_h265_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('679_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
+  it('679_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '679_drm_fwm_h265_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('680_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
+  it('680_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '680_drm_fwm_h265_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('681_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
+  it('681_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '681_drm_fwm_h265_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('682_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
+  it('682_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '682_drm_fwm_h265_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('683_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
+  it('683_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '683_drm_fwm_h265_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('684_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
+  it('684_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '684_drm_fwm_h265_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('685_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
+  it('685_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '685_drm_fwm_h265_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('686_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
+  it('686_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '686_drm_fwm_h265_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('687_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
+  it('687_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '687_drm_fwm_h265_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('688_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
+  it('688_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '688_drm_fwm_h265_h265_uhd_fhd_hd_cmaf',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'CMAF',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('689_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
+  it('689_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '689_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('690_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
+  it('690_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '690_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('691_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
+  it('691_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '691_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('692_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
+  it('692_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '692_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('693_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
+  it('693_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '693_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('694_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
+  it('694_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '694_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('695_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
+  it('695_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '695_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('696_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
+  it('696_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '696_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('697_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
+  it('697_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '697_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('698_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
+  it('698_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '698_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('699_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
+  it('699_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '699_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('700_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
+  it('700_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '700_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('701_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
+  it('701_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '701_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('702_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
+  it('702_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '702_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: false
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('703_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
+  it('703_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '703_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls',
+      cid: 'test',
+      inputCodec: 'H265',
+      resolutionProfile: 'UHD_FHD_HD',
+      streamingFormat: 'DASH_HLS',
+      outputCodec: 'H265',
+      type: 'DRM_FWM',
+      aspectRatio: false,
+      audioEncryption: false,
+      multiKey: false,
+      multiManifest: false,
+      drmOff: true
+    });
+  });
+
+  afterEach(function() {
+    if (this.currentTest.state === 'failed') {
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+      cy.screenshot(`실패_${this.currentTest.title}`);
+    }
+  });
+});
+
+
+describe('704_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
+  it('704_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+    cy.viewport(1280, 720);
+    cy.login('jcg@inka.co.kr', 'Say1013!');
+
+    cy.createDRMTask({
+      taskName: '704_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls',
       cid: 'test',
       inputCodec: 'H265',
       resolutionProfile: 'UHD_FHD_HD',

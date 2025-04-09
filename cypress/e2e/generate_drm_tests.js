@@ -14,7 +14,7 @@ let currentInputCodec = '';
 let currentOutputCodec = '';
 let currentResolution = '';
 let currentStreamingFormat = '';
-let currentAspectRatio = '';
+let currentAspectRatio = false;
 let currentAudioEncryption = false;
 let currentMultiKey = false;
 let currentMultiManifest = false;
@@ -45,7 +45,7 @@ function addTestCaseAndReset() {
   currentOutputCodec = '';
   currentResolution = '';
   currentStreamingFormat = '';
-  currentAspectRatio = false; // Reset to default boolean value
+  currentAspectRatio = false;
   currentAudioEncryption = false;
   currentMultiKey = false;
   currentMultiManifest = false;
@@ -75,7 +75,12 @@ for (const line of lines) {
   } else if (line.includes('스트리밍 포멧:')) {
     currentStreamingFormat = line.split(':')[1].trim().toLowerCase().replace(/\+/g, '_');
   } else if (line.includes('비율옵션:')) {
-    currentAspectRatio = line.split(':')[1].trim() === '체크';
+    const aspectRatioValue = line.split(':')[1].trim();
+    if (aspectRatioValue === '체크') {
+      currentAspectRatio = true;
+    } else if (aspectRatioValue === '체크해제') {
+      currentAspectRatio = false;
+    }
   } else if (line.includes('오디오 암호화:')) {
     currentAudioEncryption = line.split(':')[1].trim() === '체크';
   } else if (line.includes('멀티키:')) {
