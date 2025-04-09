@@ -74,6 +74,13 @@ Cypress.Commands.add('login', (email, password) => {
   // 이메일 입력
   cy.get('input[type="email"]')
     .should('be.visible')
+    .should('not.be.disabled')
+    .as('emailInput');
+  
+  cy.wait(500); // 요소가 안정화될 때까지 대기
+  
+  cy.get('@emailInput')
+    .clear()
     .type(email);
 
   // 비밀번호 입력
@@ -81,6 +88,8 @@ Cypress.Commands.add('login', (email, password) => {
     .should('be.visible')
     .should('not.be.disabled')
     .as('passwordInput');
+  
+  cy.wait(500); // 요소가 안정화될 때까지 대기
   
   cy.get('@passwordInput')
     .clear()
@@ -97,41 +106,8 @@ Cypress.Commands.add('login', (email, password) => {
   // 작업 페이지로 이동
   cy.get('.MuiButton-outlined')
     .should('be.visible')
+    .should('not.be.disabled')
     .click();
-});
-
-// 재시도 로직을 위한 공통 함수
-Cypress.Commands.add('retryOperation', function(operation, operationName, maxAttempts = 3) {
-  let attempts = 0;
-  
-  function retry() {
-    attempts++;
-    
-    return cy.then(() => {
-      try {
-        return operation();
-      } catch (error) {
-        cy.writelog(`[재시도 ${attempts}/${maxAttempts}] ${operationName} 실패: ${error.message}`);
-        
-        if (attempts < maxAttempts) {
-          cy.wait(1000); // 재시도 전 1초 대기
-          return retry();
-        } else {
-          cy.writelog(`[최종 실패] ${operationName} - 최대 재시도 횟수(${maxAttempts}회) 초과`);
-          throw error;
-        }
-      }
-    })
-    .then(() => {
-      if (attempts > 1) {
-        cy.writelog(`[재시도 성공] ${operationName} - ${attempts}번째 시도에서 성공`);
-      } else {
-        cy.writelog(`[성공] ${operationName}`);
-      }
-    });
-  }
-  
-  return retry();
 });
 
 // 클릭 작업을 위한 안전한 공통 함수
@@ -151,7 +127,11 @@ Cypress.Commands.add('safeClick', function(selector, options = {}) {
 // TNP 진입을 위한 공통 함수
 Cypress.Commands.add('navigateToTNP', function() {
   return cy.then(() => {
-    cy.safeClick('.side-bar-main > :nth-child(1) > :nth-child(2)');
+    cy.get('.side-bar-main > :nth-child(1) > :nth-child(2)')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .click();
+    
     cy.url().should('include', 'tnp');
     cy.get('body').should('be.visible');
     cy.writelog('TNP 진입 성공');
@@ -162,7 +142,11 @@ Cypress.Commands.add('navigateToTNP', function() {
 Cypress.Commands.add('navigateToCreateTask', function() {
   return cy.then(() => {
     cy.get('body').should('be.visible');
-    cy.safeClick('.sidebar-submenu > :nth-child(5)'); 
+    
+    cy.get('.sidebar-submenu > :nth-child(5)')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .click();
     cy.writelog('작업생성 페이지 진입 성공');
   });
 });
@@ -170,27 +154,51 @@ Cypress.Commands.add('navigateToCreateTask', function() {
 // FWM 선택을 위한 공통 함수
 Cypress.Commands.add('selectFWM', function() {
   return cy.then(() => {
-    cy.safeClick('#container');
+    cy.get('#container')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .click();
+
     cy.get('body').should('be.visible');
-    cy.safeClick(':nth-child(3) > td > label > h3');
+    
+    cy.get(':nth-child(3) > td > label > h3')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .click();
     cy.writelog('fwm 선택');
   });
 });
 
 Cypress.Commands.add('selectDRM', function() {
   return cy.then(() => {
-    cy.safeClick('#container');
+    cy.get('#container')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .click();
+
     cy.get('body').should('be.visible');
-    cy.safeClick(':nth-child(2) > td > label > h3');
+    
+    cy.get(':nth-child(2) > td > label > h3')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .click();
     cy.writelog('drm 선택');
   });
 });
 
 Cypress.Commands.add('selectDRM_FWM', function() {
   return cy.then(() => {
-    cy.safeClick('#container');
+    cy.get('#container')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .click();
+
     cy.get('body').should('be.visible');
-    cy.safeClick(':nth-child(1) > td > label > h3');
+    
+    cy.get(':nth-child(1) > td > label > h3')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .click();
     cy.writelog('drm+fwm 선택');
   });
 });
@@ -204,120 +212,74 @@ Cypress.Commands.add('inputTaskInfo', function(options) {
 
   return cy.then(() => {
     // 작업 생성 버튼 클릭
-    cy.retryOperation(
-      () => {
-        return cy.get('.align-right > .outlined_btn')
-          .should('be.visible')
-          .click();
-      },
-      '작업 생성 버튼 클릭',
-      3
-    );
+    cy.get('.align-right > .outlined_btn')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .click();
     
     // 작업명 입력
-    cy.retryOperation(
-      () => {
-        return cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) > input')
-          .should('be.visible')
-          .clear()
-          .type(taskName)
-          .should('have.value', taskName);
-      },
-      '작업명 입력',
-      3
-    );
+    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) > input')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .clear()
+      .type(taskName)
+      .should('have.value', taskName);
     
     // CID 입력
-    cy.retryOperation(
-      () => {
-        return cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input')
-          .should('be.visible')
-          .clear()
-          .type(cid)
-          .should('have.value', cid);
-      },
-      'CID 입력',
-      3
-    );
+    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .clear()
+      .type(cid)
+      .should('have.value', cid);
     cy.writelog('cid 입력');
     
     // 입력 스토리지 선택
-    cy.retryOperation(
-      () => {
-        return cy.get(':nth-child(4) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3 > .css-1wa3eu0-placeholder')
-          .should('be.visible')
-          .click();
-      },
-      '입력 스토리지 선택',
-      3
-    );
+    cy.get(':nth-child(4) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3 > .css-1wa3eu0-placeholder')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .click();
     
-    cy.retryOperation(
-      () => {
-        return cy.get('#react-select-3-option-0')
-          .should('be.visible')
-          .should('not.be.disabled')
-          .as('storageOption');
-        
-        cy.wait(500); // 요소가 안정화될 때까지 대기
-        
-        cy.get('@storageOption')
-          .should('be.visible')
-          .should('not.be.disabled')
-          .click();
-      },
-      '입력 스토리지 옵션 선택',
-      3
-    );
+    cy.get('#react-select-3-option-0')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .as('storageOption');
+    
+    cy.wait(500); // 요소가 안정화될 때까지 대기
+    
+    cy.get('@storageOption')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .click();
     cy.writelog('입력 스토리지 선택');
     
     // 입력 파일 경로 입력
-    cy.retryOperation(
-      () => {
-        return cy.get(':nth-child(1) > :nth-child(2) > :nth-child(5) > :nth-child(2) > input')
-          .should('be.visible')
-          .clear()
-          .type(inputPath);
-      },
-      '입력 파일 경로 입력',
-      3
-    );
+    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(5) > :nth-child(2) > input')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .clear()
+      .type(inputPath);
     cy.writelog('입력 파일 경로 입력');
     
     // 출력 스토리지 선택
-    cy.retryOperation(
-      () => {
-        return cy.get(':nth-child(8) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3')
-          .should('be.visible')
-          .click();
-      },
-      '출력 스토리지 선택',
-      3
-    );
+    cy.get(':nth-child(8) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .click();
     
-    cy.retryOperation(
-      () => {
-        return cy.get('#react-select-4-option-2')
-          .should('be.visible')
-          .click();
-      },
-      '출력 스토리지 옵션 선택',
-      3
-    );
+    cy.get('#react-select-4-option-2')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .click();
     cy.writelog('출력 스토리지 선택');
     
     // 출력 경로 입력
-    cy.retryOperation(
-      () => {
-        return cy.get(':nth-child(9) > :nth-child(2) > .width325')
-          .should('be.visible')
-          .clear()
-          .type(outputPath)
-          .should('have.value', outputPath);
-      },
-      '출력 경로 입력',
-      3
-    );
+    cy.get(':nth-child(9) > :nth-child(2) > .width325')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .clear()
+      .type(outputPath)
+      .should('have.value', outputPath);
     cy.writelog('출력 경로 입력');
   });
 });
@@ -331,87 +293,111 @@ Cypress.Commands.add('navigateToVideoSettings', function() {
   });
 });
 
-// 스트리밍 포맷(CMAF) 설정을 위한 공통 함수
 Cypress.Commands.add('selectCMAFFormat', function() {
   return cy.then(() => {
     cy.get(':nth-child(2) > :nth-child(1) > label')
       .should('be.visible')
+      .should('not.be.disabled')
       .first()
       .click();
+
     cy.get(':nth-child(2) > label')
       .should('be.visible')
+      .should('not.be.disabled')
       .first()
       .click();
+
     cy.get(':nth-child(3) > label')
       .should('be.visible')
+      .should('not.be.disabled')
       .first()
       .click();
     cy.writelog('스트리밍 포멧 : CMAF 선택');
   });
 });
 
-// 스트리밍 포맷(DASH) 설정을 위한 공통 함수
 Cypress.Commands.add('selectDashFormat', function() {
   return cy.then(() => {
     cy.get(':nth-child(2) > label')
       .should('be.visible')
+      .should('not.be.disabled')
       .first()
       .click();
     cy.writelog('스트리밍 포멧 : DASH 선택');
   });
 });
 
-// 스트리밍 포맷(HLS) 설정을 위한 공통 함수
 Cypress.Commands.add('selectHLSFormat', function() {
   return cy.then(() => {
     cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > label')
       .should('be.visible')
+      .should('not.be.disabled')
       .first()
       .click();
     cy.writelog('스트리밍 포멧 : HLS 선택');
   });
 });
 
-// 출력 포맷 설정을 위한 공통 함수
 Cypress.Commands.add('setOutputFormat', function(format) {
   return cy.then(() => {
-    // 셀렉트 박스 요소를 찾고 클릭
     if (format === 'H265') {
       cy.get('.select-box.width160.css-2b097c-container .css-yk16xz-control .css-1hwfws3')
         .should('be.visible')
+        .should('not.be.disabled')
         .first()
         .click();
+
+      cy.wait(500); // 드롭다운이 열릴 때까지 대기
+
       cy.get('#react-select-6-option-1')
         .should('be.visible')
+        .should('not.be.disabled')
         .click();
     }
     cy.writelog(`출력 포맷 설정: ${format}`);
   });
 });
 
-// 비디오 설정 초기화를 위한 공통 함수
 Cypress.Commands.add('resetVideoSettings', function() {
   return cy.then(() => {
     for(let i = 0; i < 5; i++) {
-      cy.safeClick(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa');
+      cy.get(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa')
+        .should('be.visible')
+        .should('not.be.disabled')
+        .click();
     }
     cy.writelog('출력 비디오 설정 초기화');
   });
 });
 
-// 단일 해상도 설정을 위한 공통 함수
 Cypress.Commands.add('addResolution', function(resolution) {
   const height = resolution.height;
   const bitrate = resolution.bitrate;
   const name = resolution.name;
 
   return cy.then(() => {
-    cy.safeClick('.messageTable > :nth-child(2) > :nth-child(2)');
-    cy.get('tbody > :nth-child(2) > :nth-child(3) > input').clear().type(height);
-    cy.get(':nth-child(5) > table > tbody > :nth-child(2) > td > input').clear().type(bitrate);
-    cy.safeClick('.floatRight');
-    cy.writelog(name + ' 추가');
+    cy.get('.messageTable > :nth-child(2) > :nth-child(2)')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .click();
 
+    cy.get('tbody > :nth-child(2) > :nth-child(3) > input')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .clear()
+      .type(height);
+
+    cy.get(':nth-child(5) > table > tbody > :nth-child(2) > td > input')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .clear()
+      .type(bitrate);
+
+    cy.get('.floatRight')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .click();
+    cy.writelog(name + ' 추가');
   });
 });
 
@@ -583,19 +569,11 @@ Cypress.Commands.add('inputDRMTaskInfo', function(options) {
 
 Cypress.Commands.add('aspectRatio', function(aspectRatio) {
   if (aspectRatio === true) {
-    cy.retryOperation(
-      () => {
-        return cy.get('.inline-child > label')
-          .should('be.visible')
-          .should('not.be.disabled')
-          .click()
-          .then(() => {
-            cy.writelog('비율옵션 활성화');
-          });
-      },
-      '비율옵션 활성화',
-      3
-    );
+    cy.get(':nth-child(4) > :nth-child(2) > .inline-block > label > .checkbtn')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .click();
+    cy.writelog('비율옵션 활성화');
   }
 });
 
