@@ -15,2284 +15,2284 @@ after(() => {
 });
 
 
-describe('1_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('1_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '1_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('2_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('2_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '2_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('3_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('3_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '3_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('4_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('4_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '4_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('5_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('5_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '5_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('6_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('6_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '6_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('7_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('7_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '7_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('8_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('8_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '8_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('9_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('9_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '9_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('10_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('10_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '10_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('11_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('11_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '11_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('12_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('12_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '12_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('13_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('13_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '13_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('14_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('14_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '14_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('15_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('15_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '15_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('16_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('16_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '16_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('17_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('17_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '17_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('18_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('18_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '18_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('19_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('19_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '19_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('20_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('20_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '20_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('21_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('21_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '21_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('22_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('22_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '22_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('23_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('23_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '23_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('24_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('24_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '24_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('25_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('25_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '25_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('26_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('26_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '26_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('27_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('27_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '27_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('28_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('28_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '28_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('29_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('29_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '29_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('30_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('30_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '30_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('31_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('31_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '31_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('32_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('32_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '32_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H264',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('33_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('33_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '33_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('34_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('34_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '34_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('35_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('35_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '35_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('36_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('36_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '36_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('37_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('37_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '37_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('38_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('38_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '38_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('39_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('39_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '39_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('40_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('40_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '40_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('41_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('41_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '41_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('42_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('42_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '42_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('43_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('43_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '43_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('44_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('44_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '44_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('45_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('45_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '45_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('46_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('46_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '46_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('47_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('47_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '47_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('48_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('48_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '48_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('49_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('49_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '49_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('50_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('50_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '50_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('51_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('51_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '51_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('52_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('52_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '52_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('53_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('53_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '53_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('54_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('54_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '54_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('55_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('55_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '55_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('56_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('56_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '56_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('57_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('57_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '57_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('58_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('58_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '58_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('59_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('59_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '59_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('60_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('60_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '60_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('61_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('61_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '61_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('62_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('62_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '62_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('63_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('63_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '63_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('64_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
-  it('64_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '64_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
-      cid: 'test',
-      inputCodec: 'H265',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'DASH_HLS',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('65_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('65_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '65_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'PRORES',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('66_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('66_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '66_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'PRORES',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('67_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('67_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '67_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'PRORES',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('68_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('68_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '68_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'PRORES',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('69_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('69_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '69_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'PRORES',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('70_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('70_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '70_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'PRORES',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('71_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('71_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '71_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'PRORES',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('72_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('72_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '72_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'PRORES',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('73_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('73_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '73_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'PRORES',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('74_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('74_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '74_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'PRORES',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('75_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('75_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '75_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'PRORES',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: true
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
-
-
-describe('76_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
-  it('76_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
-    cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
-
-    cy.createDRMTask({
-      taskName: '76_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
-      cid: 'test',
-      inputCodec: 'PRORES',
-      resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
-      streamingFormat: 'CMAF',
-      outputCodec: 'H264',
-      type: 'DRM',
-      aspectRatio: true,
-      audioEncryption: false,
-      multiKey: false,
-      multiManifest: false,
-      drmOff: false
-    });
-  });
-
-  afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
-    }
-  });
-});
+// describe('1_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('1_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '1_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('2_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('2_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '2_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('3_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('3_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '3_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('4_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('4_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '4_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('5_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('5_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '5_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('6_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('6_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '6_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('7_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('7_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '7_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('8_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('8_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '8_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('9_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('9_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '9_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('10_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('10_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '10_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('11_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('11_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '11_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('12_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('12_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '12_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('13_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('13_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '13_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('14_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('14_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '14_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('15_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('15_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '15_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('16_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('16_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '16_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('17_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('17_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '17_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('18_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('18_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '18_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('19_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('19_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '19_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('20_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('20_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '20_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('21_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('21_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '21_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('22_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('22_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '22_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('23_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('23_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '23_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('24_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('24_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '24_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('25_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('25_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '25_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('26_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('26_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '26_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('27_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('27_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '27_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('28_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('28_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '28_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('29_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('29_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '29_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('30_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('30_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '30_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('31_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('31_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '31_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('32_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('32_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '32_drm_h264_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H264',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('33_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('33_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '33_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('34_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('34_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '34_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('35_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('35_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '35_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('36_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('36_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '36_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('37_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('37_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '37_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('38_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('38_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '38_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('39_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('39_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '39_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('40_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('40_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '40_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('41_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('41_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '41_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('42_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('42_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '42_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('43_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('43_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '43_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('44_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('44_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '44_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('45_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('45_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '45_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('46_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('46_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '46_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('47_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('47_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '47_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('48_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('48_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '48_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('49_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('49_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '49_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('50_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('50_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '50_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('51_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('51_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '51_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('52_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('52_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '52_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('53_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('53_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '53_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('54_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('54_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '54_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('55_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('55_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '55_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('56_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('56_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '56_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('57_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('57_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '57_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('58_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('58_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '58_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('59_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('59_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '59_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('60_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('60_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '60_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('61_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('61_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '61_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('62_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('62_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '62_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('63_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('63_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '63_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('64_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls', () => {
+//   it('64_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '64_drm_h265_h264_uhd_fhd_fhd_hd_hd_sd_dash_hls',
+//       cid: 'test',
+//       inputCodec: 'H265',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'DASH_HLS',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('65_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('65_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '65_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'PRORES',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('66_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('66_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '66_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'PRORES',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('67_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('67_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '67_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'PRORES',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('68_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('68_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '68_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'PRORES',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('69_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('69_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '69_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'PRORES',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('70_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('70_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '70_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'PRORES',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('71_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('71_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '71_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'PRORES',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('72_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('72_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '72_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'PRORES',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('73_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('73_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '73_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'PRORES',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('74_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('74_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '74_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'PRORES',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('75_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('75_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '75_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'PRORES',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: true
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
+
+
+// describe('76_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
+//   it('76_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf 작업생성', function() {
+//     cy.viewport(1280, 720);
+//     cy.login('jcg@inka.co.kr', 'Say1013!');
+
+//     cy.createDRMTask({
+//       taskName: '76_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf',
+//       cid: 'test',
+//       inputCodec: 'PRORES',
+//       resolutionProfile: 'UHD_FHD_FHD_HD_HD_SD',
+//       streamingFormat: 'CMAF',
+//       outputCodec: 'H264',
+//       type: 'DRM',
+//       aspectRatio: true,
+//       audioEncryption: false,
+//       multiKey: false,
+//       multiManifest: false,
+//       drmOff: false
+//     });
+//   });
+
+//   afterEach(function() {
+//     if (this.currentTest.state === 'failed') {
+//       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
+//       cy.screenshot(`실패_${this.currentTest.title}`);
+//     }
+//   });
+// });
 
 
 describe('77_drm_prores_h264_uhd_fhd_fhd_hd_hd_sd_cmaf', () => {
