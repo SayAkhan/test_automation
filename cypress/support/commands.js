@@ -66,48 +66,60 @@
 
 // 로그인 함수 추가
 Cypress.Commands.add('login', (email, password) => {
-  cy.visit('https://qa-contentsecurity.doverunner.com/#ko');
+  let attempts = 0;
+  const maxAttempts = 3;
   
-  // 페이지 로딩 완료 검증
-  cy.get('body').should('be.visible');
-  
-  // 이메일 입력
-  cy.get('input[type="email"]')
-    .should('be.visible')
-    .should('not.be.disabled')
-    .as('emailInput');
-  
-  cy.wait(500); // 요소가 안정화될 때까지 대기
-  
-  cy.get('@emailInput')
-    .clear()
-    .type(email);
+  function tryFind() {
+    attempts++;
+    return cy.visit('https://qa-contentsecurity.doverunner.com/#ko')
+      .then(() => {
+        cy.get('body').should('be.visible');
+        cy.wait(500);
 
-  // 비밀번호 입력
-  cy.get('input[type="password"]')
-    .should('be.visible')
-    .should('not.be.disabled')
-    .as('passwordInput');
+        // 이메일 입력
+        cy.get('input[type="email"]')
+          .should('be.visible')
+          .should('not.be.disabled')
+          .as('emailInput');
+        cy.wait(500);
+        cy.get('@emailInput')
+          .clear()
+          .type(email);
+        cy.wait(500);
+
+        // 비밀번호 입력
+        cy.get('input[type="password"]')
+          .should('be.visible')
+          .should('not.be.disabled')
+          .as('passwordInput');
+        cy.wait(500);
+        cy.get('@passwordInput')
+          .clear()
+          .type(password);
+        cy.wait(500);
+        cy.get('@passwordInput')
+          .type('{enter}');
+
+        // 로그인 성공 후 페이지 이동
+        cy.url().should('include', 'qa-contentsecurity.doverunner.com');
+        cy.get('body').should('be.visible');
+        cy.writelog('로그인 성공');
+
+        // 2FA 나중에 확인 버튼 클릭
+        cy.get('.MuiButton-outlined')
+          .should('be.visible')
+          .should('not.be.disabled')
+          .click();
+      }, (err) => {
+        if (attempts < maxAttempts) {
+          cy.wait(1000);
+          return tryFind();
+        }
+        throw new Error(`로그인 실패 (시도 횟수: ${attempts})`);
+      });
+  }
   
-  cy.wait(500); // 요소가 안정화될 때까지 대기
-  
-  cy.get('@passwordInput')
-    .clear()
-    .type(password);
-    
-  cy.get('@passwordInput')
-    .type('{enter}');
-    
-  // 로그인 성공 검증
-  cy.url().should('include', 'qa-contentsecurity.doverunner.com');
-  cy.get('body').should('be.visible');
-  cy.writelog('로그인 성공');
-  
-  // 작업 페이지로 이동
-  cy.get('.MuiButton-outlined')
-    .should('be.visible')
-    .should('not.be.disabled')
-    .click();
+  return tryFind();
 });
 
 // 클릭 작업을 위한 안전한 공통 함수
@@ -126,248 +138,257 @@ Cypress.Commands.add('safeClick', function(selector, options = {}) {
 
 // TNP 진입을 위한 공통 함수
 Cypress.Commands.add('navigateToTNP', function() {
-  return cy.then(() => {
-    cy.get('.side-bar-main > :nth-child(1) > :nth-child(2)')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .click();
-    
-    cy.url().should('include', 'tnp');
-    cy.get('body').should('be.visible');
-    cy.writelog('TNP 진입 성공');
-  });
+  cy.get('.side-bar-main > :nth-child(1) > :nth-child(2)')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .click();
+  
+  cy.url().should('include', 'tnp');
+  cy.get('body').should('be.visible');
+  cy.writelog('TNP 진입 성공');
 });
 
 // 작업 생성 페이지 진입을 위한 공통 함수
 Cypress.Commands.add('navigateToCreateTask', function() {
-  return cy.then(() => {
-    cy.get('body').should('be.visible');
-    
-    cy.get('.sidebar-submenu > :nth-child(5)')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .click();
-    cy.writelog('작업생성 페이지 진입 성공');
-  });
+  cy.get('body').should('be.visible');
+  
+  //작업생성 클릭
+  cy.get('.sidebar-submenu > :nth-child(5)')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .click();
+  cy.writelog('작업생성 페이지 진입 성공');
 });
 
 // FWM 선택을 위한 공통 함수
 Cypress.Commands.add('selectFWM', function() {
-  return cy.then(() => {
-    cy.get('#container')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .click();
+  cy.get('#container')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .click();
 
-    cy.get('body').should('be.visible');
-    
-    cy.get(':nth-child(3) > td > label > h3')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .click();
-    cy.writelog('fwm 선택');
-  });
+  cy.get('body').should('be.visible');
+  
+  //fwm 선택
+  cy.get(':nth-child(3) > td > label > h3')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .click();
+  cy.writelog('fwm 선택');
 });
 
 Cypress.Commands.add('selectDRM', function() {
-  return cy.then(() => {
-    cy.get('#container')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .click();
+  cy.get('#container')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .click();
 
-    cy.get('body').should('be.visible');
-    
-    cy.get(':nth-child(2) > td > label > h3')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .click();
-    cy.writelog('drm 선택');
-  });
+  cy.get('body').should('be.visible');
+  
+  //drm 선택
+  cy.get(':nth-child(2) > td > label > h3')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .click();
+  cy.writelog('drm 선택');
 });
 
 Cypress.Commands.add('selectDRM_FWM', function() {
-  return cy.then(() => {
-    cy.get('#container')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .click();
+  cy.get('#container')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .click();
 
-    cy.get('body').should('be.visible');
-    
-    cy.get(':nth-child(1) > td > label > h3')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .click();
-    cy.writelog('drm+fwm 선택');
-  });
+  cy.get('body').should('be.visible');
+  
+  //drm+fwm 선택
+  cy.get(':nth-child(1) > td > label > h3')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .click();
+  cy.writelog('drm+fwm 선택');
 });
 
 // 작업 정보 입력을 위한 공통 함수
 Cypress.Commands.add('inputTaskInfo', function(options) {
   const taskName = options.taskName;
+
+  //cid 기본값 test
   const cid = options.cid || 'test';
+
+  //입력파일 기본값 test/7min_sdr.mp4
   const inputPath = options.inputPath || 'test/7min_sdr.mp4';
+
+  //출력경로 기본값 taskName
   const outputPath = taskName;
 
-  return cy.then(() => {
-    // 작업 생성 버튼 클릭
-    cy.get('.align-right > .outlined_btn')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .click();
-    
-    // 작업명 입력
-    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) > input')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .clear()
-      .type(taskName)
-      .should('have.value', taskName);
-    
-    // CID 입력
-    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .clear()
-      .type(cid)
-      .should('have.value', cid);
-    cy.writelog('cid 입력');
-    
-    // 입력 스토리지 선택
-    cy.get(':nth-child(4) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3 > .css-1wa3eu0-placeholder')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .click();
-    
-    cy.get('#react-select-3-option-0')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .as('storageOption');
-    
-    cy.wait(500); // 요소가 안정화될 때까지 대기
-    
-    cy.get('@storageOption')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .click();
-    cy.writelog('입력 스토리지 선택');
-    
-    // 입력 파일 경로 입력
-    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(5) > :nth-child(2) > input')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .clear()
-      .type(inputPath);
-    cy.writelog('입력 파일 경로 입력');
-    
-    // 출력 스토리지 선택
-    cy.get(':nth-child(8) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .click();
-    
-    cy.get('#react-select-4-option-2')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .click();
-    cy.writelog('출력 스토리지 선택');
-    
-    // 출력 경로 입력
-    cy.get(':nth-child(9) > :nth-child(2) > .width325')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .clear()
-      .type(outputPath)
-      .should('have.value', outputPath);
-    cy.writelog('출력 경로 입력');
-  });
+  //다음버튼 클릭
+  cy.get('.align-right > .outlined_btn')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .click();
+  
+  // 작업명 입력
+  cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) > input')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .clear()
+    .type(taskName)
+    .should('have.value', taskName);
+  
+  // CID 입력
+  cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .clear()
+    .type(cid)
+    .should('have.value', cid);
+  cy.writelog('cid 입력');
+  
+  // 입력 스토리지 선택
+  cy.get(':nth-child(4) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3 > .css-1wa3eu0-placeholder')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .click();
+  
+  cy.get('#react-select-3-option-0')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .as('storageOption');
+  
+  cy.wait(500); // 요소가 안정화될 때까지 대기
+  
+  cy.get('@storageOption')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .click();
+  cy.writelog('입력 스토리지 선택');
+  
+  // 입력 파일 경로 입력
+  cy.get(':nth-child(1) > :nth-child(2) > :nth-child(5) > :nth-child(2) > input')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .clear()
+    .type(inputPath);
+  cy.writelog('입력 파일 경로 입력');
+  
+  // 출력 스토리지 선택
+  cy.get(':nth-child(8) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .click();
+  
+  cy.get('#react-select-4-option-2')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .click();
+  cy.writelog('출력 스토리지 선택');
+  
+  // 출력 경로 입력
+  cy.get(':nth-child(9) > :nth-child(2) > .width325')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .clear()
+    .type(outputPath)
+    .should('have.value', outputPath);
+  cy.writelog('출력 경로 입력');
 });
 
 // 비디오 설정 페이지 진입을 위한 공통 함수
 Cypress.Commands.add('navigateToVideoSettings', function() {
-  return cy.then(() => {
-    cy.safeClick('.align-right > .outlined_btn');
-    cy.get('body').should('be.visible');
-    cy.writelog('비디오 설정으로 이동');
-  });
+  cy.safeClick('.align-right > .outlined_btn');
+  cy.get('body').should('be.visible');
+  cy.writelog('비디오 설정으로 이동');
 });
 
 Cypress.Commands.add('selectCMAFFormat', function() {
-  return cy.then(() => {
-    cy.get(':nth-child(2) > :nth-child(1) > label')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .first()
-      .click();
+  //DRM 체크해제
+  cy.wait(500);
+  cy.get(':nth-child(2) > :nth-child(1) > label')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .first()
+    .click();
 
-    cy.get(':nth-child(2) > label')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .first()
-      .click();
+  //FWM 체크해제
+  cy.wait(500);
+  cy.get(':nth-child(2) > label')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .first()
+    .click();
 
-    cy.get(':nth-child(3) > label')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .first()
-      .click();
-    cy.writelog('스트리밍 포멧 : CMAF 선택');
-  });
+  //CMAF 체크
+  cy.wait(500);
+  cy.get(':nth-child(3) > label')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .first()
+    .click();
+  cy.writelog('스트리밍 포멧 : CMAF 선택');
 });
 
 Cypress.Commands.add('selectDashFormat', function() {
-  return cy.then(() => {
-    cy.get(':nth-child(2) > label')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .first()
-      .click();
-    cy.writelog('스트리밍 포멧 : DASH 선택');
-  });
+  //HLS 체크해제
+  cy.wait(500);
+  cy.get(':nth-child(2) > label')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .first()
+    .click();
+  cy.writelog('스트리밍 포멧 : DASH 선택');
 });
 
 Cypress.Commands.add('selectHLSFormat', function() {
-  return cy.then(() => {
-    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > label')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .first()
-      .click();
-    cy.writelog('스트리밍 포멧 : HLS 선택');
-  });
+  //DASH 체크해제
+  cy.wait(500);
+  cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > label')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .first()
+    .click();
+  cy.writelog('스트리밍 포멧 : HLS 선택');
 });
 
 Cypress.Commands.add('setOutputFormat', function(format) {
-  return cy.then(() => {
-    if (format === 'H265') {
-      cy.get('.select-box.width160.css-2b097c-container .css-yk16xz-control .css-1hwfws3')
-        .should('be.visible')
-        .should('not.be.disabled')
-        .first()
-        .click();
-
-      cy.wait(500); // 드롭다운이 열릴 때까지 대기
-
-      cy.get('#react-select-6-option-1')
-        .should('be.visible')
-        .should('not.be.disabled')
-        .click();
-    }
-    cy.writelog(`출력 포맷 설정: ${format}`);
-  });
+  let attempts = 0;
+  const maxAttempts = 3;
+  
+  function tryFind() {
+    attempts++;
+    return cy.get('.select-box.width160.css-2b097c-container .css-yk16xz-control .css-1hwfws3')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .first()
+      .click()
+      .then(() => {
+        cy.wait(500);
+        cy.get('#react-select-6-option-1')
+          .should('be.visible')
+          .should('not.be.disabled')
+          .click();
+        cy.writelog(`출력 포맷 설정: ${format}`);
+      }, (err) => {
+        if (attempts < maxAttempts) {
+          cy.wait(1000);
+          return tryFind();
+        }
+        throw new Error(`출력 포맷 설정 실패 (시도 횟수: ${attempts})`);
+      });
+  }
+  
+  return tryFind();
 });
 
 Cypress.Commands.add('resetVideoSettings', function() {
-  return cy.then(() => {
-    for(let i = 0; i < 5; i++) {
-      cy.get(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa')
-        .should('be.visible')
-        .should('not.be.disabled')
-        .click();
-    }
-    cy.writelog('출력 비디오 설정 초기화');
-  });
+  //디폴트로 설정된 해상도 전부 삭제
+  for(let i = 0; i < 5; i++) {
+    cy.get(':nth-child(1) > .align-left > .x-icon > .svg-inline--fa')
+      .should('be.visible')
+      .should('not.be.disabled')
+      .click();
+  }
+  cy.writelog('출력 비디오 설정 초기화');
 });
 
 Cypress.Commands.add('addResolution', function(resolution) {
@@ -375,277 +396,305 @@ Cypress.Commands.add('addResolution', function(resolution) {
   const bitrate = resolution.bitrate;
   const name = resolution.name;
 
-  return cy.then(() => {
-    cy.get('.messageTable > :nth-child(2) > :nth-child(2)')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .click();
+  //비디오 설정 추가 버튼 클릭
+  cy.wait(500);
+  cy.get('.messageTable > :nth-child(2) > :nth-child(2)')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .click();
 
-    cy.get('tbody > :nth-child(2) > :nth-child(3) > input')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .clear()
-      .type(height);
+  //높이 입력
+  cy.wait(500);
+  cy.get('tbody > :nth-child(2) > :nth-child(3) > input')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .clear()
+    .type(height);
 
-    cy.get(':nth-child(5) > table > tbody > :nth-child(2) > td > input')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .clear()
-      .type(bitrate);
+  //비트레이트 입력
+  cy.wait(500);
+  cy.get(':nth-child(5) > table > tbody > :nth-child(2) > td > input')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .clear()
+    .type(bitrate);
 
-    cy.get('.floatRight')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .click();
-    cy.writelog(name + ' 추가');
-  });
+  //추가 버튼 클릭
+  cy.wait(500);
+  cy.get('.floatRight')
+    .should('be.visible')
+    .should('not.be.disabled')
+    .click();
+  cy.writelog(name + ' 추가');
 });
 
 // 해상도 프로파일을 이용한 설정 함수
 Cypress.Commands.add('configureResolutionsFromProfile', function(profileName) {
-  return cy.then(() => {
-    cy.resetVideoSettings();
-    
-    cy.fixture('resolutions.json').then(profiles => {
-      const profile = profiles[profileName];
-      if (!profile) {
-        throw new Error('Resolution profile not found: ' + profileName);
-      }
+  cy.resetVideoSettings();
 
-      profile.resolutions.forEach(resolution => {
-        cy.addResolution(resolution);
-      });
+  //해상도 프로파일 파일 로드
+  cy.fixture('resolutions.json').then(profiles => {
+    const profile = profiles[profileName];
+    if (!profile) {
+      throw new Error('Resolution profile not found: ' + profileName);
+    }
+
+    //해상도 프로파일 적용
+    profile.resolutions.forEach(resolution => {
+      cy.addResolution(resolution);
     });
   });
 });
 
 // 오디오/자막 설정 페이지 진입을 위한 공통 함수
 Cypress.Commands.add('navigateToAudioSubtitleSettings', function() {
-  return cy.then(() => {
-    cy.safeClick('.align-right > .outlined_btn');
-    cy.writelog('오디오, 자막 설정 페이지 진입');
-  });
+  //다음버튼 클릭
+  cy.wait(500);
+  cy.safeClick('.align-right > .outlined_btn');
+  cy.writelog('오디오, 자막 설정 페이지 진입');
 });
 
 // 작업 동작 페이지 진입을 위한 공통 함수
 Cypress.Commands.add('navigateToTaskOperation', function() {
-  return cy.then(() => {
-    cy.safeClick('.align-right > .outlined_btn');
-    cy.writelog('작업 동작 페이지 진입');
-  });
+  //다음버튼 클릭
+  cy.wait(500);
+  cy.safeClick('.align-right > .outlined_btn');
+  cy.writelog('작업 동작 페이지 진입');
 });
 
 // 해상도 설정을 위한 공통 함수
 Cypress.Commands.add('selectResolution', function(resolution) {
-  return cy.then(() => {
-    // 첫 번째 요소 클릭
-    cy.safeClick('#container');
-    
-    // 두 번째 요소 클릭
-    cy.safeClick(':nth-child(3) > td > label > h3');
-    
-    cy.writelog(`해상도 : ${resolution} 선택`);
-  });
+  cy.safeClick('#container');
+  cy.safeClick(':nth-child(3) > td > label > h3');
+  cy.writelog(`해상도 : ${resolution} 선택`);
 });
 
 
 // 코덱 선택을 위한 공통 함수
 Cypress.Commands.add('selectCodec', function(codec) {
-  return cy.then(() => {
-    cy.safeClick('.css-1hwfws3');
-    if (codec === 'H265') {
-      cy.safeClick('#react-select-6-option-1');
-    } else {
-      cy.safeClick('#react-select-6-option-0');
-    }
-    cy.writelog(`코덱 : ${codec} 선택`);
-  });
+  cy.wait(500);
+  cy.safeClick('.css-1hwfws3');
+  if (codec === 'H265') {
+    cy.safeClick('#react-select-6-option-1');
+  } else {
+    cy.safeClick('#react-select-6-option-0');
+  }
+  cy.writelog(`코덱 : ${codec} 선택`);
 });
 
 // 작업 타입 선택을 위한 공통 함수
 Cypress.Commands.add('selectTaskType', function(taskType) {
-  return cy.then(() => {
-    cy.safeClick('#container');
-    cy.get('body').should('be.visible');
-    cy.safeClick(':nth-child(3) > td > label > h3');
-    cy.writelog(`작업 타입 : ${taskType} 선택`);
-  });
+  cy.wait(500);
+  cy.safeClick('#container');
+  cy.get('body').should('be.visible');
+  cy.safeClick(':nth-child(3) > td > label > h3');
+  cy.writelog(`작업 타입 : ${taskType} 선택`);
 });
 
 
 // 작업 생성 완료를 위한 공통 함수
 Cypress.Commands.add('completeTaskCreation', function(taskName, type) {
-  return cy.then(() => {
-    if (type === 'DRM_FWM') {
-      cy.get('.align-center > .primary_btn')
-        .should('be.visible')
-        .click();
-    } else {
-      cy.get(':nth-child(4) > .primary_btn')
-        .should('be.visible')
-        .click();
-    }
-    cy.safeClick('#alert_btn');
-    cy.writelog(`작업 생성 완료: ${taskName}`);
-  });
+  cy.wait(500);
+  if (type === 'DRM_FWM') {
+    //DRM이 포함된 작업은 작업생성 버튼 위치가 다름
+    cy.get('.align-center > .primary_btn')
+      .should('be.visible')
+      .click();
+  } else {
+    cy.wait(500);
+    //FWM 단독작업은 작업생성 버튼 위치가 다름
+    cy.get(':nth-child(4) > .primary_btn')
+      .should('be.visible')
+      .click();
+  }
+  cy.safeClick('#alert_btn');
+  cy.writelog(`작업 생성 완료: ${taskName}`);
 });
 
 Cypress.Commands.add('inputDRMTaskInfo', function(options) {
-  const taskName = options.taskName;
-  const cid = options.cid || 'test';
-  const inputPath = options.inputPath || 'test/7min_sdr.mp4';
-  const outputPath = taskName;
+  let attempts = 0;
+  const maxAttempts = 3;
+  
+  function tryFind() {
+    attempts++;
+    return cy.get('.align-right > .outlined_btn')
+      .should('be.visible')
+      .click()
+      .then(() => {
+        const taskName = options.taskName;
+        const cid = options.cid || 'test';
+        const inputPath = options.inputPath || 'test/7min_sdr.mp4';
+        const outputPath = taskName;
 
-  return cy.then(() => {
-    cy.get('.align-right > .outlined_btn')
-      .should('be.visible')
-      .click();
-    
-    // 작업명 입력
-    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) > input')
-      .should('be.visible')
-      .clear()
-      .type(taskName)
-      .should('have.value', taskName);
-    
-    // CID 입력
-    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input')
-      .should('be.visible')
-      .clear()
-      .type(cid)
-      .should('have.value', cid);
-    cy.writelog('cid 입력');
-    
-    // 입력 스토리지 선택
-    cy.get(':nth-child(4) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3 > .css-1wa3eu0-placeholder')
-      .should('be.visible')
-      .click();
-    cy.get('#react-select-3-option-0')
-      .should('be.visible')
-      .click();
-    cy.writelog('입력 스토리지 선택');
-    
-    // 입력 파일 경로 입력
-    cy.get(':nth-child(1) > :nth-child(2) > :nth-child(5) > :nth-child(2) > input')
-      .should('be.visible')
-      .clear()
-      .type(inputPath);
-    cy.writelog('입력 파일 경로 입력');
+        cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) > input')
+          .should('be.visible')
+          .clear()
+          .type(taskName)
+          .should('have.value', taskName);
+        
+        cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input')
+          .should('be.visible')
+          .clear()
+          .type(cid)
+          .should('have.value', cid);
+        cy.writelog('cid 입력');
+        
+        cy.get(':nth-child(4) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3 > .css-1wa3eu0-placeholder')
+          .should('be.visible')
+          .click();
+        cy.get('#react-select-3-option-0')
+          .should('be.visible')
+          .click();
+        cy.writelog('입력 스토리지 선택');
+        
+        cy.get(':nth-child(1) > :nth-child(2) > :nth-child(5) > :nth-child(2) > input')
+          .should('be.visible')
+          .clear()
+          .type(inputPath);
+        cy.writelog('입력 파일 경로 입력');
 
-    //추가 오디오파일 입력
-    cy.get(':nth-child(6) > :nth-child(2) > .fwmInputTable > tbody > tr > td > .floatLeft')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .clear()
-      .type('test/sample2.aac');
-    cy.writelog('추가 오디오파일 입력');
+        cy.get(':nth-child(6) > :nth-child(2) > .fwmInputTable > tbody > tr > td > .floatLeft')
+          .should('be.visible')
+          .should('not.be.disabled')
+          .clear()
+          .type('test/sample2.aac');
+        cy.writelog('추가 오디오파일 입력');
 
-    //추가 자막파일 입력
-    cy.get(':nth-child(7) > :nth-child(2) > .fwmInputTable > tbody > tr > td > .floatLeft')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .clear()
-      .type('test/h264_5min_sample.vtt');
-    cy.writelog('추가 자막파일 입력');
-    
-    // 출력 스토리지 선택
-    cy.get(':nth-child(8) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3')
-      .should('be.visible')
-      .click();
-    cy.get('#react-select-4-option-2')
-      .should('be.visible')
-      .click();
-    cy.writelog('출력 스토리지 선택');
-    
-    // 출력 경로 입력
-    cy.get(':nth-child(9) > :nth-child(2) > .width325')
-      .should('be.visible')
-      .clear()
-      .type(outputPath)
-      .should('have.value', outputPath);
-    cy.writelog('출력 경로 입력');
-  });
+        cy.get(':nth-child(7) > :nth-child(2) > .fwmInputTable > tbody > tr > td > .floatLeft')
+          .should('be.visible')
+          .should('not.be.disabled')
+          .clear()
+          .type('test/h264_5min_sample.vtt');
+        cy.writelog('추가 자막파일 입력');
+        
+        cy.get(':nth-child(8) > :nth-child(2) > .select-box > .css-yk16xz-control > .css-1hwfws3')
+          .should('be.visible')
+          .click();
+        cy.get('#react-select-4-option-2')
+          .should('be.visible')
+          .click();
+        cy.writelog('출력 스토리지 선택');
+        
+        cy.get(':nth-child(9) > :nth-child(2) > .width325')
+          .should('be.visible')
+          .clear()
+          .type(outputPath)
+          .should('have.value', outputPath);
+        cy.writelog('출력 경로 입력');
+      }, (err) => {
+        if (attempts < maxAttempts) {
+          cy.wait(1000);
+          return tryFind();
+        }
+        throw new Error(`DRM 작업 정보 입력 실패 (시도 횟수: ${attempts})`);
+      });
+  }
+  
+  return tryFind();
 });
 
 Cypress.Commands.add('aspectRatio', function(aspectRatio) {
   if (aspectRatio === true) {
-    cy.get(':nth-child(4) > :nth-child(2) > .inline-block > label > .checkbtn')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .click();
-    cy.writelog('비율옵션 활성화');
+    let attempts = 0;
+    const maxAttempts = 3;
+    
+    function tryFind() {
+      attempts++;
+      return cy.get(':nth-child(4) > :nth-child(2) > .inline-block > label > .checkbtn', { timeout: 10000 })
+        .should('exist')
+        .should('be.visible')
+        .should('not.be.disabled')
+        .click({ force: true })
+        .then(() => {
+          cy.writelog('비율옵션 활성화');
+        }, (err) => {
+          if (attempts < maxAttempts) {
+            cy.wait(1000);
+            return tryFind();
+          }
+          throw new Error(`비율옵션 요소를 찾을 수 없습니다 (시도 횟수: ${attempts})`);
+        });
+    }
+    
+    return tryFind();
   }
 });
 
 Cypress.Commands.add('navigateToDRMTaskOperation', function(type) {
-  return cy.then(() => {
-    // DASH 자막옵션
-    if (type === 'DASH' || type === 'DASH_HLS') {
-      const dashOptions = [':nth-child(1) > :nth-child(2) > .width200 > label', 
-                         ':nth-child(1) > :nth-child(2) > :nth-child(2) > label',
-                         ':nth-child(1) > :nth-child(2) > :nth-child(3) > label'];
-      const randomDashIndex = Math.floor(Math.random() * dashOptions.length);
-      cy.get(dashOptions[randomDashIndex])
-        .should('be.visible')
-        .click();
-      cy.writelog(`DASH 자막 옵션 ${randomDashIndex + 1} 선택`);
-    }
-
-    // HLS 자막옵션
-    if (type === 'HLS' || type === 'DASH_HLS') {
-      const hlsOptions = [':nth-child(2) > :nth-child(2) > .width200 > label',
-                         ':nth-child(2) > :nth-child(2) > :nth-child(2) > label',
-                         ':nth-child(2) > :nth-child(2) > :nth-child(3) > label'];
-      const randomHlsIndex = Math.floor(Math.random() * hlsOptions.length);
-      cy.get(hlsOptions[randomHlsIndex])
-        .should('be.visible')
-        .click();
-      cy.writelog(`HLS 자막 옵션 ${randomHlsIndex + 1} 선택`);
-    }
-
-    // CMAF 자막옵션
-    if (type === 'CMAF') {
-      const cmafOptions = [':nth-child(3) > :nth-child(2) > .width200 > label',
-                          ':nth-child(3) > :nth-child(2) > .width130 > label'];
-      const randomCmafIndex = Math.floor(Math.random() * cmafOptions.length);
-      cy.get(cmafOptions[randomCmafIndex])
-        .should('be.visible')
-        .click();
-      cy.writelog(`CMAF 자막 옵션 ${randomCmafIndex + 1} 선택`);
-    }
-
-    // 언어코드 선택
-    cy.get('.css-1hwfws3')
+  let attempts = 0;
+  const maxAttempts = 3;
+  
+  function tryFind() {
+    attempts++;
+    return cy.get('.align-right > .outlined_btn')
       .should('be.visible')
-      .as('languageSelect');
-    
-    cy.wait(500); // 드롭다운이 열릴 때까지 대기
-    
-    cy.get('@languageSelect')
-      .click();
-    
-    cy.wait(500); // 옵션이 나타날 때까지 대기
-    
-    cy.get('#react-select-7-option-1')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .as('languageOption');
-    
-    cy.wait(500); // 요소가 안정화될 때까지 대기
-    
-    cy.get('@languageOption')
-      .should('be.visible')
-      .should('not.be.disabled')
-      .click();
-    
-    cy.writelog('언어코드 선택 완료');
+      .click()
+      .then(() => {
+        if (type === 'DASH' || type === 'DASH_HLS') {
+          const dashOptions = [':nth-child(1) > :nth-child(2) > .width200 > label', 
+                             ':nth-child(1) > :nth-child(2) > :nth-child(2) > label',
+                             ':nth-child(1) > :nth-child(2) > :nth-child(3) > label'];
+          const randomDashIndex = Math.floor(Math.random() * dashOptions.length);
+          cy.get(dashOptions[randomDashIndex])
+            .should('be.visible')
+            .click();
+          cy.writelog(`DASH 자막 옵션 ${randomDashIndex + 1} 선택`);
+        }
 
-    // 다음 단계로 이동
-    cy.get('.align-right > .outlined_btn')
-      .should('be.visible')
-      .click();
-    cy.writelog('작업 동작 페이지 진입');
-  });
+        if (type === 'HLS' || type === 'DASH_HLS') {
+          const hlsOptions = [':nth-child(2) > :nth-child(2) > .width200 > label',
+                             ':nth-child(2) > :nth-child(2) > :nth-child(2) > label',
+                             ':nth-child(2) > :nth-child(2) > :nth-child(3) > label'];
+          const randomHlsIndex = Math.floor(Math.random() * hlsOptions.length);
+          cy.get(hlsOptions[randomHlsIndex])
+            .should('be.visible')
+            .click();
+          cy.writelog(`HLS 자막 옵션 ${randomHlsIndex + 1} 선택`);
+        }
+
+        if (type === 'CMAF') {
+          const cmafOptions = [':nth-child(3) > :nth-child(2) > .width200 > label',
+                              ':nth-child(3) > :nth-child(2) > .width130 > label'];
+          const randomCmafIndex = Math.floor(Math.random() * cmafOptions.length);
+          cy.get(cmafOptions[randomCmafIndex])
+            .should('be.visible')
+            .click();
+          cy.writelog(`CMAF 자막 옵션 ${randomCmafIndex + 1} 선택`);
+        }
+
+        // 언어코드 선택
+        cy.get('.css-1hwfws3')
+          .should('be.visible')
+          .as('languageSelect');
+        cy.wait(500);
+        cy.get('@languageSelect')
+          .click();
+        cy.wait(500);
+        cy.get('#react-select-7-option-1')
+          .should('be.visible')
+          .should('not.be.disabled')
+          .as('languageOption');
+        cy.wait(500);
+        cy.get('@languageOption')
+          .should('be.visible')
+          .should('not.be.disabled')
+          .click();
+        cy.writelog('언어코드 선택 완료');
+
+        cy.get('.align-right > .outlined_btn')
+          .should('be.visible')
+          .click();
+        cy.writelog('작업 동작 페이지 진입');
+      }, (err) => {
+        if (attempts < maxAttempts) {
+          cy.wait(1000);
+          return tryFind();
+        }
+        throw new Error(`DRM 작업 동작 설정 실패 (시도 횟수: ${attempts})`);
+      });
+  }
+  
+  return tryFind();
 });
 
 

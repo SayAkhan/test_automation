@@ -1,9 +1,13 @@
-module.exports ={
+module.exports = {
   e2e: {
     experimentalStudio: true,
     watchForFileChanges: false,
     numTestsKeptInMemory: 0,
-    
+    defaultCommandTimeout: 10000,  // 기본 타임아웃 10초
+    retries: {
+      runMode: 2,
+      openMode: 0
+    },
     setupNodeEvents(on, config) {
       on('task', {
         generateLogFileName() {
@@ -21,7 +25,6 @@ module.exports ={
           return logFileName; // 로그 파일 이름 반환
         },
       });
-   
     },
   },
 };
