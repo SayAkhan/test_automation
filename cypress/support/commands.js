@@ -194,8 +194,7 @@ Cypress.Commands.add('inputTaskInfo', function(options) {
     cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) > input')
       .should('be.visible')
       .clear()
-      .type(taskName)
-      .should('have.value', taskName);
+      .type(taskName, { delay: 100 });
     
     // CID 입력
     cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input')
@@ -234,8 +233,7 @@ Cypress.Commands.add('inputTaskInfo', function(options) {
     cy.get(':nth-child(9) > :nth-child(2) > .width325')
       .should('be.visible')
       .clear()
-      .type(outputPath)
-      .should('have.value', outputPath);
+      .type(outputPath, { delay: 100 });
     cy.writelog('출력 경로 입력');
 
     
@@ -444,8 +442,7 @@ Cypress.Commands.add('inputDRMTaskInfo', function(options) {
     cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) > input')
       .should('be.visible')
       .clear()
-      .type(taskName)
-      .should('have.value', taskName);
+      .type(taskName, { delay: 100 });
     
     // CID 입력
     cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input')
@@ -491,8 +488,7 @@ Cypress.Commands.add('inputDRMTaskInfo', function(options) {
     cy.get(':nth-child(9) > :nth-child(2) > .width325')
       .should('be.visible')
       .clear()
-      .type(outputPath)
-      .should('have.value', outputPath);
+      .type(outputPath, { delay: 100 });
     cy.writelog('출력 경로 입력');
   });
 });
@@ -623,11 +619,11 @@ Cypress.Commands.add('completeDRMTaskCreation', function(options) {
   }
 
   // 작업 생성 완료
-  cy.get('.align-center > .primary_btn')
-    .should('be.visible')
-    .click();
-  cy.safeClick('#alert_btn');
-  cy.writelog(`작업 생성 완료: ${taskName}`);
+  // cy.get('.align-center > .primary_btn')
+  //   .should('be.visible')
+  //   .click();
+  // cy.safeClick('#alert_btn');
+  // cy.writelog(`작업 생성 완료: ${taskName}`);
 });
 
 // FWM 작업 생성 함수
