@@ -186,6 +186,7 @@ Cypress.Commands.add('inputTaskInfo', function(options) {
   const outputPath = taskName;
 
   return cy.then(() => {
+    cy.wait(500); // 1초 대기
     cy.get('.align-right > .outlined_btn')
       .should('be.visible')
       .click();
@@ -233,7 +234,7 @@ Cypress.Commands.add('inputTaskInfo', function(options) {
     cy.get(':nth-child(9) > :nth-child(2) > .width325')
       .should('be.visible')
       .clear()
-      .type(outputPath, { delay: 100 });
+      .type(outputPath, { delay: 50 });
     cy.writelog('출력 경로 입력');
 
     
@@ -434,6 +435,7 @@ Cypress.Commands.add('inputDRMTaskInfo', function(options) {
   const outputPath = taskName;
 
   return cy.then(() => {
+    cy.wait(500); // 1초 대기
     cy.get('.align-right > .outlined_btn')
       .should('be.visible')
       .click();
@@ -442,7 +444,7 @@ Cypress.Commands.add('inputDRMTaskInfo', function(options) {
     cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) > input')
       .should('be.visible')
       .clear()
-      .type(taskName, { delay: 100 });
+      .type(taskName, { delay: 50 });
     
     // CID 입력
     cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input')
