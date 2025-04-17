@@ -104,7 +104,7 @@ def drm_fwm_h264_combinations():
     # 각 선택지 정의
     options = {
         '작업타입': ['DRM+FWM'],
-        '입력파일': ['H264', 'H265', 'ProRes', 'XDCAM', 'MKV'],
+        '입력파일': ['H264', 'H265'],
         '비율옵션': ['체크해제'],
         '출력 코덱': ['H264'],
         '해상도': ['UHD+FHD+HD','FHD+FHD+HD+SD+SD'],
