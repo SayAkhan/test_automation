@@ -24,6 +24,8 @@ module.exports = {
           const logFileName = `cypress_log_${formattedDate}.txt`;
           return logFileName; // 로그 파일 이름 반환
         },
+
+        //describe 블록을 찾아서 반환
         getTestFromFile({ testNumber }) {
           const fs = require('fs');
           const path = require('path');
