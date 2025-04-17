@@ -70,51 +70,25 @@ Cypress.Commands.add('login', (email, password) => {
   
   // 페이지 로딩 완료 검증
   cy.get('body').should('be.visible');
+  
+  // 이메일 입력
   cy.get('input[type="email"]')
     .should('be.visible')
-    .type(email)
+    .should('not.be.disabled')
+    .type(email, { delay: 50 })
     .should('have.value', email);
 
+  // 비밀번호 입력
   cy.get('input[type="password"]')
     .should('be.visible')
-    .type(`${password}{enter}`);
+    .should('not.be.disabled')
+    .type(`${password}{enter}`, { delay: 50 });
     
   // 로그인 성공 검증
   cy.url().should('include', 'qa-contentsecurity.doverunner.com');
   cy.get('body').should('be.visible');
   cy.writelog('로그인 성공');
   cy.get('.MuiButton-outlined').click();
-});
-
-// 재시도 로직을 위한 공통 함수
-Cypress.Commands.add('retryOperation', function(operation, operationName, maxAttempts = 3) {
-  let attempts = 0;
-  
-  function retry() {
-    attempts++;
-    
-    return cy.then(() => {
-      return operation().then(() => {
-        if (attempts > 1) {
-          cy.writelog(`[재시도 성공] ${operationName} - ${attempts}번째 시도에서 성공`);
-        } else {
-          cy.writelog(`[성공] ${operationName}`);
-        }
-      }).catch((error) => {
-        cy.writelog(`[재시도 ${attempts}/${maxAttempts}] ${operationName} 실패: ${error.message}`);
-        
-        if (attempts < maxAttempts) {
-          cy.wait(1000); // 재시도 전 1초 대기
-          return retry();
-        } else {
-          cy.writelog(`[최종 실패] ${operationName} - 최대 재시도 횟수(${maxAttempts}회) 초과`);
-          throw error;
-        }
-      });
-    });
-  }
-  
-  return retry();
 });
 
 // 클릭 작업을 위한 안전한 공통 함수
@@ -195,7 +169,7 @@ Cypress.Commands.add('inputTaskInfo', function(options) {
     cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) > input')
       .should('be.visible')
       .clear()
-      .type(taskName, { delay: 100 });
+      .type(taskName, { delay: 50 });
     
     // CID 입력
     cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input')
@@ -489,7 +463,7 @@ Cypress.Commands.add('inputDRMTaskInfo', function(options) {
     cy.get(':nth-child(9) > :nth-child(2) > .width325')
       .should('be.visible')
       .clear()
-      .type(outputPath, { delay: 100 });
+      .type(outputPath, { delay: 50 });
     cy.writelog('출력 경로 입력');
   });
 });
