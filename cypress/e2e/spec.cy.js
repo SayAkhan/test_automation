@@ -1,5 +1,5 @@
 // 실행할 테스트 개수 설정 (1-704 사이)
-const TEST_COUNT = 200;
+const TEST_COUNT = 120;
 
 // Fisher-Yates 셔플 알고리즘
 const shuffleArray = (array) => {

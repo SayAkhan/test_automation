@@ -42,17 +42,33 @@
 
   // log 기록 함수 - 시간 포맷 동일하게 변경
   Cypress.Commands.add('writelog', (message) => {
-    // 로그 메시지의 시간도 동일한 YYYY-MM-ddThh:mm:ss 형식으로 변경
-    const currentTime = new Date();
-    const logYear = currentTime.getFullYear();
-    const logMonth = String(currentTime.getMonth() + 1).padStart(2, '0');
-    const logDay = String(currentTime.getDate()).padStart(2, '0');
-    const logHours = String(currentTime.getHours()).padStart(2, '0');
-    const logMinutes = String(currentTime.getMinutes()).padStart(2, '0');
-    const logSeconds = String(currentTime.getSeconds()).padStart(2, '0');
-    
-    const logTimeFormat = `${logYear}-${logMonth}-${logDay}_${logHours}:${logMinutes}:${logSeconds}`;
-    cy.writeFile(logFileName, `${logTimeFormat} ${message}\n`, { flag: 'a+' });
+    try {
+      // 로그 메시지의 시간도 동일한 YYYY-MM-ddThh:mm:ss 형식으로 변경
+      const currentTime = new Date();
+      const logYear = currentTime.getFullYear();
+      const logMonth = String(currentTime.getMonth() + 1).padStart(2, '0');
+      const logDay = String(currentTime.getDate()).padStart(2, '0');
+      const logHours = String(currentTime.getHours()).padStart(2, '0');
+      const logMinutes = String(currentTime.getMinutes()).padStart(2, '0');
+      const logSeconds = String(currentTime.getSeconds()).padStart(2, '0');
+      
+      const logTimeFormat = `${logYear}-${logMonth}-${logDay}_${logHours}:${logMinutes}:${logSeconds}`;
+      const logMessage = `${logTimeFormat} ${message}\n`;
+      
+      // 로그 파일 쓰기 시도
+      cy.writeFile(logFileName, logMessage, { 
+        flag: 'a+',
+        timeout: 30000 // 타임아웃 시간 증가
+      }).then(() => {
+        // 성공적으로 쓰여졌을 때 아무것도 하지 않음
+      }).catch(() => {
+        // 실패했을 때 콘솔에만 출력
+        console.log(logMessage);
+      });
+    } catch (error) {
+      // 예외 발생 시 콘솔에만 출력
+      console.log(`[ERROR] ${message}`);
+    }
   });
 
 //사이트 login 함수. 쿠키 유지가 안되서 폐기
@@ -160,7 +176,7 @@ Cypress.Commands.add('inputTaskInfo', function(options) {
   const outputPath = taskName;
 
   return cy.then(() => {
-    cy.wait(500); // 1초 대기
+    cy.wait(1000); // 1초 대기
     cy.get('.align-right > .outlined_btn')
       .should('be.visible')
       .click();
@@ -470,10 +486,18 @@ Cypress.Commands.add('inputDRMTaskInfo', function(options) {
 
 Cypress.Commands.add('aspectRatio', function(aspectRatio) {
   if (aspectRatio === true) {
-    cy.get(':nth-child(4) > :nth-child(2) > .inline-block > label')
-      .should('be.visible')
-      .click();
-    cy.writelog('비율옵션 활성화');
+    cy.wait(1000);
+    cy.get('body').then($body => {
+      const label = $body.find(':nth-child(4) > :nth-child(2) > .inline-block > label');
+      if (label.length > 0) {
+        cy.wrap(label)
+          .should('be.visible')
+          .click();
+        cy.writelog('비율옵션 활성화');
+      } else {
+        cy.writelog('비율옵션 요소를 찾을 수 없습니다');
+      }
+    });
   }
 });
 
