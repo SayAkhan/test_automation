@@ -435,7 +435,6 @@ Cypress.Commands.add('inputDRMTaskInfo', function(options) {
   const outputPath = taskName;
 
   return cy.then(() => {
-    cy.wait(500); // 1초 대기
     cy.get('.align-right > .outlined_btn')
       .should('be.visible')
       .click();
@@ -719,6 +718,12 @@ Cypress.Commands.add('createDRMTask', (options) => {
   // 입력 파일 코덱에 따른 입력파일 경로 설정
   const inputPath = inputCodec === 'H265' 
     ? 'test/h265_5min_sample.mp4'
+    : inputCodec === 'MKV'
+    ? 'test/h264_5min_sample.mkv'
+    : inputCodec === 'PRORES'
+    ? 'test/prores_sample.mov'
+    : inputCodec === 'XDCAM'
+    ? 'test/xdcam_sample.mxf'
     : 'test/h264_5min_sample.mp4';
 
   //TNP 페이지 이동
