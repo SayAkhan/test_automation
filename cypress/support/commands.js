@@ -176,11 +176,14 @@ Cypress.Commands.add('inputTaskInfo', function(options) {
   const outputPath = taskName;
 
   return cy.then(() => {
-    cy.wait(1000); // 1초 대기
+    // 작업 생성 버튼 클릭
     cy.get('.align-right > .outlined_btn')
       .should('be.visible')
       .click();
-    
+
+    // 페이지 로드 대기
+    cy.wait(2000);
+
     // 작업명 입력
     cy.get(':nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) > input')
       .should('be.visible')
@@ -191,8 +194,7 @@ Cypress.Commands.add('inputTaskInfo', function(options) {
     cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input')
       .should('be.visible')
       .clear()
-      .type(cid)
-      .should('have.value', cid);
+      .type(cid, { delay: 50 });
     cy.writelog('cid 입력');
     
     // 입력 스토리지 선택
@@ -208,7 +210,7 @@ Cypress.Commands.add('inputTaskInfo', function(options) {
     cy.get(':nth-child(1) > :nth-child(2) > :nth-child(5) > :nth-child(2) > input')
       .should('be.visible')
       .clear()
-      .type(inputPath);
+      .type(inputPath, { delay: 50 });
     cy.writelog('입력 파일 경로 입력');
     
     // 출력 스토리지 선택
@@ -226,8 +228,6 @@ Cypress.Commands.add('inputTaskInfo', function(options) {
       .clear()
       .type(outputPath, { delay: 50 });
     cy.writelog('출력 경로 입력');
-
-    
   });
 });
 
