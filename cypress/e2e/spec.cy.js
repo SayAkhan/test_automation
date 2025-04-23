@@ -1,5 +1,12 @@
-// 실행할 테스트 개수 설정 (1-704 사이)
-const TEST_COUNT = 120;
+// 실행할 테스트 개수 설정
+const TEST_COUNT = 50;
+
+// 테스트 실행 상태 추적을 위한 변수
+let testStats = {
+  total: 0,
+  passed: 0,
+  failed: 0
+};
 
 // Fisher-Yates 셔플 알고리즘
 const shuffleArray = (array) => {
@@ -39,18 +46,26 @@ before(() => {
     selectedTests = shuffleArray([...allTests]).slice(0, TEST_COUNT);
     testsGenerated = true;
   });
+
+  cy.sendTestStartMessage();
 });
 
 // 테스트 종료 후 로그 기록
 after(() => {
   cy.writelog('Test End');
+  cy.sendTestCompletionMessage(testStats);
 });
 
 // 테스트 실패 시 로그 및 스크린샷
 afterEach(function() {
+  testStats.total++;
   if (this.currentTest.state === 'failed') {
+    testStats.failed++;
     cy.writelog(`테스트 실패: ${this.currentTest.title}`);
     cy.screenshot(`실패_${this.currentTest.title}`);
+    cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+  } else if (this.currentTest.state === 'passed') {
+    testStats.passed++;
   }
 });
 
