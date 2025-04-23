@@ -624,7 +624,7 @@ Cypress.Commands.add('completeDRMTaskCreation', function(options) {
   //   .should('be.visible')
   //   .click();
   // cy.safeClick('#alert_btn');
-  // cy.writelog(`작업 생성 완료: ${taskName}`);
+  cy.writelog(`작업 생성 완료: ${taskName}`);
 });
 
 // FWM 작업 생성 함수

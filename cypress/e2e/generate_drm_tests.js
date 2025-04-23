@@ -121,6 +121,10 @@ cy.writelog('Test Start');
 cy.sendTestStartMessage('🚀 DRM 자동화 테스트가 시작되었습니다.');
 });
 
+beforeEach(function() {
+  cy.writelog(\`생성 시작: \${this.currentTest.title}\`);
+});
+
 after(() => {
   // 테스트 종료 후 로그 마무리
   cy.writelog('Test End');
