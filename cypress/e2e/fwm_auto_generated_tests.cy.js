@@ -1,13 +1,19 @@
-
 // 자동 생성된 테스트 파일
+const TEST_COUNT = 24; // 총 테스트 수
+let testStats = {
+  total: 0,
+  passed: 0,
+  failed: 0
+};
+
 before(() => {
   // 새로운 로그 파일 생성
   cy.task('generateLogFileName').then((fileName) => {
     Cypress.env('currentLogFile', fileName);
   });
-//테스트 시작 로그 기록
-cy.writelog('Test Start');
-cy.sendTestStartMessage();
+  //테스트 시작 로그 기록
+  cy.writelog('Test Start');
+  cy.sendTestStartMessage('🚀 FWM 자동화 테스트가 시작되었습니다.');
 });
 
 after(() => {

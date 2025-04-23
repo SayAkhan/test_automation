@@ -103,6 +103,13 @@ if (testCases.length === 0) {
 
 // 테스트 파일 내용 생성
 const testFileContent = `
+const TEST_COUNT = ${testCases.length}; // 총 테스트 수
+let testStats = {
+  total: 0,
+  passed: 0,
+  failed: 0
+};
+
 // 자동 생성된 테스트 파일
 before(() => {
   // 새로운 로그 파일 생성
@@ -111,7 +118,7 @@ before(() => {
   });
 //테스트 시작 로그 기록
 cy.writelog('Test Start');
-cy.sendTestStartMessage();
+cy.sendTestStartMessage('🚀 FWM 자동화 테스트가 시작되었습니다.');
 });
 
 after(() => {
