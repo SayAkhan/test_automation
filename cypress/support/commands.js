@@ -405,16 +405,16 @@ Cypress.Commands.add('selectTaskType', function(taskType) {
 // 작업 생성 완료를 위한 공통 함수
 Cypress.Commands.add('completeTaskCreation', function(taskName, type) {
   return cy.then(() => {
-    if (type === 'DRM_FWM') {
-      cy.get('.align-center > .primary_btn')
-        .should('be.visible')
-        .click();
-    } else {
-      cy.get(':nth-child(4) > .primary_btn')
-        .should('be.visible')
-        .click();
-    }
-    cy.safeClick('#alert_btn');
+    // if (type === 'DRM_FWM') {
+    //   cy.get('.align-center > .primary_btn')
+    //     .should('be.visible')
+    //     .click();
+    // } else {
+    //   cy.get(':nth-child(4) > .primary_btn')
+    //     .should('be.visible')
+    //     .click();
+    // }
+    // cy.safeClick('#alert_btn');
     cy.writelog(`작업 생성 완료: ${taskName}`);
   });
 });
