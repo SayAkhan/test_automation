@@ -35,42 +35,13 @@ module.exports = defineConfig({
         }
       }
 
-      on('before:run', async (details) => {
-        const specName = details.specs[0]?.name || '';
-        if (specName.includes('spec.cy.js')) {
-          await sendSlackMessage('🚀 자동화 테스트가 시작되었습니다.');
-        } else {
-          await sendSlackMessage('🚀 테스트 실행이 시작되었습니다.');
-        }
-      });
-
-      on('after:run', async (results) => {
-        const totalTests = results.totalTests;
-        const totalPassed = results.totalPassed;
-        const totalFailed = results.totalFailed;
-        
-        const message = `✅ 테스트가 완료되었습니다.\n` +
-          `- 총 테스트 수: ${totalTests}\n` +
-          `- 성공: ${totalPassed}\n` +
-          `- 실패: ${totalFailed}`;
-        
-        await sendSlackMessage(message);
-      });
-
-      on('after:spec', async (spec, results) => {
-        if (results.stats.failures > 0) {
-          const message = `❌ 테스트 실패: ${spec.name}\n` +
-            `- 실패한 테스트 수: ${results.stats.failures}\n` +
-            `- 실패한 테스트:\n${results.tests
-              .filter(test => test.state === 'failed')
-              .map(test => `  - ${test.title}`)
-              .join('\n')}`;
-          
-          await sendSlackMessage(message);
-        }
-      });
-
       on('task', {
+        // Slack 메시지 전송을 위한 task
+        sendSlackMessage: async (message) => {
+          await sendSlackMessage(message);
+          return null;
+        },
+
         generateLogFileName() {
           const now = new Date();
           // YYYY-MM-dd_hh-mm-ss 형식으로 날짜 포맷팅
