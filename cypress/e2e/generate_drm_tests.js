@@ -111,11 +111,13 @@ before(() => {
   });
 //테스트 시작 로그 기록
 cy.writelog('Test Start');
+cy.sendTestStartMessage();
 });
 
 after(() => {
   // 테스트 종료 후 로그 마무리
   cy.writelog('Test End');
+  cy.sendTestCompletionMessage(testStats);
 });
 
 ${testCases.map(testCase => `
@@ -144,7 +146,11 @@ describe('${testCase.taskName}', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(\`테스트 실패: \${this.currentTest.title}\`);
       cy.screenshot(\`실패_\${this.currentTest.title}\`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 `).join('\n')}

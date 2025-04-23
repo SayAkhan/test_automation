@@ -7,11 +7,13 @@ before(() => {
   });
 //테스트 시작 로그 기록
 cy.writelog('Test Start');
+cy.sendTestStartMessage();
 });
 
 after(() => {
   // 테스트 종료 후 로그 마무리
   cy.writelog('Test End');
+  cy.sendTestCompletionMessage(testStats);
 });
 
 
@@ -35,7 +37,11 @@ describe('1_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -60,7 +66,11 @@ describe('2_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -85,7 +95,11 @@ describe('3_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -110,7 +124,11 @@ describe('4_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -135,7 +153,11 @@ describe('5_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -160,7 +182,11 @@ describe('6_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -185,7 +211,11 @@ describe('7_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -210,7 +240,11 @@ describe('8_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -235,7 +269,11 @@ describe('9_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -260,7 +298,11 @@ describe('10_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -285,7 +327,11 @@ describe('11_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -310,7 +356,11 @@ describe('12_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -335,7 +385,11 @@ describe('13_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -360,7 +414,11 @@ describe('14_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -385,7 +443,11 @@ describe('15_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -410,7 +472,11 @@ describe('16_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -435,7 +501,11 @@ describe('17_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -460,7 +530,11 @@ describe('18_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -485,7 +559,11 @@ describe('19_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -510,7 +588,11 @@ describe('20_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -535,7 +617,11 @@ describe('21_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -560,7 +646,11 @@ describe('22_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -585,7 +675,11 @@ describe('23_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
@@ -610,7 +704,11 @@ describe('24_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
     if (this.currentTest.state === 'failed') {
       cy.writelog(`테스트 실패: ${this.currentTest.title}`);
       cy.screenshot(`실패_${this.currentTest.title}`);
+      cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+    } else if (this.currentTest.state === 'passed') {
+      testStats.passed++;
     }
+    testStats.total++;
   });
 });
 
