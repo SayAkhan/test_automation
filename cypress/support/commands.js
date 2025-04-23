@@ -190,6 +190,7 @@ Cypress.Commands.add('inputTaskInfo', function(options) {
       .should('be.visible')
       .clear()
       .type(taskName, { delay: 50 });
+    cy.writelog('작업명 입력');
     
     // CID 입력
     cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input')
@@ -435,6 +436,7 @@ Cypress.Commands.add('inputDRMTaskInfo', function(options) {
       .should('be.visible')
       .clear()
       .type(taskName, { delay: 50 });
+    cy.writelog('작업명 입력');
     
     // CID 입력
     cy.get(':nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > input')
