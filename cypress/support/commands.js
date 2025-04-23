@@ -137,6 +137,7 @@ Cypress.Commands.add('navigateToCreateTask', function() {
     cy.get('body').should('be.visible');
     cy.safeClick('.sidebar-submenu > :nth-child(5)'); 
     cy.writelog('작업생성 페이지 진입 성공');
+    cy.wait(1000); //사용자 정보 로드 대기
   });
 });
 
@@ -791,8 +792,7 @@ Cypress.Commands.add('createDRMTask', (options) => {
 });
 
 // 테스트 시작 시 Slack 메시지 전송
-Cypress.Commands.add('sendTestStartMessage', () => {
-  const message = '🚀 자동화 테스트가 시작되었습니다.';
+Cypress.Commands.add('sendTestStartMessage', (message = '🚀 자동화 테스트가 시작되었습니다.') => {
   cy.task('sendSlackMessage', message);
 });
 
