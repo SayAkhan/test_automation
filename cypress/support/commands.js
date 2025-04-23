@@ -495,7 +495,8 @@ Cypress.Commands.add('aspectRatio', function(aspectRatio) {
           .click();
         cy.writelog('비율옵션 활성화');
       } else {
-        cy.writelog('비율옵션 요소를 찾을 수 없습니다');
+        // 요소를 찾지 못했을 때 로그를 남기지 않음
+        cy.log('비율옵션 비활성화.');
       }
     });
   }
@@ -787,6 +788,32 @@ Cypress.Commands.add('createDRMTask', (options) => {
     drmOff
   });
 
+});
+
+// 테스트 시작 시 Slack 메시지 전송
+Cypress.Commands.add('sendTestStartMessage', () => {
+  const message = '🚀 자동화 테스트가 시작되었습니다.';
+  cy.task('sendSlackMessage', message);
+});
+
+// 테스트 실패 시 Slack 메시지 전송
+Cypress.Commands.add('sendTestFailureMessage', (testTitle, error) => {
+  const message = `❌ 테스트 실패\n` +
+    `- 테스트 이름: ${testTitle}\n` +
+    `- 오류 메시지: ${error.message}\n` +
+    `- 스택 트레이스: ${error.stack}`;
+  
+  cy.task('sendSlackMessage', message);
+});
+
+// 테스트 종료 시 Slack 메시지 전송
+Cypress.Commands.add('sendTestCompletionMessage', (stats) => {
+  const message = `📊 테스트 결과:\n` +
+    `- 총 테스트 수: ${stats.total}\n` +
+    `- 성공: ${stats.passed}\n` +
+    `- 실패: ${stats.failed}`;
+  
+  cy.task('sendSlackMessage', message);
 });
 
 
