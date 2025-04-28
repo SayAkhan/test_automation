@@ -11,11 +11,12 @@
 
 ## 설치 및 설정
 
-1. 프로젝트 의존성 설치:
+1. Node.js 설치 (v14 이상 권장)
+2. 프로젝트 의존성 설치:
    ```bash
    npm install
    ```
-2. Cypress 설치:
+3. Cypress 설치:
    ```bash
    npm install cypress
    ```
