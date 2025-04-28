@@ -23,9 +23,15 @@
 
 ## 테스트 실행
 
-1. 테스트 생성:
+1. 조합 파일 생성:
+   ```bash
+   python cypress/e2e/generate_combinations.py
+   ```
+
+2. 테스트 생성:
    ```bash
    node cypress/e2e/generate_drm_tests.js
+   node cypress/e2e/generate_fwm_tests.js
    ```
 
 2. Cypress 테스트 실행:
