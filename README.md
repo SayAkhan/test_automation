@@ -5,20 +5,19 @@
 ## 주요 기능
 
 - DRM / FWM / DRM+FWM 작업 생성 자동화
-- 각 서비스가 지원하는 코덱 및 포맷 지원 (H264, H265, MKV, PRORES, XDCAM)
+- 각 서비스가 지원하는 코덱((H264, H265, PRORES, XDCAM)) 및 컨테이너(mp4, mkv, mov, mxf) 지원 
 - 멀티키, 멀티매니페스트, 오디오 암호화 등 DRM 옵션 설정
 - 자동 로그 기록 및 Slack 알림
 
 ## 설치 및 설정
 
-1. Node.js 설치 (v14 이상 권장)
-2. 프로젝트 의존성 설치:
+1. 프로젝트 의존성 설치:
    ```bash
    npm install
    ```
-3. Cypress 설치:
+2. Cypress 설치:
    ```bash
-   npx cypress install
+   npm install cypress
    ```
 
 ## 테스트 실행
@@ -34,9 +33,9 @@
    node cypress/e2e/generate_fwm_tests.js
    ```
 
-2. Cypress 테스트 실행:
+2. Cypress 실행:
    ```bash
-   npx cypress run
+   npx cypress open
    ```
 
 ## 프로젝트 구조
@@ -52,8 +51,8 @@ cypress/
 │   ├── drm_combinations.txt            # 스크립트로 생성된 DRM 조합 설정 파일
 │   └── fwm_combinations.txt            # 스크립트로 생성된 FWM 조합 설정 파일
 ├── support/
-│   └── commands.js              # 작업 생성에 필요한 코드 파일
-└── logs/                        # 테스트 실행 로그 저장 디렉토리
+│   └── commands.js                     # 테스트에 필요한 함수 파일
+└── logs/                               # 테스트 실행 로그 저장 디렉토리
 ```
 
 
@@ -63,16 +62,8 @@ cypress/
 - 테스트 실행 로그는 `cypress/logs` 디렉토리에 저장됩니다.
 - 테스트 시작, 실패, 완료 시 Slack으로 알림이 전송됩니다.
 
-## 환경 변수
-
-다음 환경 변수를 설정해야 합니다:
-
-- `SLACK_WEBHOOK_URL`: Slack 웹훅 URL
-- `TEST_USER_EMAIL`: 테스트 사용자 이메일
-- `TEST_USER_PASSWORD`: 테스트 사용자 비밀번호
-
 ## 참고사항
 
-- 테스트 실행 전 `drm_combinations.txt` 파일을 확인하고 필요한 조합을 설정하세요.
+- 테스트 실행 전 `drm_combinations.txt` 또는 `fwm_combinations.txt`파일을 확인하고 필요한 조합을 설정하세요.
 - 테스트 실행 시 간헐적으로 요소를 못 찾는 에러가 발생 할 수 있습니다.
 - 로그 파일은 자동으로 생성되며, 테스트 실행 시간이 파일명에 포함됩니다. 
