@@ -5,7 +5,7 @@
 ## 주요 기능
 
 - DRM / FWM / DRM+FWM 작업 생성 자동화
-- 다양한 코덱 및 포맷 지원 (H264, H265, MKV, PRORES, XDCAM)
+- 각 서비스가 지원하는 코덱 및 포맷 지원 (H264, H265, MKV, PRORES, XDCAM)
 - 멀티키, 멀티매니페스트, 오디오 암호화 등 DRM 옵션 설정
 - 자동 로그 기록 및 Slack 알림
 
