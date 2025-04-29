@@ -74,7 +74,7 @@
 //사이트 login 함수. 쿠키 유지가 안되서 폐기
 // Cypress.Commands.add('login', (username, password) => {
 //   cy.session([username, password], () => {
-//     cy.visit('https://login-sqa.pallycon.com/');
+//     cy.visit('SITE');
 //     cy.get('#mui-2').type(username);
 //     cy.get('#mui-3').type(`${password}{enter}`, { log: false });
 //   });
@@ -82,7 +82,7 @@
 
 // 로그인 함수 추가
 Cypress.Commands.add('login', (email, password) => {
-  cy.visit('https://qa-contentsecurity.doverunner.com/#ko');
+  cy.visit('SITE');
   
   // 페이지 로딩 완료 검증
   cy.get('body').should('be.visible');
@@ -101,7 +101,7 @@ Cypress.Commands.add('login', (email, password) => {
     .type(`${password}{enter}`, { delay: 50 });
     
   // 로그인 성공 검증
-  cy.url().should('include', 'qa-contentsecurity.doverunner.com');
+  cy.url().should('include', 'SITE');
   cy.get('body').should('be.visible');
   cy.writelog('로그인 성공');
   cy.get('.MuiButton-outlined').click();
