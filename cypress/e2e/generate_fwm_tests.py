@@ -1,4 +1,5 @@
 import os
+import re
 from pathlib import Path
 
 # 기본 조합 정의
@@ -79,16 +80,25 @@ def add_test_case_and_reset():
 
 for line in lines:
     line = line.strip()
-    if not line or line.startswith('#'):
-        continue
-        
-    parts = line.split('_')
-    if len(parts) >= 5:
-        current_input_codec = parts[0]
-        current_output_codec = parts[1]
-        current_resolution = '_'.join(parts[2:-1])
-        current_streaming_format = parts[-1]
+    if '작업타입:' in line:
+        # Before processing the new type, add the previously collected test case
         add_test_case_and_reset()
+
+        # Parse the new type
+        type_match = re.match(r'작업타입:\s*(\w+)(?:\+(\w+))?', line)
+        if type_match:
+            if type_match.group(2):
+                current_type = f"{type_match.group(1)}_{type_match.group(2)}".upper()
+            else:
+                current_type = type_match.group(1).upper()
+    elif '입력파일:' in line:
+        current_input_codec = line.split(':')[1].strip().lower()
+    elif '출력 코덱:' in line:
+        current_output_codec = line.split(':')[1].strip().lower()
+    elif '해상도:' in line:
+        current_resolution = line.split(':')[1].strip().lower().replace('+', '_')
+    elif '스트리밍 포멧:' in line:
+        current_streaming_format = line.split(':')[1].strip().lower().replace('+', '_')
 
 # Add the very last test case after the loop finishes
 add_test_case_and_reset()
