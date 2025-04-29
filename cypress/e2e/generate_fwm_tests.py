@@ -2,48 +2,9 @@ import os
 import re
 from pathlib import Path
 
-# 기본 조합 정의
-default_combinations = [
-    # H264 조합 (8개)
-    'h264_h264_uhd_fhd_hd_cmaf',
-    'h264_h264_uhd_fhd_hd_dash',
-    'h264_h264_uhd_fhd_hd_hls',
-    'h264_h264_fhd_fhd_hd_sd_sd_cmaf',
-    'h264_h264_fhd_fhd_hd_sd_sd_dash',
-    'h264_h264_fhd_fhd_hd_sd_sd_hls',
-    'h265_h264_uhd_fhd_hd_cmaf',
-    'h265_h264_fhd_fhd_hd_sd_sd_cmaf',
-    
-    # H265 조합 (4개)
-    'h264_h265_uhd_fhd_hd_cmaf',
-    'h264_h265_uhd_fhd_hd_dash',
-    'h264_h265_uhd_fhd_hd_hls',
-    'h265_h265_uhd_fhd_hd_cmaf',
-    
-    # H264 조합 (4개)
-    'h264_h264_uhd_fhd_hd_cmaf',
-    'h264_h264_uhd_fhd_hd_dash',
-    'h264_h264_uhd_fhd_hd_hls',
-    'h264_h264_fhd_fhd_hd_sd_sd_cmaf'
-]
-
 # fwm_combinations.txt 파일 경로
 current_dir = Path(__file__).parent
 combinations_path = current_dir / 'fwm_combinations.txt'
-
-# 파일이 없으면 기본 조합으로 생성
-if not combinations_path.exists():
-    file_content = [
-        '# H264 조합',
-        *default_combinations[:6],
-        '',
-        '# H265 조합',
-        *default_combinations[6:]
-    ]
-    
-    with open(combinations_path, 'w', encoding='utf-8') as file:
-        file.write('\n'.join(file_content))
-    print('기본 조합 파일이 생성되었습니다.')
 
 # 파일 내용 읽기
 with open(combinations_path, 'r', encoding='utf-8') as file:
