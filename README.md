@@ -44,9 +44,9 @@
 ```
 cypress/
 ├── e2e/
-│   ├── generate_drm_tests.js           # DRM 테스트 케이스 생성 스크립트
+│   ├── generate_drm_tests.py           # DRM 테스트 케이스 생성 스크립트
 │   ├── drm_auto_generated_tests.cy.js  # 자동 생성된 테스트 파일
-│   ├── generate_fwm_tests.js           # DRM 테스트 케이스 생성 스크립트
+│   ├── generate_fwm_tests.py           # DRM 테스트 케이스 생성 스크립트
 │   ├── fwm_auto_generated_tests.cy.js  # 자동 생성된 테스트 파일
 │   ├── generate_combinations.py        # 조합가능한 모든 작업생성 케이스 생성 스크립트
 │   ├── drm_combinations.txt            # 스크립트로 생성된 DRM 조합 설정 파일
