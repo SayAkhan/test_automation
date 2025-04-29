@@ -82,7 +82,7 @@
 
 // 로그인 함수 추가
 Cypress.Commands.add('login', (email, password) => {
-  cy.visit('SITE');
+  cy.visit('https://qa-contentsecurity.doverunner.com/#ko');
   
   // 페이지 로딩 완료 검증
   cy.get('body').should('be.visible');
@@ -101,7 +101,7 @@ Cypress.Commands.add('login', (email, password) => {
     .type(`${password}{enter}`, { delay: 50 });
     
   // 로그인 성공 검증
-  cy.url().should('include', 'SITE');
+  cy.url().should('include', 'https://qa-contentsecurity.doverunner.com/#ko');
   cy.get('body').should('be.visible');
   cy.writelog('로그인 성공');
   cy.get('.MuiButton-outlined').click();
