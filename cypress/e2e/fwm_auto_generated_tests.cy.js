@@ -1,19 +1,19 @@
-// 자동 생성된 테스트 파일
 const TEST_COUNT = 24; // 총 테스트 수
 let testStats = {
   total: 0,
   passed: 0,
   failed: 0
-};
+};  
 
+// 자동 생성된 테스트 파일
 before(() => {
   // 새로운 로그 파일 생성
   cy.task('generateLogFileName').then((fileName) => {
     Cypress.env('currentLogFile', fileName);
   });
-  //테스트 시작 로그 기록
-  cy.writelog('Test Start');
-  cy.sendTestStartMessage('🚀 FWM 자동화 테스트가 시작되었습니다.');
+//테스트 시작 로그 기록
+cy.writelog('Test Start');
+cy.sendTestStartMessage('🚀 FWM 자동화 테스트가 시작되었습니다.');
 });
 
 beforeEach(function() {
@@ -30,7 +30,7 @@ after(() => {
 describe('1_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
   it('1_fwm_h264_h264_uhd_fhd_hd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '1_fwm_h264_h264_uhd_fhd_hd_cmaf',
@@ -55,11 +55,10 @@ describe('1_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
   });
 });
 
-
 describe('2_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
   it('2_fwm_h264_h264_uhd_fhd_hd_dash_hls 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '2_fwm_h264_h264_uhd_fhd_hd_dash_hls',
@@ -84,11 +83,10 @@ describe('2_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
   });
 });
 
-
 describe('3_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
   it('3_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '3_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf',
@@ -113,11 +111,10 @@ describe('3_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
   });
 });
 
-
 describe('4_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
   it('4_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '4_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls',
@@ -142,11 +139,10 @@ describe('4_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
   });
 });
 
-
 describe('5_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
   it('5_fwm_h265_h264_uhd_fhd_hd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '5_fwm_h265_h264_uhd_fhd_hd_cmaf',
@@ -171,11 +167,10 @@ describe('5_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
   });
 });
 
-
 describe('6_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
   it('6_fwm_h265_h264_uhd_fhd_hd_dash_hls 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '6_fwm_h265_h264_uhd_fhd_hd_dash_hls',
@@ -200,11 +195,10 @@ describe('6_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
   });
 });
 
-
 describe('7_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
   it('7_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '7_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf',
@@ -229,11 +223,10 @@ describe('7_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
   });
 });
 
-
 describe('8_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
   it('8_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '8_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls',
@@ -258,11 +251,10 @@ describe('8_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
   });
 });
 
-
 describe('9_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
   it('9_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '9_fwm_h264_h265_uhd_fhd_hd_cmaf',
@@ -287,11 +279,10 @@ describe('9_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
   });
 });
 
-
 describe('10_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
   it('10_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '10_fwm_h264_h265_uhd_fhd_hd_dash_hls',
@@ -316,11 +307,10 @@ describe('10_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
   });
 });
 
-
 describe('11_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
   it('11_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '11_fwm_h265_h265_uhd_fhd_hd_cmaf',
@@ -345,11 +335,10 @@ describe('11_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
   });
 });
 
-
 describe('12_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
   it('12_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '12_fwm_h265_h265_uhd_fhd_hd_dash_hls',
@@ -374,11 +363,10 @@ describe('12_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
   });
 });
 
-
 describe('13_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
   it('13_fwm_h264_h264_uhd_fhd_hd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '13_fwm_h264_h264_uhd_fhd_hd_cmaf',
@@ -403,11 +391,10 @@ describe('13_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
   });
 });
 
-
 describe('14_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
   it('14_fwm_h264_h264_uhd_fhd_hd_dash_hls 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '14_fwm_h264_h264_uhd_fhd_hd_dash_hls',
@@ -432,11 +419,10 @@ describe('14_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
   });
 });
 
-
 describe('15_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
   it('15_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '15_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf',
@@ -461,11 +447,10 @@ describe('15_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
   });
 });
 
-
 describe('16_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
   it('16_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '16_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls',
@@ -490,11 +475,10 @@ describe('16_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
   });
 });
 
-
 describe('17_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
   it('17_fwm_h265_h264_uhd_fhd_hd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '17_fwm_h265_h264_uhd_fhd_hd_cmaf',
@@ -519,11 +503,10 @@ describe('17_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
   });
 });
 
-
 describe('18_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
   it('18_fwm_h265_h264_uhd_fhd_hd_dash_hls 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '18_fwm_h265_h264_uhd_fhd_hd_dash_hls',
@@ -548,11 +531,10 @@ describe('18_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
   });
 });
 
-
 describe('19_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
   it('19_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '19_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf',
@@ -577,11 +559,10 @@ describe('19_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
   });
 });
 
-
 describe('20_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
   it('20_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '20_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls',
@@ -606,11 +587,10 @@ describe('20_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
   });
 });
 
-
 describe('21_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
   it('21_drm_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '21_drm_fwm_h264_h265_uhd_fhd_hd_cmaf',
@@ -635,11 +615,10 @@ describe('21_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
   });
 });
 
-
 describe('22_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
   it('22_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '22_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls',
@@ -664,11 +643,10 @@ describe('22_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
   });
 });
 
-
 describe('23_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
   it('23_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '23_drm_fwm_h265_h265_uhd_fhd_hd_cmaf',
@@ -693,11 +671,10 @@ describe('23_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
   });
 });
 
-
 describe('24_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
   it('24_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
     cy.viewport(1280, 720);
-    cy.login('ID', 'PW');
+    cy.login();
 
     cy.createFWMTask({
       taskName: '24_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls',
@@ -721,4 +698,3 @@ describe('24_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
     testStats.total++;
   });
 });
-

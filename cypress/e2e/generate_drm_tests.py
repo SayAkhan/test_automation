@@ -132,7 +132,7 @@ for test_case in test_cases:
 describe('{test_case['taskName']}', () => {{
   it('{test_case['taskName']} 작업생성', function() {{
     cy.viewport(1280, 720);
-    cy.login('jcg@inka.co.kr', 'Say1013!');
+    cy.login();
 
     cy.createDRMTask({{
       taskName: '{test_case['taskName']}',

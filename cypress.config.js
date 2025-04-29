@@ -11,6 +11,10 @@ module.exports = defineConfig({
       runMode: 2,
       openMode: 0
     },
+    env: {
+      LOGIN_EMAIL: '',
+      LOGIN_PASSWORD: ''
+    },
     setupNodeEvents(on, config) {
       // Slack 설정
       const SLACK_TOKEN = ''; // 여기에 실제 Slack Token을 입력하세요
