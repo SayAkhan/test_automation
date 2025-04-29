@@ -13,8 +13,8 @@ module.exports = defineConfig({
     },
     setupNodeEvents(on, config) {
       // Slack 설정
-      const SLACK_TOKEN = 'TOKEN'; // 여기에 실제 Slack Token을 입력하세요
-      const SLACK_CHANNEL = 'CHANNEL'; // 여기에 실제 Slack Channel을 입력하세요
+      const SLACK_TOKEN = 'xoxp-456896952050-468100425844-606422765040-ab96baac8599d67d1a6996b67761cb01'; // 여기에 실제 Slack Token을 입력하세요
+      const SLACK_CHANNEL = 'C03UJ84DDNF'; // 여기에 실제 Slack Channel을 입력하세요
 
       // Slack 메시지 전송 함수
       async function sendSlackMessage(message) {
