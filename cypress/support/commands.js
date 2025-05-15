@@ -82,7 +82,7 @@
 
 // 로그인 함수 추가
 Cypress.Commands.add('login', (email = Cypress.env('LOGIN_EMAIL'), password = Cypress.env('LOGIN_PASSWORD')) => {
-  cy.visit('');
+  cy.visit('https://qa-contentsecurity.doverunner.com/#ko');
   
   // 페이지 로딩 완료 검증
   cy.get('body').should('be.visible');
@@ -101,7 +101,7 @@ Cypress.Commands.add('login', (email = Cypress.env('LOGIN_EMAIL'), password = Cy
     .type(`${password}{enter}`, { delay: 50 });
     
   // 로그인 성공 검증
-  cy.url().should('include', '');
+  cy.url().should('include', 'https://qa-contentsecurity.doverunner.com/#ko');
   cy.get('body').should('be.visible');
   cy.writelog('로그인 성공');
   cy.get('.MuiButton-outlined').click();
@@ -791,11 +791,6 @@ Cypress.Commands.add('createDRMTask', (options) => {
     drmOff
   });
 
-});
-
-// 테스트 시작 시 Slack 메시지 전송
-Cypress.Commands.add('sendTestStartMessage', (message = '🚀 자동화 테스트가 시작되었습니다.') => {
-  cy.task('sendSlackMessage', message);
 });
 
 // 테스트 실패 시 Slack 메시지 전송

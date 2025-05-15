@@ -75,35 +75,39 @@ let testStats = {{
   total: 0,
   passed: 0,
   failed: 0
-}};  
+}};
 
 // 자동 생성된 테스트 파일
-before(() => {{
-  // 새로운 로그 파일 생성
+before(() => {{ 
+  //새로운 로그 파일 생성
   cy.task('generateLogFileName').then((fileName) => {{
     Cypress.env('currentLogFile', fileName);
+    // 테스트 시작 로그 기록
+    cy.writelog('Test Start');
+
+    // 수정된 Slack 메시지 전송 로직
+    cy.task('sendStartMessage', {{ // For JS object literal
+      message: '🚀 FWM 자동화 테스트가 시작되었습니다.', 
+      specIdentifier: Cypress.spec.name 
+    }}); 
   }});
-//테스트 시작 로그 기록
-cy.writelog('Test Start');
-cy.sendTestStartMessage('🚀 FWM 자동화 테스트가 시작되었습니다.');
-}});
+}}); 
 
 beforeEach(function() {{
-  cy.writelog(`생성 시작: ${{this.currentTest.title}}`);
+  cy.writelog(`생성 시작: ${{{'this.currentTest.title'}}} `);
 }});
 
-after(() => {{
+after(() => {{ 
   // 테스트 종료 후 로그 마무리
   cy.writelog('Test End');
   cy.sendTestCompletionMessage(testStats);
 }});
-
 """
 
 for test_case in test_cases:
     test_file_content += f"""
-describe('{test_case['taskName']}', () => {{
-  it('{test_case['taskName']} 작업생성', function() {{
+describe('{test_case['taskName']}', () => {{ 
+  it('{test_case['taskName']} 작업생성', function() {{ 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -119,11 +123,12 @@ describe('{test_case['taskName']}', () => {{
   }});
 
   afterEach(function() {{
-    if (this.currentTest.state === 'failed') {{
-      cy.writelog(`테스트 실패: ${{this.currentTest.title}}`);
-      cy.screenshot(`실패_${{this.currentTest.title}}`);
+    if (this.currentTest.state === 'failed') {{ 
+      cy.writelog(`테스트 실패: ${{{'this.currentTest.title'}}}`); 
+      cy.screenshot(`실패_${{{'this.currentTest.title'}}}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    }} else if (this.currentTest.state === 'passed') {{
+      testStats.failed++;
+    }} else if (this.currentTest.state === 'passed') {{ 
       testStats.passed++;
     }}
     testStats.total++;

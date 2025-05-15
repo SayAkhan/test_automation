@@ -1,5 +1,5 @@
 // 실행할 테스트 개수 설정
-const TEST_COUNT = 50;
+const TEST_COUNT = 200;
 
 // 테스트 실행 상태 추적을 위한 변수
 let testStats = {
@@ -26,10 +26,15 @@ before(() => {
   // 새로운 로그 파일 생성
   cy.task('generateLogFileName').then((fileName) => {
     Cypress.env('currentLogFile', fileName);
+    cy.writelog('Test Start');
+
+    // 수정된 태스크 호출: specIdentifier에 Cypress.spec.name 사용
+    cy.task('sendStartMessage', {
+      message: '🚀 자동화 테스트가 시작되었습니다.',
+      specIdentifier: Cypress.spec.name 
+    });
   });
-  // 테스트 시작 로그 기록
-  cy.writelog('Test Start');
-  
+
   // 테스트 케이스 로드 및 선택
   cy.readFile('cypress/e2e/drm_auto_generated_tests.cy.js').then((content) => {
     // describe 블록과 그 안의 it 블록 추출
@@ -46,8 +51,6 @@ before(() => {
     selectedTests = shuffleArray([...allTests]).slice(0, TEST_COUNT);
     testsGenerated = true;
   });
-
-  cy.sendTestStartMessage();
 });
 
 // 테스트 종료 후 로그 기록
@@ -62,7 +65,6 @@ afterEach(function() {
   if (this.currentTest.state === 'failed') {
     testStats.failed++;
     cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-    cy.screenshot(`실패_${this.currentTest.title}`);
     cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
   } else if (this.currentTest.state === 'passed') {
     testStats.passed++;

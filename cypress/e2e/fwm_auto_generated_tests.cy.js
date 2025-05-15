@@ -1,34 +1,39 @@
+
 const TEST_COUNT = 24; // 총 테스트 수
 let testStats = {
   total: 0,
   passed: 0,
   failed: 0
-};  
+};
 
 // 자동 생성된 테스트 파일
-before(() => {
-  // 새로운 로그 파일 생성
+before(() => { 
+  //새로운 로그 파일 생성
   cy.task('generateLogFileName').then((fileName) => {
     Cypress.env('currentLogFile', fileName);
+    // 테스트 시작 로그 기록
+    cy.writelog('Test Start');
+
+    // 수정된 Slack 메시지 전송 로직
+    cy.task('sendStartMessage', { // For JS object literal
+      message: '🚀 FWM 자동화 테스트가 시작되었습니다.', 
+      specIdentifier: Cypress.spec.name 
+    }); 
   });
-//테스트 시작 로그 기록
-cy.writelog('Test Start');
-cy.sendTestStartMessage('🚀 FWM 자동화 테스트가 시작되었습니다.');
-});
+}); 
 
 beforeEach(function() {
-  cy.writelog(`생성 시작: ${this.currentTest.title}`);
+  cy.writelog(`생성 시작: ${this.currentTest.title} `);
 });
 
-after(() => {
+after(() => { 
   // 테스트 종료 후 로그 마무리
   cy.writelog('Test End');
   cy.sendTestCompletionMessage(testStats);
 });
 
-
-describe('1_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
-  it('1_fwm_h264_h264_uhd_fhd_hd_cmaf 작업생성', function() {
+describe('1_fwm_h264_h264_uhd_fhd_hd_cmaf', () => { 
+  it('1_fwm_h264_h264_uhd_fhd_hd_cmaf 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -44,19 +49,20 @@ describe('1_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('2_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
-  it('2_fwm_h264_h264_uhd_fhd_hd_dash_hls 작업생성', function() {
+describe('2_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => { 
+  it('2_fwm_h264_h264_uhd_fhd_hd_dash_hls 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -72,19 +78,20 @@ describe('2_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('3_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
-  it('3_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf 작업생성', function() {
+describe('3_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => { 
+  it('3_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -100,19 +107,20 @@ describe('3_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('4_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
-  it('4_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls 작업생성', function() {
+describe('4_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => { 
+  it('4_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -128,19 +136,20 @@ describe('4_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('5_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
-  it('5_fwm_h265_h264_uhd_fhd_hd_cmaf 작업생성', function() {
+describe('5_fwm_h265_h264_uhd_fhd_hd_cmaf', () => { 
+  it('5_fwm_h265_h264_uhd_fhd_hd_cmaf 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -156,19 +165,20 @@ describe('5_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('6_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
-  it('6_fwm_h265_h264_uhd_fhd_hd_dash_hls 작업생성', function() {
+describe('6_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => { 
+  it('6_fwm_h265_h264_uhd_fhd_hd_dash_hls 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -184,19 +194,20 @@ describe('6_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('7_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
-  it('7_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf 작업생성', function() {
+describe('7_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => { 
+  it('7_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -212,19 +223,20 @@ describe('7_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('8_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
-  it('8_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls 작업생성', function() {
+describe('8_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => { 
+  it('8_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -240,19 +252,20 @@ describe('8_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('9_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
-  it('9_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+describe('9_fwm_h264_h265_uhd_fhd_hd_cmaf', () => { 
+  it('9_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -268,19 +281,20 @@ describe('9_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('10_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
-  it('10_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+describe('10_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => { 
+  it('10_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -296,19 +310,20 @@ describe('10_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('11_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
-  it('11_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+describe('11_fwm_h265_h265_uhd_fhd_hd_cmaf', () => { 
+  it('11_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -324,19 +339,20 @@ describe('11_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('12_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
-  it('12_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+describe('12_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => { 
+  it('12_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -352,19 +368,20 @@ describe('12_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('13_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
-  it('13_fwm_h264_h264_uhd_fhd_hd_cmaf 작업생성', function() {
+describe('13_fwm_h264_h264_uhd_fhd_hd_cmaf', () => { 
+  it('13_fwm_h264_h264_uhd_fhd_hd_cmaf 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -380,19 +397,20 @@ describe('13_fwm_h264_h264_uhd_fhd_hd_cmaf', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('14_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
-  it('14_fwm_h264_h264_uhd_fhd_hd_dash_hls 작업생성', function() {
+describe('14_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => { 
+  it('14_fwm_h264_h264_uhd_fhd_hd_dash_hls 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -408,19 +426,20 @@ describe('14_fwm_h264_h264_uhd_fhd_hd_dash_hls', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('15_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
-  it('15_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf 작업생성', function() {
+describe('15_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => { 
+  it('15_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -436,19 +455,20 @@ describe('15_fwm_h264_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('16_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
-  it('16_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls 작업생성', function() {
+describe('16_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => { 
+  it('16_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -464,19 +484,20 @@ describe('16_fwm_h264_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('17_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
-  it('17_fwm_h265_h264_uhd_fhd_hd_cmaf 작업생성', function() {
+describe('17_fwm_h265_h264_uhd_fhd_hd_cmaf', () => { 
+  it('17_fwm_h265_h264_uhd_fhd_hd_cmaf 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -492,19 +513,20 @@ describe('17_fwm_h265_h264_uhd_fhd_hd_cmaf', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('18_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
-  it('18_fwm_h265_h264_uhd_fhd_hd_dash_hls 작업생성', function() {
+describe('18_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => { 
+  it('18_fwm_h265_h264_uhd_fhd_hd_dash_hls 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -520,19 +542,20 @@ describe('18_fwm_h265_h264_uhd_fhd_hd_dash_hls', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('19_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
-  it('19_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf 작업생성', function() {
+describe('19_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => { 
+  it('19_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -548,19 +571,20 @@ describe('19_fwm_h265_h264_fhd_fhd_hd_sd_sd_cmaf', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('20_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
-  it('20_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls 작업생성', function() {
+describe('20_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => { 
+  it('20_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -576,19 +600,20 @@ describe('20_fwm_h265_h264_fhd_fhd_hd_sd_sd_dash_hls', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('21_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
-  it('21_drm_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+describe('21_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => { 
+  it('21_drm_fwm_h264_h265_uhd_fhd_hd_cmaf 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -604,19 +629,20 @@ describe('21_drm_fwm_h264_h265_uhd_fhd_hd_cmaf', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('22_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
-  it('22_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+describe('22_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => { 
+  it('22_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -632,19 +658,20 @@ describe('22_drm_fwm_h264_h265_uhd_fhd_hd_dash_hls', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('23_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
-  it('23_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() {
+describe('23_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => { 
+  it('23_drm_fwm_h265_h265_uhd_fhd_hd_cmaf 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -660,19 +687,20 @@ describe('23_drm_fwm_h265_h265_uhd_fhd_hd_cmaf', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;
   });
 });
 
-describe('24_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
-  it('24_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() {
+describe('24_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => { 
+  it('24_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls 작업생성', function() { 
     cy.viewport(1280, 720);
     cy.login();
 
@@ -688,11 +716,12 @@ describe('24_drm_fwm_h265_h265_uhd_fhd_hd_dash_hls', () => {
   });
 
   afterEach(function() {
-    if (this.currentTest.state === 'failed') {
-      cy.writelog(`테스트 실패: ${this.currentTest.title}`);
-      cy.screenshot(`실패_${this.currentTest.title}`);
+    if (this.currentTest.state === 'failed') { 
+      cy.writelog(`테스트 실패: ${this.currentTest.title}`); 
+      cy.screenshot(`실패_${this.currentTest.title}`); 
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
-    } else if (this.currentTest.state === 'passed') {
+      testStats.failed++;
+    } else if (this.currentTest.state === 'passed') { 
       testStats.passed++;
     }
     testStats.total++;

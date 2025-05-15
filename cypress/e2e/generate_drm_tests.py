@@ -112,11 +112,14 @@ before(() => {{
   }});
 //테스트 시작 로그 기록
 cy.writelog('Test Start');
-cy.sendTestStartMessage('🚀 DRM 자동화 테스트가 시작되었습니다.');
+//테스트 시작 메세지 전송
+cy.task('sendStartMessage', {{
+  message: '🚀 DRM 자동화 테스트가 시작되었습니다.',
+  specIdentifier: Cypress.spec.name 
+  }});
 }});
-
 beforeEach(function() {{
-  cy.writelog(`생성 시작: ${{this.currentTest.title}}`);
+  cy.writelog(`생성 시작: ${{{'this.currentTest.title'}}}`);
 }});
 
 after(() => {{
@@ -152,9 +155,10 @@ describe('{test_case['taskName']}', () => {{
 
   afterEach(function() {{
     if (this.currentTest.state === 'failed') {{
-      cy.writelog(`테스트 실패: ${{this.currentTest.title}}`);
-      cy.screenshot(`실패_${{this.currentTest.title}}`);
+      cy.writelog(`테스트 실패: ${{{'this.currentTest.title'}}}`);
+      cy.screenshot(`실패_${{{'this.currentTest.title'}}}`);
       cy.sendTestFailureMessage(this.currentTest.title, this.currentTest.err);
+      testStats.failed++;
     }} else if (this.currentTest.state === 'passed') {{
       testStats.passed++;
     }}
