@@ -542,14 +542,23 @@ Cypress.Commands.add('navigateToDRMTaskOperation', function(type) {
       cy.writelog(`CMAF 자막 옵션 ${randomCmafIndex + 1} 선택`);
     }
 
-    // 언어코드 선택
+     // 언어코드 선택
     cy.get('.css-1hwfws3')
       .should('be.visible')
       .first()
       .click();
-    cy.get('#react-select-7-option-1')
-      .should('be.visible')
-      .click();
+    
+      
+    // type이 DRM_FWM일 때는 selectbox 변수명이 #react-select-7-option-1로 변경됨.
+    if (type === 'DRM_FWM') {
+      cy.get('#react-select-7-option-1')
+        .should('be.visible')
+        .click();
+    } else {
+      cy.get('#react-select-8-option-1')
+        .should('be.visible')
+        .click();
+    }
     cy.writelog('언어코드 선택 완료');
 
     // 다음 단계로 이동
